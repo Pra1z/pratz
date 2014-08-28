@@ -15,7 +15,7 @@ public class LoginController
   @RequestMapping(value={"/login.pratz"})
   public String login(@RequestParam(value="email", required=false) String email,@RequestParam(value="password", required=false) String password,ModelMap model)
   {
-      if("pratz.nud@gmail.com".equals(email)){
+      if("pratz.nud@gmail.com".equals(email) && "asdfasdf".equals(password)){
           logger.info("Welcome pratz!");
           return "index";
       }else{
