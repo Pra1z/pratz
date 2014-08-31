@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="org.postgresql.Driver"></property>
+		<property name="url" value="jdbc:postgresql://localhost:5432/spring"></property>
+		<property name="username" value="spring"></property>
+		<property name="password" value="spring"></property>
+	</bean>
+	<bean class="hello.BatchConfiguration">
+		<property name="dataSource" ref="dataSource"></property>
+		
+	</bean>
+	<bean class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg ref="dataSource"/>
+	</bean>
+	<bean class="org.springframework.batch.core.repository.support.JobRepositoryFactoryBean">
+	    <property name="databaseType" value="POSTGRES"/>
+	    <property name="dataSource" ref="dataSource"/>
+	    <property name="transactionManager" ref="txManager"/>
+	    <property name="tablePrefix" value="BATCH_. BATCH_JOB_EXECUTION"/>
+	</bean>
+	
+	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+    	<property name="dataSource" ref="dataSource"/>
+	</bean>
+</beans>
