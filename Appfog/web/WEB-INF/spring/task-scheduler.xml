@@ -18,6 +18,7 @@
  
   <!-- Run every 5 seconds -->
   <task:scheduled-tasks>
-	<task:scheduled ref="runScheduler" method="run" cron="*/5 * * * * *" />
+	<task:scheduled ref="runScheduler" method="run" cron="0 0 9 ? * MON" />
+     <!-- <task:scheduled ref="runScheduler" method="run" cron="*/5 * * * * *" /> -->
    </task:scheduled-tasks>
 </beans>
