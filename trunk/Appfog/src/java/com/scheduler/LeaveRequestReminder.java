@@ -1,4 +1,3 @@
-
 package com.scheduler;
 
 import java.util.Properties;
@@ -14,13 +13,10 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import java.util.Date;
 
- 
-public class TaskScheduler
-{
-   
-    public void run()
-    {
-       
+public class LeaveRequestReminder {
+
+    public void run() {
+
         final String username = "prat@iconext.co.th";
         final String password = "asdf_4568";
 
@@ -29,7 +25,6 @@ public class TaskScheduler
         //props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.host", "www.iconext.co.th");
         props.put("mail.smtp.port", "25");
-
         Session session = Session.getInstance(props,
                 new javax.mail.Authenticator() {
                     @Override
@@ -37,30 +32,41 @@ public class TaskScheduler
                         return new PasswordAuthentication(username, password);
                     }
                 });
-
         try {
             session.setDebug(true);
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress("prat@iconext.co.th"));
             //message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("parkpoom@iconext.co.th,paitoon@iconext.co.th,alisa@iconext.co.th,ploypapas@iconext.co.th,darunee@iconext.co.th,usanee@iconext.co.th,prat@iconext.co.th,pratz.nud@gmail.com"));
-            message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("prat@iconext.co.th"));
-            message.setSubject("Test");
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("prat@iconext.co.th"));
+            message.setSubject("Reminder: Daily Leave request");
             Multipart multipart = new MimeMultipart();
             MimeBodyPart mbp1 = new MimeBodyPart();
-            
+
             new Date().toString();
-            
-            
-            mbp1.setContent("<b>P</b>ratz: "+new Date().toString(), "text/html");
+
+            mbp1.setContent("Dear all,\n"
+                    + "\n"
+                    + " \n"
+                    + "\n"
+                    + "Leave request as of DD MMM YYYY from NSSOL.\n"
+                    + "\n"
+                    + " \n"
+                    + "\n"
+                    + "No one request to leave.\n"
+                    + "\n"
+                    + " \n"
+                    + "\n"
+                    + "Best regards,\n"
+                    + "\n"
+                    + "Pasuwat W.", "text/html");
             multipart.addBodyPart(mbp1);
             //multipart.addBodyPart(messageBodyPart);
             message.setContent(multipart);
             Transport.send(message);
             System.out.println("Done");
-            java.awt.Toolkit.getDefaultToolkit().beep(); 
+            java.awt.Toolkit.getDefaultToolkit().beep();
         } catch (MessagingException e) {
-            
-            
+
         }
         //System.out.println("Method executed at every 5 seconds. Current time is :: "+ new Date());
     }
