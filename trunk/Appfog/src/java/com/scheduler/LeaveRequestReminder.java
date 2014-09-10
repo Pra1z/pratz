@@ -27,6 +27,7 @@ public class LeaveRequestReminder {
         props.put("mail.smtp.host", "www.iconext.co.th");
         props.put("mail.smtp.port", "25");
         Session session = Session.getInstance(props, new Authenticator() {
+            @Override
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication("prat@iconext.co.th", "asdf_4568");
             }
