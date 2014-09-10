@@ -6,7 +6,8 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-        <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+    <!--    
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://127.0.0.1:3306/test" />
@@ -19,4 +20,5 @@
 	<jdbc:initialize-database data-source="dataSource">
 		<jdbc:script location="classpath:db-schema.sql"/>
 	</jdbc:initialize-database>
+        -->
 </beans>
