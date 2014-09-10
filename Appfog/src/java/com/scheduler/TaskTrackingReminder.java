@@ -43,7 +43,7 @@ public class TaskTrackingReminder {
             message.setContent(multipart);
             Transport.send(message);
             System.out.println("Done");
-            Toolkit.getDefaultToolkit().beep();
+            
         } catch (MessagingException e) {
         }
     }
