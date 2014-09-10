@@ -15,7 +15,7 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-public class LeaveRequestReminder
+public class TaskTrackingReminder
 {
   public void run()
   {
@@ -41,27 +41,13 @@ public class LeaveRequestReminder
       message.setFrom(new InternetAddress("prat@iconext.co.th"));
       
       message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("prat@iconext.co.th"));
-      message.setSubject("Reminder: Daily Leave request");
+      message.setSubject("Reminder: Weekly Task Tracking Report");
       Multipart multipart = new MimeMultipart();
       MimeBodyPart mbp1 = new MimeBodyPart();
       
       new Date().toString();
       
-      mbp1.setContent("Dear all,<br/><br/> <br/><br/>Leave request as of DD MMM YYYY from NSSOL.<br/><br/> <br/><br/>No one request to leave.<br/><br/> <br/><br/>Best regards,<br/><br/>Pasuwat W.", "text/html");
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
+      mbp1.setContent("Please, submit your <b>Task Tracking Report</b>", "text/html");
       multipart.addBodyPart(mbp1);
       
       message.setContent(multipart);
