@@ -14,11 +14,20 @@
         http://www.springframework.org/schema/task/spring-task-3.0.xsd
 	">
    
-    <bean id="runScheduler" class="com.scheduler.TaskScheduler"></bean>
+    <bean id="runScheduler1" class="com.scheduler.LeaveRequestReminder"></bean>
+     <bean id="runScheduler2" class="com.scheduler.TaskTrackingReminder"></bean>
  
   <!-- Run every 5 seconds -->
   <task:scheduled-tasks>
-	<task:scheduled ref="runScheduler" method="run" cron="0 0 2 ? * MON" />
-     <!-- <task:scheduled ref="runScheduler" method="run" cron="*/5 * * * * *" /> -->
+	<task:scheduled ref="runScheduler1" method="run" cron="0 0 2 ? * MON-FRI" />
+        <task:scheduled ref="runScheduler2" method="run" cron="0 0 2 ? * MON" />
+        
+        <!-- 
+            cron expression  :   description
+            */5 * * * * *          every 5 second
+            0 0 2 ? * MON          Every Monday weekly day
+            0 0 9 ? * MON-FRI       Every Mon-Fri
+        -->
+     
    </task:scheduled-tasks>
 </beans>
