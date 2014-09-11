@@ -15,10 +15,12 @@
 		<property name="password" value="spring" />
 	</bean>
         
-        <import resource="task-scheduler.xml"/>
+        
 
 	<jdbc:initialize-database data-source="dataSource">
 		<jdbc:script location="classpath:db-schema.sql"/>
 	</jdbc:initialize-database>
         -->
+        
+        <import resource="task-scheduler.xml"/>
 </beans>
