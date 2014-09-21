@@ -1,5 +1,6 @@
 package com.controller;
 
+import javax.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -13,10 +14,11 @@ public class LoginController
   private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
   
   @RequestMapping(value={"/login.pratz"})
-  public String login(@RequestParam(value="email", required=false) String email,@RequestParam(value="password", required=false) String password,ModelMap model)
+  public String login(@RequestParam(value="email", required=false) String email,@RequestParam(value="password", required=false) String password,ModelMap model,HttpSession session)
   {
       if("pratz.nud@gmail.com".equals(email) && "asdfasdf".equals(password)){
           logger.info("Welcome pratz!");
+          session.setAttribute("USER", "Pratz");
           return "index";
       }else{
           logger.error("Login fail!!");
