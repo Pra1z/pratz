@@ -13,8 +13,7 @@
     <filter-mapping>
         <filter-name>sessionfiler</filter-name>
         <url-pattern>*.pratz</url-pattern>
-        <url-pattern>index.jsp</url-pattern>
-        <url-pattern>uploadFile.jsp</url-pattern>
+        <url-pattern>*.jsp</url-pattern>
     </filter-mapping>
     <!-- Creates the Spring Container shared by all Servlets and Filters -->
     <listener>
