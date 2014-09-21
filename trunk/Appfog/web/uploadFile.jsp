@@ -10,9 +10,10 @@
    int maxFileSize = 5000 * 1024;
    int maxMemSize = 5000 * 1024;
    ServletContext context = pageContext.getServletContext();
-   String filePath = request.getSession().getServletContext().getRealPath("\\");
+   String filePath = context.getRealPath("");
    
-   System.out.println("RealPath"+request.getSession().getServletContext().getRealPath("\\"));
+   System.out.println("RealPath"+request.getSession().getServletContext().getRealPath(""));
+   System.out.println("RealPath(ServletContext)"+context.getRealPath(""));
 
    // Verify the content type
    String contentType = request.getContentType();
@@ -22,7 +23,8 @@
       // maximum size that will be stored in memory
       factory.setSizeThreshold(maxMemSize);
       // Location to save data that is larger than maxMemSize.
-      factory.setRepository(new File("c:\\tempx"));
+      System.out.println("java.io.tmpdir: "+System.getProperty("java.io.tmpdir"));
+      factory.setRepository(new File(System.getProperty("java.io.tmpdir")));
 
       // Create a new file upload handler
       ServletFileUpload upload = new ServletFileUpload(factory);
@@ -52,17 +54,17 @@
             long sizeInBytes = fi.getSize();
             // Write the file
             if( fileName.lastIndexOf("\\") >= 0 ){
-            file = new File( filePath + 
+            file = new File( filePath + "/"+
             fileName.substring( fileName.lastIndexOf("\\"))) ;
             }else{
-            file = new File( filePath + 
+            file = new File( filePath + "/"+
             fileName.substring(fileName.lastIndexOf("\\")+1)) ;
             }
             fi.write( file ) ;
-            out.println("Uploaded Filename: " + filePath + 
+            out.println("Uploaded Filename: " + filePath + "/"+ 
             fileName + "<br>");
-            out.println("Access via : <a href=\"" +request.getScheme()+"://"+request.getServerName()+":"+ request.getServerPort()+"/"+request.getContextPath()+"/" + 
-            fileName+"\">"+request.getScheme()+"://"+request.getServerName()+":"+ request.getServerPort()+"/"+request.getContextPath()+"/" + 
+            out.println("Access via : <a href=\"" +request.getScheme()+"://"+request.getServerName()+":"+ request.getServerPort()+request.getContextPath()+"/" + 
+            fileName+"\">"+request.getScheme()+"://"+request.getServerName()+":"+ request.getServerPort()+request.getContextPath()+"/" + 
             fileName+"</a>");
             }
          }
