@@ -12,8 +12,8 @@
    ServletContext context = pageContext.getServletContext();
    String filePath = context.getRealPath("");
    
-   System.out.println("RealPath"+request.getSession().getServletContext().getRealPath(""));
-   System.out.println("RealPath(ServletContext)"+context.getRealPath(""));
+   //System.out.println("RealPath"+request.getSession().getServletContext().getRealPath(""));
+   //System.out.println("RealPath(ServletContext)"+context.getRealPath(""));
 
    // Verify the content type
    String contentType = request.getContentType();
@@ -23,7 +23,7 @@
       // maximum size that will be stored in memory
       factory.setSizeThreshold(maxMemSize);
       // Location to save data that is larger than maxMemSize.
-      System.out.println("java.io.tmpdir: "+System.getProperty("java.io.tmpdir"));
+      //System.out.println("java.io.tmpdir: "+System.getProperty("java.io.tmpdir"));
       factory.setRepository(new File(System.getProperty("java.io.tmpdir")));
 
       // Create a new file upload handler
