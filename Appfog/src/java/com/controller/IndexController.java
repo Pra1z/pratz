@@ -15,6 +15,7 @@ public class IndexController
   public String index(Model model)
   {
     logger.info("Welcome home!");
+    
     return "index";
   }
 }
