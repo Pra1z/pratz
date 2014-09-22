@@ -33,6 +33,9 @@
         <servlet-name>appServlet</servlet-name>
         <url-pattern>*.pratz</url-pattern>
     </servlet-mapping>
+    <session-config>
+        <session-timeout>-1</session-timeout>
+    </session-config>
     <welcome-file-list>
         <welcome-file>redirect.jsp</welcome-file>
     </welcome-file-list>
