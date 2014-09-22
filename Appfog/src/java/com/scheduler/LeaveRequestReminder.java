@@ -1,6 +1,5 @@
 package com.scheduler;
 
-import java.awt.Toolkit;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
@@ -15,9 +14,11 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LeaveRequestReminder {
-
+    private static final Logger logger = LoggerFactory.getLogger(TaskTrackingReminder.class);
     private static final SimpleDateFormat sdf = new SimpleDateFormat("dd MMM yyyy");
 
     public void run() {
@@ -52,6 +53,7 @@ public class LeaveRequestReminder {
             System.out.println("Done");
             
         } catch (MessagingException e) {
+            logger.error("MessagingException",e);
         }
     }
 
