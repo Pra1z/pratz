@@ -1,11 +1,13 @@
 package com.scheduler;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
 import java.util.Properties;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
 import javax.mail.Message;
-import javax.mail.MessagingException;
 import javax.mail.Multipart;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
@@ -14,13 +16,14 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class TaskTrackingReminder {
 
     private static final Logger logger = LoggerFactory.getLogger(TaskTrackingReminder.class);
-
+ 
     public void run() {
 
         final String username = "prat@iconext.co.th";
@@ -41,7 +44,7 @@ public class TaskTrackingReminder {
                 });
 
         try {
-
+            
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress("prat@iconext.co.th"));
             //message.setRecipients(Message.RecipientType.TO,InternetAddress.parse("parkpoom@iconext.co.th,paitoon@iconext.co.th,alisa@iconext.co.th,ploypapas@iconext.co.th,darunee@iconext.co.th,usanee@iconext.co.th,prat@iconext.co.th,pratz.nud@gmail.com"));
@@ -50,9 +53,12 @@ public class TaskTrackingReminder {
             MimeBodyPart messageBodyPart = new MimeBodyPart();
             Multipart multipart = new MimeMultipart();
             messageBodyPart = new MimeBodyPart();
-            String file = "/var/vcap.local/dea/apps/pratz-0-5c3a813f5ecdae4d0996206a1de5524a/tomcat/webapps/ROOT/uploaddata/Task Tracking Report 2014_Mr.Prat.xls";
+            //String file = "/var/vcap.local/dea/apps/pratz-0-5c3a813f5ecdae4d0996206a1de5524a/tomcat/webapps/ROOT/uploaddata/Task Tracking Report 2014_Mr.Prat.xls";
             String fileName = "Task Tracking Report 2014_Mr.Prat.xls";
-            DataSource source = new FileDataSource(file);
+            File f = new File(System.getProperty("java.io.tmpdir")+ "tmp.xls");
+            f.deleteOnExit();
+            FileUtils.copyURLToFile(new URL("http://pratz.ap01.aws.af.cm/uploaddata/Task%20Tracking%20Report%202014_Mr.Prat.xls"), f);       
+            DataSource source = new FileDataSource(f);
             messageBodyPart.setDataHandler(new DataHandler(source));
             messageBodyPart.setFileName(fileName);
             MimeBodyPart mbp1 = new MimeBodyPart();
@@ -67,7 +73,7 @@ public class TaskTrackingReminder {
             Transport.send(message);
             System.out.println("Done");
             java.awt.Toolkit.getDefaultToolkit().beep();
-        } catch (MessagingException e) {
+        } catch (Exception e) {
             logger.error("MessagingException", e);
         }
     }
