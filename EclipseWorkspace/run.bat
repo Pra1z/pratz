@@ -1,1 +1,0 @@
-java -jar target/spring-boot-web-mvc-tiles3-1.0.war --debug
