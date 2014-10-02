@@ -1,7 +1,6 @@
 <!--
 <%--
  % contents2.
-
  %
  % Creator       : Prat
  % Creation date : 2014/10/02
@@ -11,4 +10,288 @@
  % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
  --%>
 -->
-<p>Content #2</p>
+
+	<table class="table">
+		<tbody>
+			<tr>
+				<th width="1000px" height="30px" align="left">&nbsp;&nbsp;&nbsp;Quotation</th>
+			</tr>
+		</tbody>
+	</table>
+	<table width="1000px">
+		<tr>
+			<td style="background-color: #dedfff">Quotation No</td>
+			<td style="background-color: #efebef"><input
+				style="width: 300px" type="text" value="QS1A-133-DST-180" /><input
+				type="button" style="width: 30px;" value="..."
+				onclick="SearchQuotation()"></td>
+			<td style="background-color: #dedfff">Salesman</td>
+			<td style="background-color: #efebef" colspan="2"><input
+				style="width: 350px" type="text" value="" /></td>
+
+		</tr>
+		<tr>
+			<td style="background-color: #dedfff">Quotation Date</td>
+			<td style="background-color: #efebef"><input
+				style="width: 350px" id="inputField" type="text" value="" /></td>
+			<td style="background-color: #dedfff">Quotation Type</td>
+			<td style="background-color: #efebef" colspan="2"><select
+				style="width: 350px" name="QuotationType" class="select">
+					<option value="1" selected>New FL</option>
+			</select></td>
+
+		</tr>
+		<tr>
+			<td style="background-color: #dedfff">Customer Code</td>
+			<td style="background-color: #efebef"><input
+				style="width: 300px; background-color: lightyellow" readonly
+				type="text" value="34001313" /><input disabled type="button"
+				style="width: 30px;" value="..." onclick="SearchCustomer()"></td>
+			<td style="background-color: #dedfff">Customer Name</td>
+			<td style="background-color: #efebef" colspan="2"><input
+				style="width: 350px; background-color: lightyellow" readonly
+				type="text" value="SV1ZZ-ONE CORPORATION LTD." /></td>
+
+		</tr>
+		<tr>
+			<td style="background-color: #dedfff">Cust. Bill To</td>
+			<td style="background-color: #efebef"><select
+				style="width: 350px">
+					<option value="1" selected>บริษัท ยามากิ จำกัด (สีลม)</option>
+			</select></td>
+			<td style="background-color: #dedfff">Cust. Ship To</td>
+			<td style="background-color: #efebef" colspan="2"><select
+				style="width: 350px">
+					<option value="1" selected>โรงงาน ยามากิ (อยุธยา)</option>
+			</select></td>
+
+		</tr>
+		<tr>
+			<td style="background-color: #dedfff">Contract</td>
+			<td style="background-color: #efebef"><input
+				style="width: 350px; background-color: lightyellow" readonly
+				type="text" value="K.Somsri" /></td>
+			<td style="background-color: #dedfff">Email</td>
+			<td style="background-color: #efebef" colspan="2"><input
+				style="width: 350px; background-color: lightyellow" readonly
+				type="text" value="" /></td>
+		</tr>
+		<tr>
+			<td style="background-color: #dedfff">Telephone</td>
+			<td style="background-color: #efebef"><input
+				style="width: 350px; background-color: lightyellow" readonly
+				type="text" value="02-420-0038" /></td>
+			<td style="background-color: #dedfff">Fax</td>
+			<td style="background-color: #efebef" colspan="2"><input
+				style="width: 350px; background-color: lightyellow" readonly
+				type="text" value="" /></td>
+		</tr>
+		<tr>
+			<td style="background-color: #dedfff">Payment Term</td>
+			<td style="background-color: #efebef"><select
+				style="width: 350px; background-color: lightyellow" disabled>
+					<option value="1" selected>30 Days</option>
+			</select></td>
+			<td style="background-color: #dedfff">Delivery Term</td>
+			<td style="background-color: #efebef" colspan="2"><select
+				style="width: 350px">
+					<option value="1" selected>30 Days</option>
+			</select></td>
+
+		</tr>
+		<tr>
+			<td style="background-color: #dedfff">Price Basic</td>
+			<td style="background-color: #efebef"><input
+				style="width: 350px" type="text" value="" /></td>
+			<td style="background-color: #dedfff">Price Validity</td>
+			<td style="background-color: #efebef" colspan="2"><select
+				style="width: 350px">
+					<option value="1" selected>7 Days</option>
+			</select></td>
+
+		</tr>
+		<tr>
+			<td style="background-color: #dedfff">VAT Code</td>
+			<td style="background-color: #efebef" colspan="4"><select
+				style="width: 350px">
+					<option value="1" selected>7%</option>
+			</select></td>
+		</tr>
+	</table>
+	<br />
+	<table class="table">
+		<tbody>
+			<tr>
+				<th width="1000px" height="30px" align="left">&nbsp;&nbsp;&nbsp;Quotation
+					Detail</th>
+			</tr>
+		</tbody>
+	</table>
+	<table border="1" width="1000px" class="table">
+		<tr>
+			<td colspan="8">
+				<div style="margin-left: 5px; float: right;">
+					<input disabled id="btnPDI" type="button" style="width: 100px;"
+						value="PDI Request" /><input disabled type="button"
+						style="width: 30px;" value="-"><input disabled
+						type="button" style="width: 30px;" value="+">
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<th>#</th>
+			<th>Seq</th>
+			<th>Model</th>
+			<th>Description</th>
+			<th>Warantee</th>
+			<th>Qty</th>
+			<th>Amount</th>
+
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+	<br />
+	<table class="table">
+		<tbody>
+			<tr>
+				<th width="1000px" height="30px" align="left">&nbsp;&nbsp;&nbsp;Total
+					Amount</th>
+			</tr>
+		</tbody>
+	</table>
+
+	<table width="1000px">
+		<tr>
+			<td style="background-color: #dedfff">Total Amount</td>
+			<td style="background-color: #efebef"><input
+				style="width: 350px; background-color: lightyellow" readonly
+				type="text" value="" /></td>
+			<td style="background-color: #dedfff">VAT Amount</td>
+			<td style="background-color: #efebef" colspan="2"><input
+				style="width: 350px; background-color: lightyellow" readonly
+				type="text" value="" /></td>
+
+		</tr>
+		<tr>
+			<td style="background-color: #dedfff">Grand Amount</td>
+			<td style="background-color: #efebef" colspan="4"><input
+				style="width: 350px; background-color: lightyellow" readonly
+				type="text" value="" /></td>
+		</tr>
+	</table>
+	<br />
+	<table>
+		<tr>
+			<td>&nbsp;</td>
+			<td><input type="button" value="Save" onclick="backToMain()" /></td>
+
+			<td>&nbsp;</td>
+			<td><input type="button" value="Cancel" onclick="backToMain()" /></td>
+		</tr>
+	</table>
+
+<script type="text/javascript">
+		new JsDatePick({
+			   useMode:2,
+			   target:"inputField",
+			   dateFormat:"%d/%m/%Y"
+			  });
+		
+		function SearchCustomer() {
+				var customerSearch = window.open("searchCustomer_z.html", "customerSearch", "width=850px,height=320px,left=500,top=200");
+					customerSearch.focus();
+	    }
+		function SearchQuotation() {
+				var customerSearch = window.open("searchQuotation_z.html", "quotationSearch", "width=650px,height=420px,left=500,top=200");
+					customerSearch.focus();
+	    }
+</script>

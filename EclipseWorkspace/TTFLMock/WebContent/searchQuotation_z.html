@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../css/zStyle.css" >
+<title>Search Quotation</title>
+</head>
+<body style="width:180px,height:75px" bgcolor="#FFFFFF" text="#000000">
+	<br>
+	<div style="margin-left:40px;">	
+			<table class="table">
+				<tbody>
+					<tr>
+						<th width="1000px" height="30px" align="left">&nbsp;&nbsp;&nbsp;Cost Sheet Dialog</th>
+					</tr>
+				</tbody>
+			</table>
+			<br/>
+			Search Condition
+			<br/>
+			<br/>
+			<table border="1" >
+				<tr>
+					<td>
+						<table>
+							<tr>
+								<td>CostSheet No.</td>
+								<td colspan="3"><input style="width:150px" type="text" value=""/></td>
+								
+							</tr>
+							<tr>
+								<td>Customer</td>
+								<td colspan="3"><input style="width:150px" type="text" value=""/></td>
+								
+							</tr>
+							<tr>
+								<td>CostSheet Date</td>
+								<td><input style="width:150px" type="text" value=""/></td>
+								<td>-</td>
+								<td><input style="width:150px" type="text" value=""/></td>
+							
+
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<input type="button" value="select" onclick="window.close();"/>
+			
+			<table class="table" >
+				<tr>
+					<th>#</th>
+					<th>CostSheet No.</th>
+					<th>Date</th>
+					<th>Customer</th>
+					
+					
+				</tr>
+				<tr>
+					<td align="center"><input type="radio" name="datalist" value="cu1" id="cu1"></td>
+					
+					<td>QO2014060009</td>
+					<td>6/15/2014</td>
+					<td>YAMASHIN MATERIAL(THAILAND)Co.,Ltd.</td>
+				</tr>
+				<tr>
+					<td align="center"><input type="radio" name="datalist" value="cu1" id="cu1"></td>
+					
+					<td>QO2014060008</td>
+					<td>6/15/2014</td>
+					<td>THAI SEAGUL STANLESS STELL</td>
+				</tr>
+				<tr>
+					<td align="center"><input type="radio" name="datalist" value="cu1" id="cu1"></td>
+					
+					<td>QO2014060007</td>
+					<td>6/15/2014</td>
+					<td>YAMASHIN MATERIAL(THAILAND)Co.,Ltd.</td>
+				</tr>
+				<tr>
+					<td align="center"><input type="radio" name="datalist" value="cu1" id="cu1"></td>
+					
+					<td>QO2014060006</td>
+					<td>6/15/2014</td>
+					<td>THAI SEAGUL STANLESS STELL</td>
+				</tr>
+				<tr>
+					<td align="center"><input type="radio" name="datalist" value="cu1" id="cu1"></td>
+					
+					<td>QO2014060005</td>
+					<td>6/15/2014</td>
+					<td>TATA STANLESS STEEL (Thailand)</td>
+				</tr>
+				<tr>
+					<td align="center"><input type="radio" name="datalist" value="cu1" id="cu1"></td>
+					
+					<td>QO2014060004</td>
+					<td>6/15/2014</td>
+					<td>TATA STANLESS STEEL (Thailand)</td>
+				</tr>
+			</table>
+			<br>
+	</div>
+	<script type="text/javascript">
+	function backToMain(){
+		if (window.opener != null && !window.opener.closed) {
+			window.opener.document.getElementById("saleHisBlank").style.visibility="hidden";
+			window.opener.document.getElementById("saleHisBlank").style.display = "none";
+			window.opener.document.getElementById("assetBlank").style.visibility="hidden";
+			window.opener.document.getElementById("assetBlank").style.display = "none";
+			window.opener.document.getElementById("saleActBlank").style.visibility="hidden";
+			window.opener.document.getElementById("saleActBlank").style.display = "none";
+			
+			window.opener.document.getElementById("saleHis").style.visibility="visible";
+			window.opener.document.getElementById("saleHis").style.display = "inline";
+			window.opener.document.getElementById("asset").style.visibility="visible";
+			window.opener.document.getElementById("asset").style.display = "inline";
+			window.opener.document.getElementById("saleAct").style.visibility="visible";
+			window.opener.document.getElementById("saleAct").style.display = "inline";
+			
+			window.opener.document.getElementById("custCode").innerHTML = "C30291004";
+			window.opener.document.getElementById("custType").value = "STAINLESS";
+			window.opener.document.getElementById("custName").value = "YAMASHIN MATERIAL(THAILAND)Co.,Ltd.";
+			window.opener.document.getElementById("custAddress").value = "Saraburee";
+			window.opener.document.getElementById("custNation").value = "Local";
+			window.opener.document.getElementById("custContact").value = "Mr. HATANO";
+			window.opener.document.getElementById("custEmail").value = "k.hatano@yamashin-material.co.jp";
+			window.opener.document.getElementById("custTel").value = "081-821-9013";
+			
+		}
+		 window.close();
+	}
+	
+    function SetCustomer() {
+        if (window.opener != null && !window.opener.closed) {
+        	if (document.getElementById('cu1').checked) {
+	            window.opener.document.getElementById("cusCode").value = "CO01255";
+	            window.opener.document.getElementById("name1").value = "Toshiba";
+	            window.opener.document.getElementById("name2").value = "Storage Device";
+	            window.opener.document.getElementById("telNo").value = "02-744-4785";
+	            window.opener.document.getElementById("faxNo").value = "12-842-8741";
+	            window.opener.document.getElementById("cPerson").value = "Mr.Nirut";
+        	} else if(document.getElementById('cu2').checked) {
+        		 window.opener.document.getElementById("cusCode").value = "CO02541";
+                 window.opener.document.getElementById("name1").value = "Dell";
+                 window.opener.document.getElementById("name2").value = "Thailand";
+                 window.opener.document.getElementById("telNo").value = "04-842-8714";
+                 window.opener.document.getElementById("faxNo").value = "51-844-8714";
+                 window.opener.document.getElementById("cPerson").value = "Mrs.Vipa";
+        	} else if(document.getElementById('cu3').checked) {
+	       		 window.opener.document.getElementById("cusCode").value = "CO01745";
+	             window.opener.document.getElementById("name1").value = "Kubota";
+	             window.opener.document.getElementById("name2").value = "Tractors";
+	             window.opener.document.getElementById("telNo").value = "02-871-8415";
+	             window.opener.document.getElementById("faxNo").value = "12-874-8748";
+	             window.opener.document.getElementById("cPerson").value = "Mr.Pongpop";
+    		} else if(document.getElementById('cu4').checked) {
+          		 window.opener.document.getElementById("cusCode").value = "CO07894"
+                 window.opener.document.getElementById("name1").value = "Sumsung";
+                 window.opener.document.getElementById("name2").value = "Mobile";
+                 window.opener.document.getElementById("telNo").value = "02-574-8741";
+                 window.opener.document.getElementById("faxNo").value = "15-874-8971";
+                 window.opener.document.getElementById("cPerson").value = "Mrs.Parawee";
+        	}
+        }
+        window.close();
+    }
+</script>
+</body>
+</html>
