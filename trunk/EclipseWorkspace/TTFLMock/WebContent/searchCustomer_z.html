@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../css/zStyle.css" >
+<title>Search Customer</title>
+</head>
+<body style="width:180px,height:75px" bgcolor="#FFFFFF" text="#000000">
+	<br>
+	<div style="margin-left:10px;">	
+			<table  >
+				<tr>
+					<td>
+						<table >
+							<tr>
+								<td style="background-color:#dedfff">Code</td>
+								<td style="background-color:#efebef"><input type="text" id="custCode" value="C3209100%"/></td>
+								<td style="background-color:#dedfff">Type</td>
+								<td style="background-color:#efebef"><select style="width:90px" id="orderType" name="orderType" class="select">
+									<option value="1" selected>STAINLESS</option>
+							</select></td>
+								<td style="background-color:#dedfff">Nation</td>
+								<td style="background-color:#efebef"><select style="width:90px" id="orderType" name="orderType" class="select">
+									
+							</select></td>
+							</tr>
+							<tr>
+								<td style="background-color:#dedfff">Name</td>
+								<td style="background-color:#efebef"><input type="text" id="custName" value=""/></td>
+								<td style="background-color:#dedfff">Telephone</td>
+								<td style="background-color:#efebef"><input type="text" id="custTelephone" value=""/></td>
+								<td style="background-color:#dedfff">Email</td>
+								<td style="background-color:#efebef"><input type="text" id="custEmail" value=""/></td>
+							</tr>
+							<tr>
+								
+								<td colspan="6" align="right"><input type="button" value="Reset"/><input type="button" value="Search"/></td>
+								
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<input type="button" value="select" onclick="backToMain()"/>
+			
+			<table class="table" width="1000px">
+				<tr>
+					<th>#</th>
+					<th>Code</th>
+					<th>Business Type</th>
+					<th>Name</th>
+					<th>Address</th>
+					<th>Nation</th>
+					<th>Contact</th>
+					<th>Telephone</th>
+					<th>Email</th>
+				</tr>
+				<tr>
+					<td align="center"><input type="radio" name="datalist" value="cu1" id="cu1"></td>
+					<td>34000228</td>
+					<td>Textile</td>
+					<td>ABSOLUTE DENIM CO., LTD.</td>
+					<td>Bangkok</td>
+					<td>Local</td>
+					<td>K.Pratom</td>
+					<td>087-998-0900</td>
+					<td>n.pratom@absolutedenim.com</td>
+				</tr>
+				<tr>
+					<td align="center"><input type="radio" name="datalist" value="cu1" id="cu1"></td>
+					<td>34010032</td>
+					<td>Sanitary ware</td>
+					<td>KHOLER (THAILAND) PUBLIC COMPANY LIMITED</td>
+					<td>Saraburee</td>
+					<td>Local</td>
+					<td>K.Narong</td>
+					<td>083-990-1234</td>
+					<td>p.narong@kohler.com</td>
+				</tr>
+				<tr>
+					<td align="center"><input type="radio" name="datalist" value="cu1" id="cu1"></td>
+					<td>34009045</td>
+					<td>Automotive</td>
+					<td>SIAM KUBOTA CORPORATION CO., LTD.</td>
+					<td>Phthum Thani</td>
+					<td>Local</td>
+					<td>K.Boonchai</td>
+					<td>084-562-1929</td>
+					<td>boonchai_s@siamkubota.co.th</td>
+				</tr>
+				<tr>
+					<td align="center"><input type="radio" name="datalist" value="cu1" id="cu1"></td>
+					<td>34000135</td>
+					<td>Rubber</td>
+					<td>SUMITOMO RUBBER (THAILAND) CO., LTD.</td>
+					<td>Rayong</td>
+					<td>Local</td>
+					<td>K.Samart</td>
+					<td>085-188-2106</td>
+					<td>k.samart@sumitomorubber.co.th</td>
+				</tr>
+				<tr>
+					<td align="center"><input type="radio" name="datalist" value="cu1" id="cu1"></td>
+					<td>34001313</td>
+					<td>Rubber</td>
+					<td>SV1ZZ-ONE CORPORATION LTD.</td>
+					<td>Nakornpatom</td>
+					<td>Local</td>
+					<td>K.Somsri</td>
+					<td>02-420-0038</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td align="center"><input type="radio" name="datalist" value="cu1" id="cu1"></td>
+					<td>34000037</td>
+					<td>Automotive</td>
+					<td>TOYOTA MOTOR THAILAND CO., LTD.</td>
+					<td>Samutprakarn</td>
+					<td>Local</td>
+					<td>K.Niran</td>
+					<td>089-000-0101</td>
+					<td>t.niran@toyota.co.th</td>
+				</tr>
+				<tr>
+					<td align="center"><input type="radio" name="datalist" value="cu1" id="cu1"></td>
+					<td>34001004</td>
+					<td>Stainless</td>
+					<td>YAMASHIN MATERIAL(THAILAND) CO., LTD.</td>
+					<td>Saraburee</td>
+					<td>Local</td>
+					<td>Mr. Hatano</td>
+					<td>081-821-9013</td>
+					<td>k.hatano@yamashin-material.co.jp</td>
+				</tr>
+			</table>
+			<br>
+			
+	</div>
+	<script type="text/javascript">
+	function backToMain(){
+		try{
+		if (window.opener != null && !window.opener.closed) {
+			
+			window.opener.document.getElementById("saleHisBlank").style.visibility="hidden";
+			window.opener.document.getElementById("saleHisBlank").style.display = "none";
+			window.opener.document.getElementById("assetBlank").style.visibility="hidden";
+			window.opener.document.getElementById("assetBlank").style.display = "none";
+			window.opener.document.getElementById("saleActBlank").style.visibility="hidden";
+			window.opener.document.getElementById("saleActBlank").style.display = "none";
+			
+			window.opener.document.getElementById("saleHis").style.visibility="visible";
+			window.opener.document.getElementById("saleHis").style.display = "inline";
+			window.opener.document.getElementById("asset").style.visibility="visible";
+			window.opener.document.getElementById("asset").style.display = "inline";
+			window.opener.document.getElementById("saleAct").style.visibility="visible";
+			window.opener.document.getElementById("saleAct").style.display = "inline";
+			
+			window.opener.document.getElementById("custCode").innerHTML = "34001313";
+			window.opener.document.getElementById("custType").innerHTML = "Rubber";
+			window.opener.document.getElementById("custName").innerHTML = "SV1ZZ-ONE CORPORATION LTD.";
+			window.opener.document.getElementById("custAddress").innerHTML = "Nakornpatom";
+			window.opener.document.getElementById("custNation").innerHTML = "Local";
+			window.opener.document.getElementById("custContact").innerHTML = "K.Somsri";
+			window.opener.document.getElementById("custEmail").innerHTML = "";
+			window.opener.document.getElementById("custTel").innerHTML = "02-420-0038";
+			
+			window.opener.document.getElementById("btnOrderType").disabled = false;
+			window.opener.document.getElementById("orderType").disabled = false;
+			
+			
+		}
+		 }catch(e){
+			
+			}finally{
+				window.close();
+			}
+	}
+	
+    function SetCustomer() {
+        
+		if (window.opener != null && !window.opener.closed) {
+		
+        	if (document.getElementById('cu1').checked) {
+	            window.opener.document.getElementById("cusCode").value = "CO01255";
+	            window.opener.document.getElementById("name1").value = "Toshiba";
+	            window.opener.document.getElementById("name2").value = "Storage Device";
+	            window.opener.document.getElementById("telNo").value = "02-744-4785";
+	            window.opener.document.getElementById("faxNo").value = "12-842-8741";
+	            window.opener.document.getElementById("cPerson").value = "Mr.Nirut";
+        	} else if(document.getElementById('cu2').checked) {
+        		 window.opener.document.getElementById("cusCode").value = "CO02541";
+                 window.opener.document.getElementById("name1").value = "Dell";
+                 window.opener.document.getElementById("name2").value = "Thailand";
+                 window.opener.document.getElementById("telNo").value = "04-842-8714";
+                 window.opener.document.getElementById("faxNo").value = "51-844-8714";
+                 window.opener.document.getElementById("cPerson").value = "Mrs.Vipa";
+        	} else if(document.getElementById('cu3').checked) {
+	       		 window.opener.document.getElementById("cusCode").value = "CO01745";
+	             window.opener.document.getElementById("name1").value = "Kubota";
+	             window.opener.document.getElementById("name2").value = "Tractors";
+	             window.opener.document.getElementById("telNo").value = "02-871-8415";
+	             window.opener.document.getElementById("faxNo").value = "12-874-8748";
+	             window.opener.document.getElementById("cPerson").value = "Mr.Pongpop";
+    		} else if(document.getElementById('cu4').checked) {
+          		 window.opener.document.getElementById("cusCode").value = "CO07894"
+                 window.opener.document.getElementById("name1").value = "Sumsung";
+                 window.opener.document.getElementById("name2").value = "Mobile";
+                 window.opener.document.getElementById("telNo").value = "02-574-8741";
+                 window.opener.document.getElementById("faxNo").value = "15-874-8971";
+                 window.opener.document.getElementById("cPerson").value = "Mrs.Parawee";
+        	}
+        }
+        window.close();
+    }
+</script>
+</body>
+</html>
