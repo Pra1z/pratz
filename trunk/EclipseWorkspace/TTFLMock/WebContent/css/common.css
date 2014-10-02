@@ -1,0 +1,362 @@
+@charset "UTF-8";
+/* ------------------------------------------------------------
+    HTML, Body, Anchor,etc.
+   ------------------------------------------------------------ */
+html {
+    color: #000;
+    background: #FFF;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 0%;
+    font-family: "メイリオ", Meiryo;
+    line-height: 1.5em;
+    font-size: 12px;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td
+    {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input[type="file"] {
+    width: 300px;
+}
+
+.float-r {
+    float: right;
+}
+
+.float-l {
+    float: left;
+}
+
+.txtColor-r {
+    color: #F00;
+}
+
+.txtColor-b {
+    color: #00F;
+}
+
+.txtColor-w {
+    color: #FFF;
+}
+
+div.clear-border {
+    clear: both;
+}
+/* ------------------------------------------------------------
+    1. Container
+   ------------------------------------------------------------ */
+div#container {
+    width: 1170px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+
+/* ------------------------------------------------------------
+    2. Header
+   ------------------------------------------------------------ */
+div#header {
+    padding-bottom: 0px;
+    background-color: #222255;
+    color: #000000;
+    height: 130px;
+    width: 100%;
+    float: left;
+    display: block;
+}
+.header-title{
+	padding-bottom: 0px;
+    background-color: #2E9AFE;
+    color: #000000;
+    height: 68px;
+    width: 100%;
+    float: left;
+    display: block;
+    background-image:url("../image/header-title.jpg");
+    background-repeat:repeat;
+}
+
+
+/* ------------------------------------------------------------
+    3. Content Layout
+   ------------------------------------------------------------ */
+div#content {
+    width: 1000px;
+    float: left;
+    margin: 10px 0 10px 0;
+    min-height: 500px;
+}
+
+
+/* ------------------------------------------------------------
+    4. Customer Dashboard
+   ------------------------------------------------------------
+ */
+div#customer-dashbord{
+	background-color:#FFFFFF;
+	text-align: left;
+	font-size: 13px;
+	margin-left: 20px;
+}
+
+.order-type{
+	width: 600px;
+	height: 30px;
+	margin-left: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    /* border : 1px solid #FF9900 */
+}
+
+.order-type select{
+	size: 1;
+}
+
+.customer-info {
+	width: 80%;
+	margin-left: 0px;
+	/* border: 1px solid #FF9900; */
+}
+
+.customer-info table {
+    width: 100%;
+    font-size: 12px;
+    vertical-align: baseline;
+    border-collapse: separate;
+    background-color: #ffffff;
+    ext-align: left;
+}
+.customer-info caption {
+	caption-side: top;
+	background-color: #a6e4ff;
+	text-align: left;
+}
+
+.customer-info th{
+	background-color: #dedfff;
+	text-align: left;
+}
+
+.customer-info tr{
+	background-color: #efebef;
+}
+
+.sales-activity {
+	width: 80%;
+	margin-left: 0px;
+	margin-top: 10px;
+	/* border: 1px solid #FF9900; */
+}
+
+.sales-activity table,
+.sales-activity th,
+.sales-activity tr,
+.sales-activity td,
+.sales-activity caption{
+	border: 1px #000000 solid;
+}
+
+.sales-activity table{
+	width: 100%;
+    font-size: 12px;
+    vertical-align: baseline;
+    border-collapse: collapse;
+    background-color: #efebef;
+}
+.sales-activity th{
+	background-color: #6677aa;
+	text-align: center;
+	color: #FFFFFF;
+}
+.sales-activity caption {
+	caption-side: top;
+	background-color: #efebef;
+	text-align: left;
+	height: 30px;
+}
+
+.asset {
+	width: 80%;
+	margin-left: 0px;
+	margin-top: 10px;
+	/* border: 1px solid #FF9900; */
+}
+
+.asset table,
+.asset th,
+.asset tr,
+.asset td,
+.asset caption{
+	border: 1px #000000 solid;
+}
+
+.asset table{
+	width: 100%;
+    font-size: 12px;
+    vertical-align: baseline;
+    border-collapse: collapse;
+    background-color: #efebef;
+}
+.asset th{
+	background-color: #6677aa;
+	text-align: center;
+	color: #FFFFFF;
+}
+.asset caption {
+	caption-side: top;
+	background-color: #efebef;
+	text-align: left;
+	height: 15px;
+}
+
+.sales-history {
+	width: 100%;
+	margin-left: 0px;
+	margin-top: 10px;
+	/* border: 1px solid #FF9900; */
+}
+
+.sales-history table,
+.sales-history th,
+.sales-history tr,
+.sales-history td,
+.sales-history caption{
+	border: 1px #000000 solid;
+}
+
+.sales-history table{
+	width: 80%;
+    font-size: 12px;
+    vertical-align: baseline;
+    border-collapse: collapse;
+    background-color: #efebef;
+}
+.sales-history th{
+	background-color: #6677aa;
+	text-align: center;
+	color: #FFFFFF;
+}
+.sales-history caption {
+	caption-side: top;
+	background-color: #efebef;
+	text-align: left;
+	height: 15px;
+}
+
+/* ------------------------------------------------------------
+    5. Side Content
+   ------------------------------------------------------------ */
+
+div#sidemenu {
+    float: left;
+    width: 170px;
+    background-color:#9fabc5;
+    margin-top: 0px;
+    padding-bottom: 50%;
+}
+
+.side-title {
+    /* background-color: #171717; */
+    color: #FFF;
+    font-size: 15px;
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 0 5px 0;
+    text-indent: 10px;
+    height: 20px;
+}
+
+/* .side-body ul {
+    width: 150;
+}
+
+.side-body li {
+    margin: 10px 10px 0 10px;
+    font-weight: bold;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-width: 1px;
+}
+
+.side-body a:link,a:visited {
+    text-decoration: none;
+}
+
+.side-body a:hover,a:active {
+    text-decoration: underline;
+}
+ */
+.side-body {
+    text-align: left;
+    width: 100%;
+    bo margin-right: 8px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+    margin-top: 100px;
+}
+
+div#tree {
+	/* color:#9fabc5; */
+	width: 100%;
+	height: 300px;
+}
+
+img.side-img {
+	width:162px;
+	height:95px;
+}
+
+
+
+/* ------------------------------------------------------------
+    6. Footer
+   ------------------------------------------------------------ */
+div#footer {
+    clear: both;
+    background-color: #171717;
+    color: #FFFFFF;
+    height: 40px;
+    width: 100%;
+    display: block;
+    font-size: 9pt;
+}
+
+div#footer table {
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 9px;
+    vertical-align: middle;
+}
+
+div#footer td {
+    margin: 0;
+    text-align: right;
+}
+
+div#footer a:link,a:visited,a:hover,a:active {
+    text-decoration: underline;
+}
+
+.pagingList li {
+	display: inline;
+	font-weight: bold;
+	margin: 5px 0 5px 5px;
+}
+
+

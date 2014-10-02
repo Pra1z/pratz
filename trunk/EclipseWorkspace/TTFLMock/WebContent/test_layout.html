@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>TTFL Mock for Basic Design</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+$(function() {
+$("#read_text").load("header.html");
+$("#sidemenu").load("side.html");
+$("#content").load("content.html");
+$("#footer").load("footer.html");
+});
+</script>
+<link rel="stylesheet" type="text/css" href="./css/common.css" />
+<link rel="stylesheet" type="text/css" href="./css/zStyle.css" />
+<style>
+#read_text{margin:0;padding:10px; width:400px; border:3px solid #CC0;} 
+</style>
+
+</head>
+<body>
+
+<div id="container">
+	<!--  <div id="header">
+	</div>
+	 -->
+	 <div id="read_text">
+	 <font size="50">read_text</font>
+	</div>
+	<div id="sidemenu">
+		sidemenu
+	</div>
+	 <div id="content">
+	 	body
+	</div>
+	<div id="footer">
+		footer
+	</div>
+</div>
+
+</body>
+</html>

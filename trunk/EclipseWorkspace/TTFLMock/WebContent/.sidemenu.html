@@ -1,0 +1,26 @@
+<div class="side-title">
+	<img src="image/title.jpg" class="side-img" alt="side-title">
+</div>
+<div class="side-body">
+	<p>[side]New One Stop <br>
+	System</p>
+	<p> Sample of dynatree </p>
+	<div id="tree" >
+		<ul id="treeData" style="display: none;">
+			<li id="id1" title="file">file
+			<li id="id2" class="folder">folder
+				<ul>
+					<li id="id2.1">file
+					<ul>
+						<li id="id2.1.1">child1
+						<li id="id2.1.2">child2
+					</ul>
+	            </ul>
+	        </li>
+	    </ul>
+	</div>
+</div>
+<script>
+	var tree = $("#tree").dynatree();
+</script>
+
