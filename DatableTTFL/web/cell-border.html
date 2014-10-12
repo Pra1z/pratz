@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/favicon.ico">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=2.0">
+        <title>DataTables</title>
+        <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+        <link rel="stylesheet" type="text/css" href="css/dataTables.tableTools.min.css">
+        <link rel="stylesheet" type="text/css" href="css/dataTables.tableTools.min.css">
+        <link rel="stylesheet" type="text/css" href="css/custom.dataTables.css">
+
+        <script type="text/javascript" language="javascript" src="js/jquery-2.1.1.js"></script>
+        <script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
+        <script type="text/javascript" language="javascript" src="js/dataTables.tableTools.min.js"></script>
+        <script type="text/javascript" language="javascript" class="init">
+            $(document).ready(function() {
+                var t = $('#example').DataTable({
+                    "searching": false,
+                    "lengthChange": false,
+                    "columns": [
+                        {"data": "name"},
+                        {"data": "position"},
+                        {"data": "office"},
+                        {"data": "age"},
+                        {"data": "start_date"},
+                        {"data": "salary"}
+                    ],
+                    dom: 'T<"clear">lfrtip',
+                    tableTools: {
+                        "sRowSelect": "multi",
+                        "aButtons": [
+                            "select_all", "select_none",
+                            {
+                                "sExtends": "text",
+                                "sButtonText": "Add",
+                                "fnClick": function(nButton, oConfig, oFlash) {
+                                    t.row.add({
+                                        "DT_RowId": "row_99",
+                                        "name": "test",
+                                        "position": "test",
+                                        "office": "test",
+                                        "age": "test",
+                                        "start_date": "test",
+                                        "salary": "test"
+                                    }).draw();
+                                }
+                            }, {
+                                "sExtends": "text",
+                                "sButtonText": "Delete",
+                                "fnClick": function(nButton, oConfig, oFlash) {
+                                    var oTT = TableTools.fnGetInstance('example');
+                                    var aSelectedTrs = oTT.fnGetSelected();
+                                    $.each(aSelectedTrs, function(i, v) {
+                                        console.log("Delete at TR ID: " + $(v).attr('id'));
+                                        t.row(v).remove().draw(false);
+                                    });
+                                }
+                            }]
+                    }});
+                var counter = 1;
+                $('#command').on('click', function() {
+                    t.row.add({
+                        "DT_RowId": "row_99",
+                        "name": "test",
+                        "position": "test",
+                        "office": "test",
+                        "age": "test",
+                        "start_date": "test",
+                        "salary": "test"
+                    }).draw();
+                    counter++;
+                });
+            });
+        </script>
+    </head>
+    <body class="dt-example">
+        <div class="container">
+            <button id="command">Test</button>
+            <section>
+                <h1>DataTables</h1>
+                <table id="example" class="cell-border" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Age</th>
+                            <th>Start date</th>
+                            <th>Salary</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td  id="1">1</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td>
+                        </tr>
+                        <tr  id="2">
+                            <td>2</td>
+                            <td>System Architect</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            <td>2011/04/25</td>
+                            <td>$320,800</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </body>
+</html>
