@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Block UI</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" language="javascript" src="js/jquery-2.1.1.js"></script>
+        <style>
+            body{
+                font-family: Verdana,Arial,sans-serif;
+                font-size: small;
+            }
+            label, input {
+                display: block;
+            }
+            .dialog {
+                outline: 0 none;
+                overflow: hidden;
+                top: 0;
+                display: block;
+                height: auto;
+                left: 462px;
+                position: absolute;
+                top: 98px;
+                width: 350px;
+                z-index: 101;
+                background: url("images/ui-bg_flat_75_ffffff_40x100.png") repeat-x scroll 50% 50% #ffffff;
+                border: 1px solid #aaaaaa;
+                color: #222222;
+            }
+            .dialog-title {
+                clear: both;
+                padding: 8px 8px; 
+                position: relative;
+                background: url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") repeat-x scroll 50% 50% #cccccc;
+                border: 1px solid #aaaaaa;
+                color: #222222;
+                font-weight: bold;
+                width: 100%;
+            }
+            .dialog-form{
+                height: 202px;
+                max-height: none;
+                min-height: 0;
+                width: auto;
+                background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+                border: 0 none;
+                overflow: auto;
+                padding: 0.5em 1em;
+                position: relative;
+                color: #222222;
+            }
+            .dialog-form input {
+                border: 1px solid #aaaaaa;
+                margin-bottom: 12px;
+                padding: 0.4em;
+                width: 95%;
+            }
+            .dialog-command {
+                min-height: 0;
+                background: url("images/ui-bg_flat_75_ffffff_40x100.png") repeat-x scroll 50% 50% #ffffff;
+                border: 1px solid #aaaaaa;
+                color: #222222;
+                background-image: none;
+                border-width: 1px 0 0;
+                margin-top: 0.5em;
+                padding: 0.3em 1em 0.5em 0.4em;
+                text-align: left;
+                clear: both;
+                border-collapse: collapse;
+                content: "";
+                display: table;
+                width: 100%;
+            }
+            .dialog-command input,button{
+                cursor: pointer;
+                margin: 0.5em 0.4em 0.5em 0;
+                border: 1px solid #d3d3d3;
+                color: #555555;
+                font-weight: normal;
+                float: right;
+                padding: 0.4em 1em;
+            }
+            .block-ui {
+                z-index: 100;
+                background: url("ui-bg_flat_0_aaaaaa_40x100.png") repeat-x scroll 50% 50% #aaaaaa;
+                opacity: 0.3;
+                height: 100%;
+                left: 0;
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+            .hiddenlayer{
+                display: none;
+                z-index: -1;
+            }
+        </style>
+        <script>
+            $(document).ready(function() {
+                $('#btnOpen').click(function(){
+                    $('.dialog').toggleClass('hiddenlayer');
+                    $('.block-ui').toggleClass('hiddenlayer');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button id="btnOpen">Open</button>
+        <div class="block-ui hiddenlayer"></div>
+        <div class="dialog hiddenlayer">
+            <div class="dialog-title">Title</div>
+            <div class="dialog-form">
+                <p>Some word</p>
+                <form>
+                    <fieldset>
+                        <label>Name</label>
+                        <input type="text"/>
+                        <label>Email</label>
+                        <input type="text"/>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="dialog-command"><button>OK</button></div>
+        </div>
+    </body>
+</html>
