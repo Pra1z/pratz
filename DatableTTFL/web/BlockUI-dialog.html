@@ -10,7 +10,7 @@
                 font-family: Verdana,Arial,sans-serif;
                 font-size: small;
             }
-            label, input {
+            .dialog label, input {
                 display: block;
             }
             .dialog {
@@ -83,13 +83,15 @@
             }
             .block-ui {
                 z-index: 100;
-                background: url("ui-bg_flat_0_aaaaaa_40x100.png") repeat-x scroll 50% 50% #aaaaaa;
-                opacity: 0.3;
+                /*background: url("ui-bg_flat_0_aaaaaa_40x100.png") repeat-x scroll 50% 50% #aaaaaa;*/
+                background: url("ui-bg_flat_0_aaaaaa_40x100.png") repeat-x scroll 50% 50% black;
+                opacity: 0.5;
                 height: 100%;
                 left: 0;
                 position: fixed;
                 top: 0;
                 width: 100%;
+                cursor: not-allowed;
             }
             .hiddenlayer{
                 display: none;
@@ -102,6 +104,10 @@
                     $('.dialog').toggleClass('hiddenlayer');
                     $('.block-ui').toggleClass('hiddenlayer');
                 });
+                 $('.dialog-command').click(function(){
+                    $('.dialog').toggleClass('hiddenlayer');
+                    $('.block-ui').toggleClass('hiddenlayer');
+                 });
             });
         </script>
     </head>
