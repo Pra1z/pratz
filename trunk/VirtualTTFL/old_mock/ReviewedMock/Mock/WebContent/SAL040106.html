@@ -1,0 +1,70 @@
+<!--
+<%--
+ % DeliveryForkLiftMenu - SAL040106.
+ % This page is Delivery Forklift Menu Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Tin
+ % Creation date : 2014/10/07
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<script>
+	new JsDatePick({
+		useMode : 2,
+		target : "deliverydatefrom",
+		dateFormat : "%d/%m/%Y"
+	});
+
+	new JsDatePick({
+		useMode : 2,
+		target : "deliverydateto",
+		dateFormat : "%d/%m/%Y"
+	});
+</script>
+<div class="contentpanel">
+<div class="frm">
+	<table>
+            <caption>Delivery&nbsp;Forklift&nbsp;Menu</caption>
+		<tbody>
+			<tr>
+				<th>Request&nbsp;No.</th>
+				<td><input name="requestnofrom" type="text" /></td>
+				<th>To</th>
+				<td><input name="requestnofromto" type="text"></td>
+			</tr>
+			<tr>
+				<th>Delivery&nbsp;Date</th>
+				<td><input id="deliverydatefrom" name="deliverydatefrom" type="text" /></td>
+				<th>To</th>
+				<td><input id="deliverydateto" name="deliverydateto" type="text" /></td>
+			</tr>
+			<tr>
+				<th>Customer</th>
+				<td>
+					<input name="customer" type="text" /> 
+					<input type="button" value="..." />
+				</td>
+				<th>Customer&nbsp;Site</th>
+				<td><select name="customersite"></select></td>
+			</tr>
+			<tr>
+				<th>Forklift&nbsp;Name</th>
+                                <td colspan="3">
+					<input name="forkliftname" type="text" /> 
+					<input type="button" value="..." />
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="tblfooter">
+	<div>
+		<input name="print" type="button" value="Print" class="button-normal"/> 
+		<input name="cancel" type="button" value="Cancel" class="button-normal"/>
+	</div>
+</div>
+     </div>

@@ -1,0 +1,116 @@
+<!--
+<%--
+ % Cost Sheet Inquiry contents.
+ % This page is Cost Sheet Inquiry Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Sutiporn.D
+ % Creation date : 2014/10/08
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<div class="contentpanel">
+    <div class="frm">
+        <table>
+            <caption>Cost Sheet Inquiry</caption>
+            <tbody>
+                <tr>
+                    <th>&nbsp;Sale&nbsp;Type</th>
+                    <td>
+                        <select class="dropdownlist">
+                            <option value="0">Sale&nbsp;New&nbsp;FL</option>
+                        </select></td>
+                    <th>Costsheet No</th>
+                    <td>
+                        <input type="text" value=""/>
+                    </td>
+
+                </tr>
+                <tr>
+                    <th>&nbsp;Customer&nbsp;Code</th>
+                    <td>
+                        <input type="text" value="34000228"/><input type="button" value="&nbsp;&nbsp;...&nbsp;&nbsp;" class="btnpopup"/>
+                    </td>
+                    <th>Customer Name</th>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <th>&nbsp;Status</th>
+                    <td colspan="3">
+                        <select class="dropdownlist">
+                            <option value="0">&nbsp;</option>
+                        </select>
+                    </td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+    <div class="tblfooter">
+        <div>
+            <input type="button" value="New" class="button-normal" onclick="goToCostsheet();">&nbsp;&nbsp;
+                        <input type="button" value="Search" class="button-normal">&nbsp;&nbsp;
+                        <input type="button" value="Clear" class="button-normal">
+        </div>
+    </div>
+    <div class="tbl">
+        <table>
+            <caption>&nbsp;Result</caption>
+            <tbody>
+                <tr>
+                    <th>No</th>
+                    <th>Cost&nbsp;Sheet&nbsp;No.</th>
+                     <th>Date</th>
+                     <th>QuotationNo</th>
+                    <th>CustomerCode</th>
+                    <th>CustomerName</th>
+                    <th>Sale&nbsp;Type</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>&nbsp;<a href="#">QS1A-133-DST-180</a></td>
+                     <td align="center">15/10/2013</td>
+                    <td>QS1A-133-DST-180</td>
+                    <td>34000228</td>
+                    <td>TOYOTA MOTOR ThAILAND LTD.</td>
+                    <td>&nbsp;Sale&nbsp;New&nbsp;F/L</td>
+                    <td>&nbsp;Draft</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>&nbsp;<a href="#">QS1A-133-DST-181</a></td>
+                    <td align="center">&nbsp;20/11/2013</td>
+                     <td>QS1A-133-DST-181</td>
+                   <td>34000228</td>
+                    <td>TOYOTA MOTOR ThAILAND LTD.</td>
+                    <td>&nbsp;Sale&nbsp;New&nbsp;F/L</td>
+                    <td>&nbsp;Approved</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>&nbsp;<a href="#">QS1A-133-DST-182</a></td>
+                    <td align="center">&nbsp;12/10/2013</td>
+                    <td>QS1A-133-DST-182</td>
+                 <td>34000228</td>
+                    <td>TOYOTA MOTOR ThAILAND LTD.</td>
+                    <td>&nbsp;Sale&nbsp;New&nbsp;F/L</td>
+                    <td>&nbsp;Revise</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>&nbsp;<a href="#">QS1A-133-DST-182</a></td>
+                    <td align="center">&nbsp;12/10/2013</td>
+                    <td>QS1A-133-DST-182</td>
+                 <td>34000228</td>
+                    <td>TOYOTA MOTOR ThAILAND LTD.</td>
+                    <td>&nbsp;Sale&nbsp;New&nbsp;F/L</td>
+                    <td>&nbsp;Draft</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

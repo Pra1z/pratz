@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+<%--
+ % Search Customer Window/Popup/Modal.
+ %
+ % Creator       : Pratz
+ % Creation date : 2014/09/29
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- <meta http-equiv="Content-Script-Type" content="text/javascript"> -->
+        <title>TTFL&nbsp;projects</title>
+        <!-- <title><spring:message text="${title}" /></title> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <script type="text/javascript" src="js/jquery/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/slidebars.js"></script>
+        <script type="text/javascript" src="js/jquery.fancytree-all.min.js"></script>
+        <script type="text/javascript" src="js/jsDatePick.min.1.3.js"></script>
+        <script type="text/javascript" src="js/mock.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/common.css" />
+        <link rel="stylesheet" type="text/css" href="./css/jquery/jquery-ui.min.css" />
+        <link rel="stylesheet" type="text/css" href="./css/slidebars.css" />
+        <link rel="stylesheet" type="text/css" href="./css/ui.fancytree.min.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="./css/jsDatePick_ltr.min.css" />
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    </head>
+    <body>
+        <div class="search-customer">
+            <fieldset>
+                <legend>
+                    <b>Select&nbsp;Customer</b>
+                </legend>
+                <table class="frm">
+                    <tbody>
+                        <tr>
+                            <th>Code</th>
+                            <td><input type="text"/></td>
+                            <th>Name</th>
+                            <td><input type="text"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+
+          
+                <table class="tbl-command">
+                    <tr>
+                        <td>
+                            &nbsp;		
+                        </td>
+                        <td width="50%">
+                            &nbsp;		
+                        </td>
+                        <td width="50%" align="right">
+                            <input id="search" name="search" type="button" value="Search" onclick="searchAction();" class="width7" >	
+                        </td>
+                    </tr>
+                </table>
+         
+
+            <div class="tbl">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>Site</th>
+                            <th>Contact&nbsp;Person</th>
+
+                        </tr>
+                        <tr>
+                            <td align="center"><a href="#">34000228</a></td>
+                            <td>ABSOLUTE&nbsp;DENIM CO.,&nbsp;LTD.</td>
+                            <td>HQ</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td align="center"><a href="#">34010032</a></td>
+                            <td>KHOLER&nbsp;(THAILAND)&nbsp;PUBLIC&nbsp;COMPANY&nbsp;LIMITED</td>
+                            <td>HQ</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td align="center"><a href="#">34009045</a></td>
+                            <td>SIAM&nbsp;KUBOTA&nbsp;CORPORATION&nbsp;CO.,&nbsp;LTD.</td>
+                            <td>HQ</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td align="center"><a href="#">34000135</a></td>
+                            <td>SUMITOMO&nbsp;RUBBER&nbsp;(THAILAND)&nbsp;CO.,&nbsp;LTD.</td>
+                            <td>HQ</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td align="center"><a href="#">34001313</a></td>
+                            <td>SV1ZZ-ONE&nbsp;CORPORATION&nbsp;LTD.</td>
+                            <td>HQ</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script>
+            $(function() {
+                $('a').click(function() {
+                    window.close();
+                });
+            });
+        </script>
+    </body>
+</html>

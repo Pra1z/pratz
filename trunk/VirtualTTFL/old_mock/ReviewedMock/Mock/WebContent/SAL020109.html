@@ -1,0 +1,163 @@
+<!--
+<%--
+ % SAL020101 - PDI Request Result.
+ %
+ % Creator       : Pratz
+ % Creation date : 2014/10/13
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<div class="contentpanel">
+    <div class="frm">
+        <table>
+            <caption>Search&nbsp;Condition</caption>
+            <tbody>
+                <tr>
+                    <th>Quotation No.</th>
+                    <td><input type="text"/></td>
+                    <th>Sales Order No.</th>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <th>PDI Request No.</th>
+                    <td><input type="text"/></td>
+                    <th>Request Date</th>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <th>Customer</th>
+                    <td><input type="text" value="34000228"/><input type="button" value="..." onclick="SearchCustomer();"/></td>
+                    <th>Model</th>
+                    <td><input type="button" value="..." onclick="SelectModel();"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tblfooter">
+        <div>
+            <input type="button" value="Search" class="button-normal"/>
+            <input type="button" value="Clear" class="button-normal"/>
+        </div>
+    </div>
+    <div class="tbl">
+        <table>
+            <caption>PDI Process Result</caption>
+            <thead>
+                <tr>
+                    <th>PDI Request No.</th>
+                    <th>Customer</th>
+                    <th>Quotation No.</th>
+                    <th>Sales Order No.</th>
+                    <th>Model</th>
+                    <th>Receive Date</th>
+                    <th>Assigned Date</th>
+                    <th>Bay</th>
+                    <th>Status</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tblcenter"><a href="#">1407-001</a></td>
+                    <td>SVIZZ-ONE Corp.</td>
+                    <td class="tblcenter"><a href="#">QR1A-150-MHT-055 R.1</a></td>
+                    <td class="tblcenter"><a href="#">SC1A-145-MHT-090</a></td>
+                    <td>30-8FG30</td>
+                    <td class="tblcenter"><input type="text" value="9/2/2014" id="datex1"/></td>
+                    <td class="tblcenter"><input type="text" value="9/2/2014" id="datex2"/></td>
+                    <td class="currency"><select><option value="0">1</option><option value="1">2</option><option value="2">3</option><option value="3">4</option><option value="4">5</option></select></td>
+                    
+                    <td><select><option value="0">WIP</option><option value="1">Prepared</option></select></td>
+                   <td> <input type="button" value="Complete" /></td>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><a href="#">1407-001</a></td>
+                    <td>SVIZZ-ONE Corp.</td>
+                    <td class="tblcenter"><a href="#">QR1A-150-MHT-055 R.1</a></td>
+                    <td class="tblcenter"><a href="#">SC1A-145-MHT-090</a></td>
+                    <td>30-8FG30</td>
+                    <td class="tblcenter"><input type="text" value="9/2/2014" id="datex3"/></td>
+                    <td class="tblcenter"><input type="text" value="9/2/2014" id="datex4"/></td>
+                    <td class="currency"><select><option value="0">1</option><option value="1">2</option><option value="2">3</option><option value="3">4</option><option value="4">5</option></select></td>
+                    <td><select><option value="0">WIP</option><option value="1">Prepared</option></select></td>
+                   <td> <input type="button" value="Complete" /></td>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><a href="#">1407-001</a></td>
+                    <td>SVIZZ-ONE Corp.</td>
+                    <td class="tblcenter"><a href="#">QR1A-150-MHT-055 R.1</a></td>
+                    <td class="tblcenter"><a href="#">SC1A-145-MHT-090</a></td>
+                    <td>30-8FG30</td>
+                    <td class="tblcenter"><input type="text" value="9/2/2014" id="datex5"/></td>
+                    <td class="tblcenter"><input type="text" value="9/2/2014" id="datex6"/></td>
+                    <td class="currency"><select><option value="0">1</option><option value="1">2</option><option value="2">3</option><option value="3">4</option><option value="4">5</option></select></td>
+                    <td><select><option value="0">WIP</option><option value="1">Prepared</option></select></td>
+                    <td> <input type="button" value="Complete" /></td>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><a href="#">1407-001</a></td>
+                    <td>SVIZZ-ONE Corp.</td>
+                    <td class="tblcenter"><a href="#">QR1A-150-MHT-055 R.1</a></td>
+                    <td class="tblcenter"><a href="#">SC1A-145-MHT-090</a></td>
+                    <td>30-8FG30</td>
+                    <td class="tblcenter"><input type="text" value="9/2/2014" id="datex7"/></td>
+                    <td class="tblcenter"><input type="text" value="9/2/2014" id="datex8"/></td>
+                    <td class="currency"><select><option value="0">1</option><option value="1">2</option><option value="2">3</option><option value="3">4</option><option value="4">5</option></select></td>
+                    <td><select><option value="0">WIP</option><option value="1">Prepared</option></select></td>
+                    <td> <input type="button" value="Complete" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+     <div class="tblfooter">
+        <div>
+            <input type="button" value="Save" class="button-normal"/>
+            <input type="button" value="Cancel" class="button-normal"/>
+        </div>
+    </div>
+</div>
+<script>
+    new JsDatePick({
+			useMode : 2,
+			target : "datex1",
+			dateFormat : "%d/%m/%Y"
+    });
+     new JsDatePick({
+			useMode : 2,
+			target : "datex2",
+			dateFormat : "%d/%m/%Y"
+    });
+     new JsDatePick({
+			useMode : 2,
+			target : "datex3",
+			dateFormat : "%d/%m/%Y"
+    });
+     new JsDatePick({
+			useMode : 2,
+			target : "datex4",
+			dateFormat : "%d/%m/%Y"
+    });
+     new JsDatePick({
+			useMode : 2,
+			target : "datex5",
+			dateFormat : "%d/%m/%Y"
+    });
+     new JsDatePick({
+			useMode : 2,
+			target : "datex6",
+			dateFormat : "%d/%m/%Y"
+    });
+     new JsDatePick({
+			useMode : 2,
+			target : "datex7",
+			dateFormat : "%d/%m/%Y"
+    });
+     new JsDatePick({
+			useMode : 2,
+			target : "datex8",
+			dateFormat : "%d/%m/%Y"
+    });
+</script>

@@ -1,0 +1,229 @@
+<!--
+<%--
+ % Main contents.
+ % This page is Borrow Request Entry Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Phannika R.
+ % Creation date : 2014/10/07
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<script>
+	new JsDatePick({
+		useMode : 2,
+		target : "requestDate",
+		dateFormat : "%d/%m/%Y"
+	});
+	
+	new JsDatePick({
+		useMode : 2,
+		target : "planUsedDate",
+		dateFormat : "%d/%m/%Y"
+	});
+	
+</script>
+<div class="contentpanel">
+<div class="frm">
+	
+	<table>
+            <caption>Header</caption>
+		<colgroup>
+			<col class="col-20-left"></col>
+			<col class="col-30-left"></col>
+			<col class="col-20-left"></col>
+			<col class="col-30-left"></col>
+		</colgroup>
+			
+		<tbody>
+			
+			<tr>
+				<th>&nbsp;&nbsp;&nbsp;Borrow&nbsp;Request&nbsp;No</th>
+				<td><input type="text" readonly="readonly" value="BR001"/></td>
+				<th>&nbsp;Status</th>
+				<td><input type="text" readonly="readonly" value="Approved"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;&nbsp;&nbsp;Request&nbsp;User&nbsp;ID</th>
+				<td><input type="text" readonly="readonly" value="Emp0002: Mr. A"/></td>
+				<th>&nbsp;Request&nbsp;Approved&nbsp;By&nbsp;User</th>
+				<td><input type="text" readonly="readonly" value="Emp001: Manager XXX"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;&nbsp;&nbsp;Request&nbsp;Date</th>
+				<td colspan="3"><input type="text" id="requestDate" name="requestDate"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;&nbsp;&nbsp;Mechanic&nbsp;User&nbsp;ID</th>
+				<td><input type="text" value="Emp0002"/><input type="button" value="  ...  "/></td>
+				<th>&nbsp;Mechanic&nbsp;Name</th>
+				<td><input type="text" readonly="readonly" value="Mr. A"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;&nbsp;&nbsp;Borrow&nbsp;Section</th>
+				<td><input type="text" readonly="readonly" value="Service"/></td>
+				<th>&nbsp;Lender&nbsp;Section*</th>
+				<td>
+					<select name="lenderSectionSelect" class="dropdownlist" >
+						<option value="sample1"></option>
+						<option value="sample1">TY4A</option>
+						<option value="sample2">TY8A</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>&nbsp;&nbsp;&nbsp;Plan&nbsp;Used&nbsp;Date*</th>
+				<td colspan="3"><input type="text" id="planUsedDate" name="planUsedDate"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;&nbsp;&nbsp;Job&nbsp;Type*</th>
+				<td>
+					<select name="jobTypeSelect" style="width:152px">
+						<option value="sample1"></option>
+						<option value="sample2">PDI</option>
+						<option value="sample3">OSJ</option>
+						<option value="sample4">Service</option>
+						<option value="sample5">Sale</option>
+						<option value="sample6">Other</option>
+					</select>
+				</td>
+				<th>&nbsp;Job&nbsp;No</th>
+				<td><input type="text" value="J0001"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;&nbsp;&nbsp;Customer</th>
+				<td><input type="text" value="Cust 0001"/><input type="button" value="  ...  "/></td>
+				<th>&nbsp;Customer&nbsp;Name</th>
+				<td><input type="text" readonly="readonly" value="name"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;&nbsp;&nbsp;Remark</th>
+                                <td colspan="3" align="left"><textarea rows="3" cols="50"></textarea></td>
+			</tr>
+			<tr>
+				<th colspan="4">&nbsp;&nbsp;&nbsp;Received&nbsp;Information</th>
+			</tr>
+			<tr>
+				<th>&nbsp;&nbsp;&nbsp;Lender's&nbsp;Plan&nbsp;Delivery&nbsp;Date</th>
+				<td><input type="text" readonly="readonly" value=""/></td>
+				<th>&nbsp;Actual&nbsp;Delivery&nbsp;Date</th>
+				<td><input type="text" readonly="readonly" value=""/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;&nbsp;&nbsp;Lender's&nbsp;Picker&nbsp;User&nbsp;ID</th>
+				<td><input type="text" readonly="readonly" value=""/></td>
+				<th>&nbsp;Receiver&nbsp;User&nbsp;ID</th>
+				<td><input type="text" readonly="readonly" value=""/></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="tblfooter">
+    <div>
+        <input type="button" value="Save" class="button-normal"/>
+		<input type="button" value="Cancel" class="button-normal"/>
+    </div>
+</div>
+<div class="tbl">
+	<table>
+		<caption>&nbsp;Detail
+			<div>
+				<button>+</button>
+				<button>-</button>
+			</div>
+		</caption>
+		<tbody>
+			<tr>
+				<th rowspan="2">Item&nbsp;No*</th>
+				<th rowspan="2">Item&nbsp;Description*</th>
+				<th rowspan="2">Supplier&nbsp;Location</th>
+				<th rowspan="2">Request&nbsp;Qty*</th>
+				<th colspan="2">Stock</th>
+				<th rowspan="2">Request&nbsp;Allocated&nbsp;Qty</th>
+				<th rowspan="2">Remark</th>
+				<th rowspan="2">Status</th>
+				<th rowspan="2">Order</th>
+				<th rowspan="2">Issue&nbsp;PR</th>
+			</tr>
+			<tr>
+				<th>Allocated&nbsp;Qty</th>
+				<th>Available&nbsp;Qty</th>
+			</tr>
+			<tr>
+				<td><input type="text" value="A" class="textpopup"/><input type="button" value="  ...  "/></td>
+				<td>Part&nbsp;A</td>
+				<td>Local</td>
+				<td><input type="text" value="10"/></td>
+				<td>20</td>
+				<td>30</td>
+				<td>10</td>
+				<td><input type="text"/></td>
+				<td>Requested</td>
+				<td>
+					<select name="orderSelect" class="dropdownlist">
+						<option value="sample1"></option>
+						<option value="sample2">SOS Air</option>
+						<option value="sample3">Air</option>
+						<option value="sample4">Sea</option>
+						<option value="sample5">Normal</option>
+					</select>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="text" value="B" class="textpopup"/><input type="button" value="  ...  "/></td>
+				<td>Part&nbsp;B</td>
+				<td>Local</td>
+				<td><input type="text" value="5"/></td>
+				<td>0</td>
+				<td>5</td>
+				<td></td>
+				<td><input type="text"/></td>
+				<td>Requested</td>
+				<td>
+					<select name="orderSelect" class="dropdownlist">
+						<option value="sample1"></option>
+						<option value="sample2">SOS Air</option>
+						<option value="sample3">Air</option>
+						<option value="sample4">Sea</option>
+						<option value="sample5">Normal</option>
+					</select>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td><input type="text" value="C" class="textpopup"/><input type="button" value="  ...  "/></td>
+				<td>Part&nbsp;C</td>
+				<td>Oversea</td>
+				<td><input type="text" value="3"/></td>
+				<td>0</td>
+				<td>0</td>
+				<td></td>
+				<td><input type="text"/></td>
+				<td>Requested</td>
+				<td>
+					<select name="orderSelect" class="dropdownlist">
+						<option value="sample1"></option>
+						<option value="sample2">SOS Air</option>
+						<option value="sample3">Air</option>
+						<option value="sample4">Sea</option>
+						<option value="sample5">Normal</option>
+					</select>
+				</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+	<div align="center">
+		<input type="button" value="Send to approve" class="button-normal"/>
+		<input type="button" value="Print Report" class="button-normal"/>
+		<input type="button" value="Cancel" class="button-normal"/>
+	</div>
+</div>
+    </div>
+	
+	

@@ -1,0 +1,1017 @@
+<!--
+<%--
+ % Cost Sheet Entry contents.
+ % This page is Cost Sheet Entry Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Sutiporn.D
+ % Creation date : 2014/10/08
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<!--
+<script type="text/javascript" src="js/tab.js"></script>-->
+<div class="contentpanel">
+    <div class="tabs">
+        <ul class="tab-links">
+            <li class="active"><a href="#head">Header</a></li>
+            <li><a href="#spec">Spec</a></li>
+          <!--
+            <li><a href="#local">Local</a></li>
+            <li><a href="#costsheet">Cost Sheet</a></li> -->
+        </ul>
+        <div class="tab-content">
+            <!------------------------------ TAB HEADER START ------------------------------>
+            <div id="head" class="tab active">
+                <div class="frm">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>&nbsp;Cost&nbsp;Sheet&nbsp;No</th>
+                                <td>
+                                    <input type="text" readonly="readonly" value="QS1A-133-DST-183"/>
+                                    <input type="text" readonly="readonly" value="R0" style="width:20px"/>
+                                    <input type="text" readonly="readonly" value="Draft" style="width:100px"/>
+                                </td>
+                                <th>&nbsp;Salesman*</th>
+                                <td>
+                                    <select class="dropdownlist">
+                                        <option value="sample1">Sales&nbsp;0001</option>
+                                        <option value="sample1">Sales&nbsp;0002</option>
+                                        <option value="sample2">Sales&nbsp;0003</option>
+                                        <option value="sample3">Sales&nbsp;0004</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;Cost&nbsp;Sheet&nbsp;Date*</th>
+                                <td>
+                                    <input type="text" value="10/10/2014" id="date1"/>
+                                   
+                                </td>
+                                <th>&nbsp;Sale&nbsp;Type*</th>
+                                <td>
+                                    <select class="dropdownlist">
+                                        <option value="sample1">Sales&nbsp;New&nbsp;F/L</option>
+                                        <option value="sample1">Sales&nbsp;Type&nbsp;002</option>
+                                        <option value="sample2">Sales&nbsp;Type&nbsp;003</option>
+                                        <option value="sample3">Sales&nbsp;Type&nbsp;004</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <table>
+                        <caption>Customer&nbsp;Info</caption>
+                        <tbody>
+                            <tr>
+                                <th>&nbsp;Customer&nbsp;Code*</th>
+                                <td>
+                                    <input type="text" value="34001313" readonly="readonly"/>
+                                    <input type="button" onclick="SelectCompany();" value="&nbsp;&nbsp;...&nbsp;&nbsp;" class="btnpopup"/>
+                                </td>
+                                <th>&nbsp;Customer&nbsp;Name</th>
+                                <td>
+                                    <input type="text" value="SV1ZZ-ONE&nbsp;CORPORATION&nbsp;LTD." readonly="readonly"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;Site&nbsp;Name</th>
+                                <td>
+                                    <input type="text" value="HQ" readonly="readonly"/>
+                                </td>
+                                <th>&nbsp;Address</th>
+                                <td>
+                                    <input type="text"  readonly="readonly"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;Contact&nbsp;Name</th>
+                                <td>
+                                    <select class="dropdownlist">
+                                        <option value="sample1">K.Somsri</option>
+                                        <option value="sample1">K.Kraisorn</option>
+                                        <option value="sample2">K.Arun</option>
+                                        <option value="sample3">K.Thara</option>
+                                    </select>
+                                </td>
+                                <th>&nbsp;Email</th>
+                                <td>
+                                    <input type="text" value="abc@abccc.com"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;Telephone</th>
+                                <td>
+                                    <input type="text" value="02-123-4567"/>
+                                </td>
+                                <th>&nbsp;Fax</th>
+                                <td>
+                                    <input type="text" value="02-1234567"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;Payment&nbsp;Term</th>
+                                <td>
+                                    <select class="dropdownlist">
+                                        <option value="sample1">15&nbsp;DAYS</option>
+                                        <option value="sample1">30&nbsp;DAYS</option>
+                                        <option value="sample2">45&nbsp;DAYS</option>
+                                        <option value="sample3">60&nbsp;DAYS</option>
+                                    </select>
+                                </td>
+                                <th>&nbsp;Delivery&nbsp;Required&nbsp;Date</th>
+                                <td>
+                                    <input type="text" id="date2"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;Order&nbsp;To&nbsp;JAPAN</th>
+                                <td>
+                                    <input type="text"/>
+                                </td>
+                                <th>&nbsp;Stock</th>
+                                <td>
+                                    <input type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;TSDR&nbsp;No.</th>
+                                <td>
+                                    <input type="text"/>
+                                </td>
+                                <th>&nbsp;Frame&nbsp;No</th>
+                                <td>
+                                    <input type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input type="text"/>
+                                </td>
+                                <th></th>
+                                <td>
+                                    <input type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;SPR</th>
+                                <td>
+                                    <input type="text"/>&nbsp;%
+                                </td>
+                                <th></th>
+                                <td>
+                                    <input type="text"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <table>
+                        <caption>&nbsp;Warranty</caption>
+                        <tbody>
+                            <tr>
+                                <th>Warranty&nbsp;Code</th>
+                                <td colspan="3">
+                                    <select class="dropdownlist">
+                                        <option value="sample1">Warranty1</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;Warranty</th>
+                                <td>
+                                    <input type="text" value="1" style="width:60px;text-align: right;"/>&nbsp;Year&nbsp;/&nbsp;<input type="text" value="1200" style="width:100px;text-align: right;"/>&nbsp;Hours
+                                </td>
+                                <th>&nbsp;Free&nbsp;Inspections</th>
+                                <td>
+                                    <input type="text" value="2" style="text-align: right;"/>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <br/>
+                    <table>
+                        <caption>&nbsp;For&nbsp;Rantal</caption>
+                        <tbody>
+                            <tr>
+                                <th>&nbsp;Operating&nbsp;Time</th>
+                                <td>
+                                    <input type="text"/>
+                                </td>
+                                <th>&nbsp;Surface&nbsp;Condition</th>
+                                <td>
+                                    <input type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;Enviroment&nbsp;Condition</th>
+                                <td colspan="3">
+                                    <input type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;Competitor</th>
+                                <td>
+                                    <input type="text"/>
+                                </td>
+                                <th>&nbsp;Competitor'&nbsp;Price</th>
+                                <td>
+                                    <input type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;Idea&nbsp;Price</th>
+                                <td colspan="3">
+                                    <input type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;Period</th>
+                                <td>
+                                    <input type="text"/>
+                                </td>
+                                <th>&nbsp;Other</th>
+                                <td>
+                                    <input type="text"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <table>
+                        <caption>&nbsp;Other&nbsp;Information</caption>
+                        <tbody>
+                            <tr>
+                                <th>&nbsp;Customer&nbsp;Req.&nbsp;Delivery</th>
+                                <td>
+                                    <input type="text"/>
+                                </td>
+                                <th>&nbsp;Customer&nbsp;Preferable&nbsp;Price</th>
+                                <td>
+                                    <input type="text"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th rowspan="3">&nbsp;Remark</th>
+                                <td rowspan="3" colspan="3">
+                                    <textarea rows="3" cols="72" name="comment">
+                                    </textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+
+                    <br>
+                    <div align="right">
+                        <input type="button" value="Copy&nbsp;New" class="button-normal"/>&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="Save" class="button-normal"/>&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="Send&nbsp;Approve" class="button-normal"/>&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="Cancel" class="button-normal" onclick="goToDashborad();"/>&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="Print" class="button-normal"/>&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="Create&nbsp;Quotation" class="button-normal" onclick="goToQuotation();"/>&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="Back" class="button-normal" onclick="goToDashborad();"/>&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
+            </div>
+            <!------------------------------ TAB HEADER END ------------------------------>
+
+            <!------------------------------ TAB SPEC START ------------------------------>
+            <div id="spec" class="tab">
+                <div class="frm">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>&nbsp;Forklift&nbsp;Type</th>
+                                <td>
+                                    <select class="dropdownlist">
+                                        <option value="sample1">Forklift</option>
+                                        <option value="sample1">Truck</option>
+                                        <option value="sample2">Tracktor</option>
+                                    </select>
+                                </td>
+                                <th>&nbsp;Model</th>
+                                <td>
+                                    <input type="text" value="7FBE200">
+                                    <input type="button" onclick="SelectModel();" value="&nbsp;&nbsp;...&nbsp;&nbsp;" class="btnpopup"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Order to Japan</th>
+                                <td colspan="3">
+                                    <input type="text" value="" class="currency">Unit(s)
+                                </td>
+
+                            </tr>
+                              <tr>
+                                <th>Stock</th>
+                                <td colspan="3">
+                                    <input type="text" value="2" readonly="readonly" class="currency">Unit(s)
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <td colspan="3">
+                                    <div class="tbl">
+                                        <table>
+                                            <caption><div><button>-</button><button>+</button></div></caption>
+                                            <thead>
+                                                <tr>
+                                                    <th><input type="checkbox"/></th>
+                                                    <th>Model</th>
+                                                    <th>Frame</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="tblcenter"><input type="checkbox"/></td>
+                                                    <td>7FBE20</td>
+                                                    <td>10001</td>
+                                                </tr>
+                                                 <tr>
+                                                    <td class="tblcenter"><input type="checkbox"/></td>
+                                                    <td>7FBE20</td>
+                                                    <td>10002</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tbl">
+                    <table>
+                        <caption>&nbsp;Component&nbsp;From&nbsp;JAPAN(TICO)
+                            <div>
+                                <button>-</button>
+                                <button onclick="SelectComponentJP();">+</button>
+                            </div>
+                        </caption>
+                        <tbody>
+                            <tr>
+                                <th width="40px"><input type="checkbox"/></th>
+                                <th width="150px">Code</th>
+                                <th>Description</th>
+                                <th class="currency">Price</th>
+                                <th class="currency">Cost</th>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="costSheetEntrySpecHead">&nbsp;Model</td>
+                            </tr>
+                            <tr>
+                                <td align="center">&nbsp;</td>
+                                <td>&nbsp;7FBE200</td>
+                                <td></td>
+                                <td><input type="text" readonly="readonly" value="917,000" class="currency"/></td>
+                                <td><input type="text" readonly="readonly" value="500,000" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="costSheetEntrySpecHead">&nbsp;Mast</td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td>&nbsp;V300</td>
+                                <td></td>
+                                <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                                <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="costSheetEntrySpecHead">&nbsp;Tire</td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td>&nbsp;F01B</td>
+                                <td>&nbsp;FRONT&nbsp;(LOAD)&nbsp;PSCT</td>
+                                 <td><input type="text" readonly="readonly" value="13,300" class="currency"/></td>
+                                <td><input type="text" readonly="readonly" value="6,650" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td>&nbsp;F41A</td>
+                                <td>&nbsp;REAR&nbsp;(DRIVE)&nbsp;PSCT</td>
+                                 <td><input type="text" readonly="readonly" value="7,900" class="currency"/></td>
+                                <td><input type="text" readonly="readonly" value="3,950" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="costSheetEntrySpecHead">&nbsp;Fork</td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td>&nbsp;M20A</td>
+                                <td>&nbsp;SIZE&nbsp;1220</td>
+                                 <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                                <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="costSheetEntrySpecHead">&nbsp;Att/Piping</td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td></td>
+                                <td></td>
+                                 <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                                <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="costSheetEntrySpecHead">&nbsp;Std&nbsp;Opt.</td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td>&nbsp;G80A</td>
+                                <td>&nbsp;FLOOR&nbsp;MAT.</td>
+                                 <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td> 
+                                <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td>&nbsp;J10B</td>
+                                <td>&nbsp;REAR-VIEW&nbsp;MIRROR,&nbsp;RIGHT&nbsp;AND&nbsp;LEFT&nbsp;SIDES</td>
+                                 <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                                <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td>&nbsp;J21A</td>
+                                <td>&nbsp;REAR&nbsp;COMBINATION&nbsp;LIGHTS</td>
+                                 <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                                <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td>&nbsp;K21K</td>
+                                <td>&nbsp;BACK-UP&nbsp;BUZZER&nbsp;WITH&nbsp;ON-OFF&nbsp;SWITCH</td>
+                                 <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                                <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="costSheetEntrySpecHead">&nbsp;Other&nbsp;Option</td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td>&nbsp;L37A</td>
+                                <td>&nbsp;REAR-PILLAR&nbsp;ASSIST&nbsp;GRIP</td>
+                                 <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                                <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td>&nbsp;S0DC</td>
+                                <td>&nbsp;TOOLS,&nbsp;STANDARD&nbsp;SET(B&nbsp;SET)</td>
+                                 <td><input type="text" readonly="readonly" value="3,100" class="currency"/></td>
+                                <td><input type="text" readonly="readonly" value="1,550" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td>&nbsp;C00B</td>
+                                <td>&nbsp;LPG&nbsp;FUEL&nbsp;SYSTEM&nbsp;CONVERTIBLE&nbsp;TYPE(Z3)</td>
+                                 <td><input type="text" readonly="readonly" value="7,700" class="currency"/></td>
+                                <td><input type="text" readonly="readonly" value="3,850" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td>&nbsp;C01P</td>
+                                <td>&nbsp;W/O&nbsp;LPG&nbsp;CYLINDER&nbsp;(15KG)</td>
+                                 <td><input type="text" readonly="readonly" value="26,500" class="currency"/></td>
+                                <td><input type="text" readonly="readonly" value="13,250" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td>&nbsp;C2GG</td>
+                                <td>&nbsp;LPG&nbsp;CONNECTER&nbsp;VALE</td>
+                                 <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                                <td><input type="text" readonly="readonly" value="0.00" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="tblcenter">A: Total</td>
+                                <td class="currency"><input type="text" readonly="readonly" value="975,500" class="currency"/></td>
+                                <td class="currency"><input type="text" readonly="readonly" value="529,250" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="tblcenter">B: Discount<div style="clear:both;float:right;margin-right: 20px"><input type="text" value="24.21" style="text-align: right;"/>%</div></td>
+                               
+                                <td class="currency"><input type="text" value="236,200" class="currency"/></td>
+                                 <td></td>
+                            </tr>
+                              <tr>
+                                  <td colspan="3" class="tblcenter">C: Net (A-B)</td>
+                                <td class="currency"><input type="text" readonly="readonly" value="739,300" class="currency"/></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br/>
+                <div class="tbl">
+                    <table>
+                        <caption>LOCAL ARRANGEMENT (TTFL)</caption>
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"/></th>
+                                <th>Code</th>
+                                <th>Description</th>
+                                <th class="currency">QTY</th>
+                                <th class="currency">Unit Price</th>
+                                <th class="currency">Price</th>
+                                <th class="currency">Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <tr>
+                                 <td class="tblcenter"><input type="checkbox"/></td>
+                                <td>F01B</td>
+                                <td>Flash light/ Cover High</td>
+                                <td><input type="text" value="1" class="currency"/></td>
+                                <td><input type="text" value="8,800" class="currency"/></td>
+                                <td><input type="text" value="8,800" readonly="readonly" class="currency"/></td>
+                                <td><input type="text" value="7,480" readonly="readonly"  class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td class="tblcenter"><input type="checkbox"/></td>
+                                <td>F41A</td>
+                                <td>Extingutsher + Stand</td>
+                                <td><input type="text" value="1" class="currency"/></td>
+                                <td><input type="text" value="2,600" class="currency"/></td>
+                                <td><input type="text" value="2,600" readonly="readonly" class="currency"/></td>
+                                <td><input type="text" value="2,210" readonly="readonly" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td class="tblcenter"><input type="checkbox"/></td>
+                                <td>1070</td>
+                                <td>LPG CERTIFICATE</td>
+                                <td class="currency"><input type="text" value="1" class="currency"/></td>
+                                <td class="currency"><input type="text" value="3,000" class="currency"/></td>
+                                <td class="currency"><input type="text" value="3,000" readonly="readonly" class="currency"/></td>
+                                <td class="currency"><input type="text" value="2,550" readonly="readonly" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td class="tblcenter"><input type="checkbox"/></td>
+                                <td>G80A</td>
+                                <td>LPG CONNECTER VALE</td>
+                                <td class="currency"><input type="text" value="1" class="currency"/></td>
+                                <td class="currency"><input type="text" value="6,300" class="currency"/></td>
+                                <td class="currency"><input type="text" value="6,300" readonly="readonly" class="currency"/></td>
+                                <td class="currency"><input type="text" value="5,355" readonly="readonly" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="currency">D: Total</td>
+                                <td class="currency"><input type="text" value="20,700" readonly="readonly" class="currency"/></td>
+                                <td class="currency"><input type="text" value="17,595" readonly="readonly" class="currency"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br/>
+                <div class="tbl">
+                    <table>
+                        <caption>Service</caption>
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"/></th>
+                                <th>Code</th>
+                                <th>Description</th>
+                                <th class="currency">QTY</th>
+                                <th class="currency">Unit Price</th>
+                                <th class="currency">Price</th>
+                                <th class="currency">Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <tr>
+                                <td class="tblcenter"><input type="checkbox"/></td>
+                                <td>S001</td>
+                                <td>Service Contact 12 Times / Year</td>
+                                <td class="currency"><input type="text" value="1" class="currency"/></td>
+                                <td class="currency"><input type="text" value="100,000" class="currency"/></td>
+                                <td class="currency"><input type="text" value="100,000" readonly="readonly" class="currency"/></td>
+                                <td class="currency"><input type="text" value="50,000" readonly="readonly" class="currency"/></td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="currency">E: Total</td>
+                                <td class="currency"><input type="text" value="100,000" readonly="readonly" class="currency"/></td>
+                                <td class="currency"><input type="text" value="50,000" readonly="readonly" class="currency"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <br/>
+                <div class="tbl">
+                    <table>
+                        <caption>Other</caption>
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"/></th>
+                                <th>Code</th>
+                                <th>Description</th>
+                                <th class="currency">QTY</th>
+                                <th class="currency">Unit Price</th>
+                                <th class="currency">Price</th>
+                                <th class="currency">Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <tr>
+                                <td class="tblcenter"><input type="checkbox"/></td>
+                                <td>OTH1</td>
+                                <td>Trainning</td>
+                                <td class="currency"><input type="text" value="1" class="currency"/></td>
+                                <td class="currency"><input type="text" value="10,000" class="currency"/></td>
+                                <td class="currency"><input type="text" value="10,000" readonly="readonly" class="currency"/></td>
+                                <td class="currency"><input type="text" value="5,000" readonly="readonly" class="currency"/></td>
+                            </tr>
+                              <tr>
+                                <td colspan="5" class="currency">F: Total</td>
+                                <td class="currency"><input type="text" value="10,000" readonly="readonly" class="currency"/></td>
+                                <td class="currency"><input type="text" value="5,000" readonly="readonly" class="currency"/></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br/>
+                    <table>
+                        <tr>
+                              <td colspan="5">Total (C+D+E+F)</td>
+                              <td class="currency" style="width: 150px;"><input type="text" value="870,000" readonly="readonly" class="currency"/></td>
+                              <td class="currency" style="width: 150px;"><input type="text" value="601,845" readonly="readonly" class="currency"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Grand Total</td>
+                            <td>x</td>
+                            <td>2</td>
+                            <td>Unit(s)</td>
+                            <td class="currency"><input type="text" value="4,350,000" readonly="readonly" class="currency" style="background-color: yellow;"/></td>
+                            <td class="currency"><input type="text" value="3,009,225" readonly="readonly" class="currency" style="background-color: yellow;"/></td>
+                        </tr>
+                    </table>
+                </div>
+                 <br>
+                 <div class="tblfooter">
+                    <div>
+                        <input type="button" value="Copy&nbsp;New" class="button-normal"/>&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="Save" class="button-normal"/>&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="Send&nbsp;Approve" class="button-normal"/>&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="Cancel" class="button-normal" onclick="goToDashborad();"/>&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="Print" class="button-normal"/>&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="Create&nbsp;Quotation" class="button-normal" onclick="goToQuotation();"/>&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="Back" class="button-normal" onclick="goToDashborad();"/>&nbsp;&nbsp;&nbsp;
+                    </div>
+                      </div>
+                 <br/>
+                 <br/>
+            </div>
+            <!------------------------------ TAB SPEC END ------------------------------>
+            
+            <!------------------------------ TAB LOCAL START ------------------------------>
+            <!--
+            <div id="local" class="tab">
+                <div class="tbl">
+                    <table>
+                        <caption>&nbsp;Component&nbsp;From&nbsp;Local
+                            <div>
+                                <button>-</button>
+                                <button onclick="SelectComponentLocal();">+</button>
+                            </div>
+                        </caption>
+                        <tbody>
+                            <tr>
+                                <th width="40px"><input type="checkbox"/></th>
+                                <th>#</th>
+                                <th>Type</th>
+                                <th>Code</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td align="center">1</td>
+                                <td>&nbsp;Flash</td>
+                                <td>&nbsp;F01B</td>
+                                <td>&nbsp;Flash&nbsp;light/&nbsp;Cover&nbsp;High</td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td align="center">2</td>
+                                <td>&nbsp;Extingutsher</td>
+                                <td>&nbsp;F41A</td>
+                                <td>&nbsp;Extingutsher&nbsp;+&nbsp;Stand</td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td align="center">3</td>
+                                <td>&nbsp;Attachment</td>
+                                <td>&nbsp;1070</td>
+                                <td>&nbsp;LPG&nbsp;CERTIFICATE</td>
+                            </tr>
+                            <tr>
+                                <td align="center"><input type="checkbox"/></td>
+                                <td align="center">4</td>
+                                <td>&nbsp;Attachment</td>
+                                <td>&nbsp;G80A</td>
+                                <td>&nbsp;LPG&nbsp;Tank&nbsp;(PTT)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            -->
+            <!------------------------------ TAB LOCAL END ------------------------------>
+
+            <!------------------------------ TAB COSTSHEET START ------------------------------>
+            <!--
+            <div id="costsheet" class="tab">
+                <div class="tbl">
+                    <table>
+                        <caption>&nbsp;Model</caption>
+                        <tbody>
+                            <tr>
+                                <th>Model</th>
+                                <td>&nbsp;30-8FG20</td>
+                                <th>Mast</th>
+                                <td>&nbsp;V</td>
+                                <th>Fork</th>
+                                <td>&nbsp;3000</td>
+                                <th>Qty</th>
+                                <td align="center">&nbsp;1</td>
+                                <th>Unit</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <table>
+                        <caption>&nbsp;From&nbsp;JAPAN(TICO)</caption>
+                        <tbody>
+                            <tr>
+                                <th style="width:30px">#</th>
+                                <th>Type</th>
+                                <th>Code</th>
+                                <th>Description</th>
+                                <th>Unit&nbsp;Price</th>
+                                <th>Price</th>
+                                <th colspan="2">Cost</th>
+                            </tr>
+                            <tr>
+                                <td align="center">1</td>
+                                <td>&nbsp;Model</td>
+                                <td>&nbsp;30-8FG25</td>
+                                <td></td>
+                                <td class="costSheetEntryRightB">917,000.00</td>
+                                <td class="costSheetEntryRightY">917,000.00</td>
+                                <td colspan="2" class="costSheetEntryRightY">500,000.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center">2</td>
+                                <td>&nbsp;Mast</td>
+                                <td>&nbsp;V3000</td>
+                                <td></td>
+                                <td class="costSheetEntryRightB">0.00</td>
+                                <td class="costSheetEntryRightY">0.00</td>
+                                <td colspan="2" class="costSheetEntryRightY">0.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center">3</td>
+                                <td>&nbsp;Tire</td>
+                                <td>&nbsp;F01B</td>
+                                <td>&nbsp;FRONT&nbsp;(LOAD)&nbsp;PSCT</td>
+                                <td class="costSheetEntryRightB">13,300.00</td>
+                                <td class="costSheetEntryRightY">13,300.00</td>
+                                <td colspan="2" class="costSheetEntryRightY">6,650.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center">4</td>
+                                <td>&nbsp;Tire</td>
+                                <td>&nbsp;F41A</td>
+                                <td>&nbsp;REAR&nbsp;(DRIVE)&nbsp;PSCT</td>
+                                <td class="costSheetEntryRightB">7,900.00</td>
+                                <td class="costSheetEntryRightY">7,900.00</td>
+                                <td colspan="2" class="costSheetEntryRightY">3,950.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center">5</td>
+                                <td>&nbsp;Fork</td>
+                                <td>&nbsp;1070</td>
+                                <td>&nbsp;SIZE</td>
+                                <td class="costSheetEntryRightB">0.00</td>
+                                <td class="costSheetEntryRightY">0.00</td>
+                                <td colspan="2" class="costSheetEntryRightY">0.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center">6</td>
+                                <td>&nbsp;Std&nbsp;Opt.</td>
+                                <td>&nbsp;G80A</td>
+                                <td>&nbsp;FLOOR&nbsp;MAT.</td>
+                                <td class="costSheetEntryRightB">0.00</td>
+                                <td class="costSheetEntryRightY">0.00</td>
+                                <td colspan="2" class="costSheetEntryRightY">0.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center">7</td>
+                                <td>&nbsp;Std&nbsp;Opt.</td>
+                                <td>&nbsp;J10B</td>
+                                <td>&nbsp;REAR-VIEW&nbsp;MIRROR,&nbsp;RIGHT&nbsp;AND&nbsp;LEFT&nbsp;SIDES</td>
+                                <td class="costSheetEntryRightB">0.00</td>
+                                <td class="costSheetEntryRightY">0.00</td>
+                                <td colspan="2" class="costSheetEntryRightY">0.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center" >8</td>
+                                <td>&nbsp;Std&nbsp;Opt.</td>
+                                <td>&nbsp;J21A</td>
+                                <td>&nbsp;REAR&nbsp;COMBINATION&nbsp;LIGHTS</td>
+                                <td class="costSheetEntryRightB">0.00</td>
+                                <td class="costSheetEntryRightY">0.00</td>
+                                <td colspan="2" class="costSheetEntryRightY">0.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center">9</td>
+                                <td>&nbsp;Std&nbsp;Opt.</td>
+                                <td>&nbsp;K21K</td>
+                                <td>&nbsp;BACK-UP&nbsp;BUZZER&nbsp;WITH&nbsp;ON-OFF&nbsp;SWITCH</td>
+                                <td class="costSheetEntryRightB">0.00</td>
+                                <td class="costSheetEntryRightY">0.00</td>
+                                <td colspan="2" class="costSheetEntryRightY">0.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center">10</td>
+                                <td>&nbsp;Other&nbsp;Option</td>
+                                <td>&nbsp;L37A</td>
+                                <td>&nbsp;REAR-PILLAR&nbsp;ASSIST&nbsp;GRIP</td>
+                                <td class="costSheetEntryRightB">0.00</td>
+                                <td class="costSheetEntryRightY">0.00</td>
+                                <td colspan="2" class="costSheetEntryRightY">0.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center">11</td>
+                                <td>&nbsp;Other&nbsp;Option</td>
+                                <td>&nbsp;S0DC</td>
+                                <td>&nbsp;TOOLS,&nbsp;STANDARD&nbsp;SET(B&nbsp;SET)</td>
+                                <td class="costSheetEntryRightB">3,100.00</td>
+                                <td class="costSheetEntryRightY">3,100.00</td>
+                                <td colspan="2" class="costSheetEntryRightY">1,550.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center">12</td>
+                                <td>&nbsp;Other&nbsp;Option</td>
+                                <td>&nbsp;C00B</td>
+                                <td>&nbsp;LPG&nbsp;FUEL&nbsp;SYSTEM&nbsp;CONVERTIBLE&nbsp;TYPE(Z3)</td>
+                                <td class="costSheetEntryRightB">7,700.00</td>
+                                <td class="costSheetEntryRightY">7,700.00</td>
+                                <td colspan="2" class="costSheetEntryRightY">3,850.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center">13</td>
+                                <td>&nbsp;Other&nbsp;Option</td>
+                                <td>&nbsp;C01P</td>
+                                <td>&nbsp;W/O&nbsp;LPG&nbsp;CYLINDER&nbsp;(15KG)</td>
+                                <td class="costSheetEntryRightB">26,500.00</td>
+                                <td class="costSheetEntryRightY">26,500.00</td>
+                                <td colspan="2" class="costSheetEntryRightY">13,250.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center">14</td>
+                                <td>&nbsp;Other&nbsp;Option</td>
+                                <td>&nbsp;C2GG</td>
+                                <td>&nbsp;LPG&nbsp;CONNECTER&nbsp;VALE</td>
+                                <td class="costSheetEntryRightB">0.00</td>
+                                <td class="costSheetEntryRightY">0.00</td>
+                                <td colspan="2" class="costSheetEntryRightY">0.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="costSheetEntryCenter">Total</td>
+                                <td class="costSheetEntryRightY" style="font-weight:bold">975,500.00</td>
+                                <td colspan="2" class="costSheetEntryRightY" style="font-weight:bold">529,250.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="costSheetEntryCenter">Discount</td>
+                                <td class="costSheetEntryRightB" style="font-weight:bold">236,200.00</td>
+                                <td class="costSheetEntryRightB" style="font-weight:bold;width:40px">24.21</td>
+                                <td>%</td>
+                            </tr>
+                            <tr>
+                                <td colspan="5" class="costSheetEntryCenter">Net</td>
+                                <td class="costSheetEntryRightY" style="font-weight:bold">739,300.00</td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <table>
+                        <caption>&nbsp;Local&nbsp;Arrangment</caption>
+                        <tbody>
+                            <tr>
+                                <th style="width:30px">#</th>
+                                <th>Type</th>
+                                <th>Code</th>
+                                <th>Description</th>
+                                <th>QTY</th>
+                                <th>Unit&nbsp;Price</th>
+                                <th>Price</th>
+                                <th>Cost</th>
+                            </tr>
+                            <tr>
+                                <td align="center">1</td>
+                                <td>&nbsp;Flash</td>
+                                <td>&nbsp;F01B</td>
+                                <td>&nbsp;Flash&nbsp;light/&nbsp;Cover&nbsp;High</td>
+                                <td align="right">1&nbsp;</td>
+                                <td align="right">8,800.00</td>
+                                <td class="costSheetEntryRightY">8,800.00</td>
+                                <td class="costSheetEntryRightY">7,480.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center">2</td>
+                                <td>&nbsp;Extingutsher</td>
+                                <td>&nbsp;F41A</td>
+                                <td>&nbsp;Extingutsher&nbsp;+&nbsp;Stand</td>
+                                <td align="right">1&nbsp;</td>
+                                <td align="right">2,600.00</td>
+                                <td class="costSheetEntryRightY">2,600.00</td>
+                                <td class="costSheetEntryRightY">2,210.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center">3</td>
+                                <td>&nbsp;Attachment</td>
+                                <td>&nbsp;1070</td>
+                                <td>&nbsp;LPG&nbsp;CERTIFICATE</td>
+                                <td align="right">1&nbsp;</td>
+                                <td align="right">3,000.00</td>
+                                <td class="costSheetEntryRightY">3,000.00</td>
+                                <td class="costSheetEntryRightY">2,550.00</td>
+                            </tr>
+                            <tr>
+                                <td align="center">4</td>
+                                <td>&nbsp;Attachment</td>
+                                <td>&nbsp;G80A</td>
+                                <td>&nbsp;LPG&nbsp;Tank&nbsp;(PTT)</td>
+                                <td align="right">1&nbsp;</td>
+                                <td align="right">6,300.00</td>
+                                <td class="costSheetEntryRightY">6,300.00</td>
+                                <td class="costSheetEntryRightY">5,355.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="costSheetEntryCenter">Total</td>
+                                <td></td>
+                                <td></td>
+                                <td class="costSheetEntryRightY" style="font-weight:bold">20,700.00</td>
+                                <td class="costSheetEntryRightY" style="font-weight:bold">17,595.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="6">&nbsp;</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" style="font-weight:bold">&nbsp;Total&nbsp;Selling&nbsp;Price</td>
+                                <td class="costSheetEntryRightY" style="font-weight:bold">760,000.00</td>
+                                <td class="costSheetEntryRightY" style="font-weight:bold">546,845.00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" style="font-weight:bold">&nbsp;Grand&nbsp;Total</td>
+                                <td class="costSheetEntryRightY" style="font-weight:bold;background-color:#f3b789">760,000.00</td>
+                                <td class="costSheetEntryRightY" style="font-weight:bold;background-color:#f3b789">546,845.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            -->
+            <!------------------------------ TAB COSTSHEET END ------------------------------>
+
+        </div>
+    </div>
+</div>
+<script>
+    jQuery(document).ready(function() {
+        jQuery('.tabs .tab-links a').on('click', function(e) {
+
+            var currentAttrValue = jQuery(this).attr('href');
+
+            // Show/Hide Tabs
+            jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+
+            // Change/remove current tab to active
+            jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+
+            e.preventDefault();
+        });
+    });
+</script>
+<script>
+		new JsDatePick({
+			useMode : 2,
+			target : "date1",
+			dateFormat : "%d/%m/%Y"
+		});
+
+		new JsDatePick({
+			useMode : 2,
+			target : "date2",
+			dateFormat : "%d/%m/%Y"
+		});
+	</script>

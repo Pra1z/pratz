@@ -1,0 +1,203 @@
+<!--
+<%--
+ % PartOrderListInquiry - PUR010105.
+ % This page is Part Order List Inquiry Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Padchimnuch S.
+ % Creation date : 2014/10/08
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<div class="contentpanel">
+	<script>
+		new JsDatePick({
+			useMode : 2,
+			target : "borrowrequestdatefrom",
+			dateFormat : "%d/%m/%Y"
+		});
+
+		new JsDatePick({
+			useMode : 2,
+			target : "borrowrequestdateto",
+			dateFormat : "%d/%m/%Y"
+		});
+	</script>
+	<div class="frm">
+		<table>
+			<colgroup>
+				<col class="col-20-left"></col>
+				<col class="col-30-left"></col>
+				<col class="col-20-left"></col>
+				<col class="col-30-left"></col>
+			</colgroup>
+			<tbody>
+				<tr>
+				   	<th colspan="4">Search&nbsp;Criteria</th>
+				</tr>
+				<tr>
+					<th>Borrow&nbsp;Request&nbsp;Date&nbsp;From</th>
+					<td><input id="borrowrequestdatefrom" name="borrowrequestdatefrom" type="text"/></td>
+					<th>Borrow&nbsp;Request&nbsp;Date&nbsp;To</th>
+					<td><input id="borrowrequestdateto" name="borrowrequestdateto" type="text"/></td>
+				</tr>
+				<tr>
+					<th>Item&nbsp;No</th>
+					<td><input type="text"/><input type="button" value="&nbsp;&nbsp;...&nbsp;&nbsp;" class="btnpopup"/></td>
+					<th>Item&nbsp;Description</th>
+					<td><input type="text" readonly="readonly" value="Item's desc"/></td>
+				</tr>
+				<tr>
+					<th>Borrow&nbsp;Request&nbsp;No</th>
+					<td colspan="3"><input type="text"/></td>
+				</tr>
+				<tr>
+					<th>Borrow&nbsp;Section</th>
+					<td>
+						<select name="borrowsectionlist" class="dropdownlist">
+							<option value="sample1"></option>
+							<option value="sample2">Service</option>
+							<option value="sample3">PDI</option>
+						</select>
+					</td>
+					<th>Lender&nbsp;Section</th>
+					<td><input type="text" readonly="readonly" value="TY4A"/></td>
+				</tr>
+				<tr>
+					<th>Supplier</th>
+					<td><input type="text"/><input type="button" value="&nbsp;&nbsp;...&nbsp;&nbsp;" class="btnpopup"/></td>
+					<th>Supplier&nbsp;Name</th>
+					<td><input type="text" readonly="readonly" value="Supplier's name"/></td>
+				</tr>
+				<tr>
+					<th>Order&nbsp;Scheme</th>
+					<td colspan="3">
+						<select name="orderschemelist" class="dropdownlist">
+							<option value="sample1"></option>
+							<option value="sample2">Air</option>
+							<option value="sample3">Normal</option>
+							<option value="sample4">SOS Air</option>
+						</select>
+					</td>
+				</tr>
+				<tr class="tr-button">
+					<td class="td-button" colspan="4">
+				 	  	<input type="button" value="Search" class="button-normal"/>
+					   	<input type="button" value="Clear" class="button-normal"/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="tbl">
+		<table class='cell-border datatable'>
+			<thead>
+				<tr>
+					<th><input type="checkbox" name="chkAll"/></th>
+					<th>Request&nbsp;Date</th>
+					<th>Borrow&nbsp;Request&nbsp;No</th>
+					<th>Item&nbsp;No</th>
+					<th>Item&nbsp;Description</th>
+					<th>Supplier</th>
+					<th>Supplier&nbsp;Location</th>
+					<th>Borrow&nbsp;Section</th>
+					<th>Request&nbsp;Qty</th>
+					<th>Order&nbsp;Scheme</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="td-checkbox"><input type="checkbox" name="chk1"/></td>
+					<td>10/09/2014</td>
+					<td>BR01</td>
+					<td>A</td>
+					<td>Part&nbsp;A</td>
+					<td>SUP001:&nbsp;Sup's&nbsp;name1</td>
+					<td>Local</td>
+					<td>Service</td>
+					<td>15</td>
+					<td>Air</td>
+				</tr>
+				<tr>
+					<td class="td-checkbox"><input type="checkbox" name="chk2"/></td>
+					<td>10/09/2014</td>
+					<td>BR01</td>
+					<td>B</td>
+					<td>Part&nbsp;B</td>
+					<td>SUP001:&nbsp;Sup's&nbsp;name1</td>
+					<td>Local</td>
+					<td>Service</td>
+					<td>5</td>
+					<td>Normal</td>
+				</tr>
+				<tr>
+					<td class="td-checkbox"><input type="checkbox" name="chk3"/></td>
+					<td>10/09/2014</td>
+					<td>BR01</td>
+					<td>C</td>
+					<td>Part&nbsp;C</td>
+					<td>SUP003:&nbsp;Sup's&nbsp;name3</td>
+					<td>Oversea</td>
+					<td>Service</td>
+					<td>3</td>
+					<td>Normal</td>
+				</tr>
+				<tr>
+					<td class="td-checkbox"><input type="checkbox" name="chk4"/></td>
+					<td>11/09/2014</td>
+					<td>BR02</td>
+					<td>A</td>
+					<td>Part&nbsp;A</td>
+					<td>SUP001:&nbsp;Sup's&nbsp;name1</td>
+					<td>Local</td>
+					<td>PDI</td>
+					<td>5</td>
+					<td>SOS Air</td>
+				</tr>
+				<tr>
+					<td class="td-checkbox"><input type="checkbox" name="chk5"/></td>
+					<td>11/09/2014</td>
+					<td>BR02</td>
+					<td>B</td>
+					<td>Part&nbsp;B</td>
+					<td>SUP001:&nbsp;Sup's&nbsp;name1</td>
+					<td>Local</td>
+					<td>PDI</td>
+					<td>10</td>
+					<td>Normal</td>
+				</tr>
+				<tr>
+					<td class="td-checkbox"><input type="checkbox" name="chk6"/></td>
+					<td>11/09/2014</td>
+					<td>BR03</td>
+					<td>A</td>
+					<td>Part&nbsp;A</td>
+					<td>SUP001:&nbsp;Sup's&nbsp;name1</td>
+					<td>Local</td>
+					<td>PDI</td>
+					<td>3</td>
+					<td>Air</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<br>
+	<div class="div-bottombutton">
+		<input type="button" value="Purchase Request" class="button-purchasereq"/>
+	</div>
+</div>
+<script>
+$(document).ready(function() {
+    $('.cell-border.datatable').dataTable({
+                  "scrollY": 200,
+                   "scrollX": true,
+                   "searching": false,
+                   "pageLength": 5,
+                   "ordering":  false,
+                   "lengthChange": false
+   });
+});
+</script>

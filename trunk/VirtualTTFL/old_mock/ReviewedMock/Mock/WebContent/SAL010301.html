@@ -1,0 +1,122 @@
+<!--
+<%--
+ % Quotation Inquiry - SAL010301.
+ % This page is Quotation Inquiry Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Tin
+ % Creation date : 2014/10/06
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<script>
+	new JsDatePick({
+		useMode : 2,
+		target : "quotationdatefrom",
+		dateFormat : "%d/%m/%Y"
+	});
+
+	new JsDatePick({
+		useMode : 2,
+		target : "quotationdateto",
+		dateFormat : "%d/%m/%Y"
+	});
+</script>
+<div class="contentpanel">
+<div class="frm">
+	<table>
+            <caption>Quotation Inquiry</caption>
+		<tbody>
+			<tr>
+				<th>Sale&nbsp;Type</th>
+				<td><input name="ordertype" type="text" /></td>
+				<th>Quotation&nbsp;No.</th>
+				<td><input name="quotationnumber" type="text" /></td>
+		</tr>
+			<tr>
+                                <th>Customer&nbsp;Code</th>
+				<td><input name="customercode" type="text"> <input type="button" value="..." /></td>
+                                 <th>Customer&nbsp;Name</th>
+                                 <td><input  type="text" /></td>
+					</tr>
+			<tr>
+				<th>Quotation&nbsp;Date&nbsp;From</th>
+				<td><input id="quotationdatefrom" name="quotationdatefrom" type="text" /></td>
+				<th>Quotation&nbsp;Date&nbsp;To</th>
+				<td><input id="quotationdateto" name="quotationdateto" type="text" /></td>
+			</tr>
+			<tr>
+				<th>Status</th>
+                                <td colspan="3"><select class="dropdownlist">
+                                                <option value="0">&nbsp;</option>
+                                    </select></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="tblfooter">
+    <div>
+        <input type="button" value="Search" class="button-normal"/>&nbsp;&nbsp;&nbsp;<input type="button" value="Clear" class="button-normal"/>
+    </div>
+</div>
+<div class="tbl">
+        <table>
+            <caption>&nbsp;Result</caption>
+            <tbody>
+                <tr>
+                    <th>No</th>
+                    <th>Cost&nbsp;Sheet&nbsp;No.</th>
+                     <th>Date</th>
+                     <th>QuotationNo</th>
+                    <th>CustomerCode</th>
+                    <th>CustomerName</th>
+                    <th>Sale&nbsp;Type</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td class="tblcenter">&nbsp;<a href="#" onclick="goToQuotationEntry();">QS1A-133-DST-180</a></td>
+                     <td align="center">15/10/2013</td>
+                    <td>QS1A-133-DST-180</td>
+                    <td>34000228</td>
+                    <td>TOYOTA MOTOR ThAILAND LTD.</td>
+                    <td>&nbsp;Sale&nbsp;New&nbsp;F/L</td>
+                    <td>&nbsp;Draft</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="tblcenter">&nbsp;<a href="#" onclick="goToQuotationEntry();">QS1A-133-DST-181</a></td>
+                    <td align="center">&nbsp;20/11/2013</td>
+                     <td>QS1A-133-DST-181</td>
+                   <td>34000228</td>
+                    <td>TOYOTA MOTOR ThAILAND LTD.</td>
+                    <td>&nbsp;Sale&nbsp;New&nbsp;F/L</td>
+                    <td>&nbsp;Approved</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="tblcenter">&nbsp;<a href="#" onclick="goToQuotationEntry();">QS1A-133-DST-182</a></td>
+                    <td align="center">&nbsp;12/10/2013</td>
+                    <td>QS1A-133-DST-182</td>
+                 <td>34000228</td>
+                    <td>TOYOTA MOTOR ThAILAND LTD.</td>
+                    <td>&nbsp;Sale&nbsp;New&nbsp;F/L</td>
+                    <td>&nbsp;Revise</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="tblcenter">&nbsp;<a href="#" onclick="goToQuotationEntry();">QS1A-133-DST-182</a></td>
+                    <td align="center">&nbsp;12/10/2013</td>
+                    <td>QS1A-133-DST-182</td>
+                 <td>34000228</td>
+                    <td>TOYOTA MOTOR ThAILAND LTD.</td>
+                    <td>&nbsp;Sale&nbsp;New&nbsp;F/L</td>
+                    <td>&nbsp;Draft</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>

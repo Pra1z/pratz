@@ -1,0 +1,128 @@
+<!--
+<%--
+ % Main contents.
+ % This page is Transport Request Entry Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Tin
+ % Creation date : 2014/10/07
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<script>
+	function back() {
+		$("#content").load("TransportRequestInquiry.html");
+	};
+</script>
+<div class="contentpanel">
+
+<div class="frm">
+	<table>
+            <caption>Transport Request Entry</caption>
+		<tbody>
+			<tr>
+				<th>Request&nbsp;No.</th>
+				<td><input name="requestno" type="text" /></td>
+				<th>Request&nbsp;Date</th>
+				<td><input name="requestdate" type="text" value="07/10/2014" readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<th>Company</th>
+				<td>
+					<input name="company" type="text" /> 
+					<input type="button" value="..." />
+				</td>
+				<th>Company&nbsp;Site</th>
+				<td><select name="companysite"></select></td>
+			</tr>
+			<tr>
+				<th>Delivery&nbsp;Address</th>
+				<td colspan="3"><input name="deliveryaddress" type="text" /></td>
+			</tr>
+			<tr>
+				<th>Forklist&nbsp;Frame</th>
+				<td>
+					<input name="formliftframe" type="text" /> 
+					<input type="button" value="..." />
+				</td>
+				<th>Model</th>
+				<td><input name="model" type="text" value="Model_1" readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<th>Engine&nbsp;No.</th>
+				<td><input name="engineno" type="text" value="Engine_No_1" readonly="readonly"/></td>
+				<th>Frame&nbsp;No.</th>
+				<td><input name="frameno" type="text" value="Frame_No_1" readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<th>Attachment</th>
+				<td><input name="attachment" type="text" value="Attached_1" readonly="readonly"/></td>
+				<th>Mast</th>
+				<td><input name="mast" type="text" value="Mast_1" readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<th>Tire</th>
+				<td><input name="tire" type="text" value="Tire_1" readonly="readonly"/></td>
+				<th>Fork</th>
+				<td><input name="fork" type="text" value="Fork_1" readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<th>Request&nbsp;By</th>
+				<td><select name="requestby"></select>
+				<th>Delivery&nbsp;Date</th>
+				<td>
+					<input id="deliverydate" name="deliverydate" type="text" />
+				</td>
+			</tr>
+			<tr>
+				<th>Description</th>
+				<td colspan="3"><textarea rows="3" ></textarea></td>
+			</tr>
+			<tr>
+				<th>Ship&nbsp;From</th>
+				<td><input name="shipfrom" type="text" value="Amata" /></td>
+				<th>Ship&nbsp;To</th>
+				<td><input type="text" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<table>
+		<caption>Reference</caption>
+		<tbody>
+			<tr>
+				<th>PDI&nbsp;Request</th>
+				<td>
+					<input name="pdirequest" type="text" /> 
+					<input type="button" value="..." />
+				</td>
+				<th>Service&nbsp;Contact</th>
+				<td>
+					<input name="servicecontact" type="text" /> 
+					<input type="button" value="..." />
+				</td>
+			</tr>
+			<tr>
+				<th>Order&nbsp;Special&nbsp;Job</th>
+				<td colspan="3">
+					<input name="orderspecialjob" type="text" />
+					<input type="button" value="..." />
+				</td>
+			</tr>
+			<tr>
+				<th>Status</th>
+				<td colspan="3"><input name="status" type="text" value="Open" readonly="readonly"/></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+    <div class="tblfooter">
+	<div>
+		<input name="save" type="button" value="Save" class="button-normal"/> 
+		<input name="cancel" type="button" value="Cancel Request" class="button-normal"/> 
+		<input name="back" type="button" value="Back" onclick="back()" class="button-normal"/>
+	</div>
+</div>
+    </div>

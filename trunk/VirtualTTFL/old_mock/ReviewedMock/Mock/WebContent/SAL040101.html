@@ -1,0 +1,157 @@
+<!--
+<%--
+ % Main contents.  SAL040101
+ % This page is Transport Request Inquiry Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Tin
+ % Creation date : 2014/10/07
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<script>
+	new JsDatePick({
+		useMode : 2,
+		target : "requestdate",
+		dateFormat : "%d/%m/%Y"
+	});
+
+	new JsDatePick({
+		useMode : 2,
+		target : "deliverydate",
+		dateFormat : "%d/%m/%Y"
+	});
+	
+	function openEntry() {
+		$("#content").load("TransportRequestEntry.html");
+	};
+</script>
+<div class="contentpanel">
+<div class="frm">
+	<table>
+		<caption>Search&nbsp;Condition</caption>
+		<tbody>
+			<tr>
+				<th>Request&nbsp;No.</th>
+				<td><input name="requestno" type="text" /></td>
+				<th>Request&nbsp;Date</th>
+				<td><input id="requestdate" name="requestdate" type="text">
+				</td>
+			</tr>
+			<tr>
+				<th>Customer</th>
+				<td>
+					<input name="customer" type="text" /> 
+					<input type="button" value="..." />
+				</td>
+				<th>Delivery&nbsp;Date</th>
+				<td><input id="deliverydate" name="deliverydate" type="text" /></td>
+			</tr>
+			<tr>
+				<th>Forklift&nbsp;Frame</th>
+				<td>
+					<input name="forkliftframe" type="text" /> 
+					<input type="button" value="..." />
+				</td>
+				<th>Request&nbsp;By</th>
+				<td><select name="requestby"></select></td>
+			</tr>
+			<tr>
+				<th>PDI&nbsp;Request&nbsp;No.</th>
+				<td>
+					<input name="pdirequestno" type="text" /> 
+					<input type="button" value="..." />
+				</td>
+				<th>OSJ&nbsp;No.</th>
+				<td>
+					<input name="osjno" type="text" /> 
+					<input type="button" value="..." />
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="tblfooter">
+	<div>
+		<input name="search" type="button" value="Search" class="button-normal"/> 
+		<input name="clear" type="button" value="Clear" class="button-normal"/> 
+		<input name="new" type="button" value="New" onclick="openEntry()" class="button-normal" />
+	</div>
+</div>
+<div class="tbl">
+	<table>
+		<caption>Transportation&nbsp;Request&nbsp;List</caption>
+		<tbody>
+			<tr>
+				<th>Request&nbsp;No.</th>
+				<th>Request&nbsp;Date</th>
+				<th>Delivery&nbsp;Date</th>
+				<th>PDI&nbsp;Request&nbsp;No.</th>
+				<th>Customer</th>
+				<th>Customer&nbsp;Site</th>
+				<th>Forklift&nbsp;Frame</th>
+				<th>Request&nbsp;By</th>
+				<th>Status</th>
+			</tr>
+			<tr>
+				<td class="tblcenter"><a href="#" onclick="openEntry()">5409001</a></td>
+				<td class="tblcenter">01-Sep-14</td>
+				<td class="tblcenter">01-Sep-14</td>
+				<td>571002</td>
+				<td>W/H-Asia</td>
+				<td>Bangna</td>
+				<td>FG8029910-09</td>
+				<td>TF2A</td>
+				<td>Open</td>
+			</tr>
+			<tr>
+				<td class="tblcenter"><a href="#" onclick="openEntry()">5409002</a></td>
+				<td class="tblcenter">02-Sep-14</td>
+				<td class="tblcenter">02-Sep-14</td>
+				<td>571003</td>
+				<td>W/H-Asia</td>
+				<td>Bangna</td>
+				<td>FG8029910-10</td>
+				<td>TF3C</td>
+				<td>Open</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+    </div>

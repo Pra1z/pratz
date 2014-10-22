@@ -1,0 +1,134 @@
+<!--
+<%--
+ % Sale Order Entry - SAL010402.
+ %
+ % Creator       : Pratz
+ % Creation date : 2014/10/17
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<div class="contentpanel">
+<div class="tblfooter">
+    <div>
+        Attach <a href="#">0 files</a>
+    </div>
+</div>
+<div class="frm">
+    <table>
+        <caption>Sale Order Entry</caption>
+        <thead>
+            <tr>
+                <th>QuotationNo</th>
+                <td><input type="text" readonly="readonly"/><input type="button" value="..."/></td>
+                <th>Order Type</th>
+                <td><input type="text"/></td>
+            </tr>
+             <tr>
+                <th>Sale Order No</th>
+                <td><input type="text" readonly="readonly"/></td>
+                <th>ReferenceNo</th>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <th>Order Date</th>
+                <td><input type="text"/></td>
+                <th>Credit Application</th>
+                <td>
+                    <select class="dropdownlist">
+                        <option value="0">Pass</option>
+                    </select>
+                </td>
+            </tr>
+             <tr>
+                <th>Customer Code</th>
+                <td><input type="text" readonly="readonly"/></td>
+                <th>Customer Person</th>
+                <td><input type="text" readonly="readonly"/></td>
+            </tr>
+              <tr>
+                <th>Customer Name</th>
+                <td colspan="3"><input type="text" readonly="readonly"/></td>
+               
+            </tr>
+              <tr>
+                <th>Bill Address</th>
+                <td><input type="text" readonly="readonly"/></td>
+                <th>Ship Address</th>
+                <td><input type="text" readonly="readonly"/></td>
+            </tr>
+               <tr>
+                <th>Sale Rep</th>
+                <td>
+                    <select class="dropdownlist">
+                        <option value="0">Sirinapa</option>
+                    </select>
+                </td>
+                <th>Payment Term</th>
+                <td><input type="text" readonly="readonly"/></td>
+            </tr>
+             <tr>
+                <th>VAT</th>
+                <td></td>
+                <th>Status</th>
+                <td></td>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div class="tbl">
+    <table>
+        <caption>
+            <div>
+                <button>-</button>
+            </div>
+        </caption>
+        <thead>
+            <tr>
+                <th>Seq</th>
+                <th>#</th>
+                <th>ItemCode</th>
+                <th>Description</th>
+                <th>Qty</th>
+                <th>UOM</th>
+                <th>Unit Price</th>
+                <th>Total Amt</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="tblcenter"><input type="checkbox"/></td>
+                <td>1</td>
+                <td>FG-30-8FG25</td>
+                <td><input type="text" value="ForkLift Model FG-30-8FG25"/></td>
+                <td><input type="text" value="2" class="currency"/></td>
+                <td>Unit</td>
+                <td class="currency">781,500</td>
+                <td class="currency">1,563,000</td>
+            </tr>
+            <tr>
+                <td colspan="7" class="currency">Total Amount</td>
+                <td class="currency">1,563,000</td>
+            </tr>
+             <tr>
+                <td colspan="7" class="currency">VAT Amount</td>
+                <td class="currency">109,410</td>
+            </tr>
+             <tr>
+                <td colspan="7" class="currency">Grand Total</td>
+                <td class="currency">1,672,410</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="tblfooter">
+    <div>
+        <input type="button" class="button-normal" value="Generate PDI" onclick="goToPDIRequestInquiry();"/>
+        <input type="button" class="button-normal" value="Save"/>
+        <input type="button" class="button-normal" value="Cancel Order" onclick="goToSaleOrderInquiry();"/>
+        <input type="button" class="button-normal" value="Back" onclick="goToSaleOrderInquiry();"/>
+    </div>
+</div>
+    </div>

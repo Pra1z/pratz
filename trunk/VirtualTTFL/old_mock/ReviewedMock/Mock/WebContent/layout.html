@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+<%--
+ % layout contents.
+ % This page is layout Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Kambara
+ % Creation date : 2014/09/29
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- <meta http-equiv="Content-Script-Type" content="text/javascript"> -->
+        <title>TTFL&nbsp;projects</title>
+        <!-- <title><spring:message text="${title}" /></title> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <script type="text/javascript" src="js/jquery/jquery-1.11.1.min.js"></script>
+        <!-- <script type="text/javascript" src="js/jquery/jquery-2.0.3.min.js"></script>
+         <script type="text/javascript" src="js/jquery.rStorage.js"></script> -->
+        <script type="text/javascript" src="js/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/slidebars.js"></script>
+        <script type="text/javascript" src="js/jquery.fancytree-all.min.js"></script>
+        <script type="text/javascript" src="js/jsDatePick.min.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="js/jquery.blockUI.js"></script>
+        <script type="text/javascript" src="js/mock.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="./css/common.css" />
+        <link rel="stylesheet" type="text/css" href="./css/jquery/jquery-ui.min.css" />
+        <link rel="stylesheet" type="text/css" href="./css/slidebars.css" />
+        <link rel="stylesheet" type="text/css" href="./css/ui.fancytree.min.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="./css/jsDatePick_ltr.min.css" />
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+        <link rel="stylesheet" type="text/css" href="./css/jquery.dataTables.css" >
+
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="sb-site">
+                <div id="container">
+                    <div id="header">
+                        <!--  <tiles:insert page="Headar.jsp"/>  -->
+                    </div>
+                    <div id="content">
+                        <!--  <tiles:insert page="content.jsp"/>  -->
+                    </div>
+                    <div id="footer">
+                        <!--  <tiles:insert page="footer.jsp"/>  -->
+                    </div>
+                </div>
+            </div>
+            <div class="sb-slidebar sb-left sb-style-overlay">
+                <div id="tree">
+                    <ul>
+                        <li class="folder">Sale
+                            <ul>
+                                <li class="folder">Opportunity&nbsp;Management
+                                    <ul>
+                                        <li><a href="SAL010101.html">Customer&nbsp;Dashboard</a></li>
+                                        <!--                                        <li><a href="SAL010201.html">Cost&nbsp;Sheet&nbsp;Entry</a></li>-->
+                                        <li><a href="SAL010204.html">Cost&nbsp;Sheet&nbsp;Inquiry</a></li>
+                                        <li><a href="SAL010301.html">Quotation&nbsp;Inquiry</a></li>
+                                        <!--                                        <li><a href="SAL010302.html">Quotation&nbsp;Entry</a></li>-->
+<!--                                        <li><a href="SAL010303.html">Quotation&nbsp;Report</a></li>-->
+                                        <li><a href="SAL010401.html">Sale&nbsp;Order&nbsp;Inquiry</a></li>
+                                        <!--                                        <li><a href="SAL010402.html">Sale&nbsp;Order&nbsp;Entry</a></li>-->
+                                        <li><a href="SAL010501.html">Opportunity&nbsp;Status</a></li>
+                                        <li><a href="#">Rental Agreement will be finished</a></li>
+                                        <li><a href="#"> FL sale opportunity</a></li>
+
+                                        <!--
+                                        <li><a href="PUR010105.html">Part&nbsp;Order&nbsp;List&nbsp;Inquiry</a></li>
+                                        <li><a href="PartOrderListInquiry.html">Part&nbsp;Order&nbsp;List&nbsp;Inquiry - nunee</a></li>
+                                        -->  
+
+                                        <!--
+                                         <li><a href="PUR010105.html">Part&nbsp;Order&nbsp;List&nbsp;Inquiry</a></li>
+                                        -->  
+                                    </ul>
+                                </li>
+                                <li class="folder">PDI Management
+                                    <ul>
+                                        <li><a href="SAL020101.html">PDI&nbsp;Request&nbsp;Inquiry</a></li>
+                                        <!--                                        <li><a href="SAL020102.html">PDI&nbsp;Request&nbsp;Entry</a></li>-->
+                                        <li><a href="SAL020109.html">PDI&nbsp;Process&nbsp;Result</a></li>
+                                        <li><a href="#">PDI&nbsp;Processing&nbsp;Result</a></li>
+                                        <li><a href="#">Order Special Job Inquiry</a></li>
+                                        <li><a href="#">FL Stock Transaction Inquiry</a></li>
+                                        <li><a href="#">FL Inventory Status</a></li>
+                                        <li><a href="#">Assign FL to PDI Request(or Order Special Job)</a></li>
+                                    </ul>
+                                </li>
+                                <li class="folder">Billing Management
+                                    <ul>
+                                        <li><a href="SAL030101.html">Sale&nbsp;Invoice&nbsp;Inquiry</a></li>
+                                        <li><a href="#">Sale Invoice Generate Data</a></li>
+                                        <li><a href="#">Billing Inquiry</a></li>
+                                    </ul>
+                                </li>
+                                <li class="folder">Transprotation Management
+                                    <ul>
+                                        <li><a href="SAL040101.html">Transport&nbsp;Request&nbsp;Inquiry</a></li>
+                                        <!--                                          <li><a href="SAL040102.html">Transport&nbsp;Request&nbsp;Entry</a></li>-->
+                                        <!--                                          <li><a href="SAL040106.html">Delivery&nbsp;Forklift&nbsp;Menu</a></li>-->
+                                        <li><a href="#">Transport Result Entry</a></li>
+                                    </ul>
+                                </li>
+                                <li class="folder">Sales Master Management
+                                    <ul>
+                                        <li><a href="#">Company Master Inquiry</a></li>
+                                        <li><a href="#">FL Master Inquiry</a></li>
+                                        <li><a href="#">Item Inquiry</a></li>
+                                        <li><a href="#">FL Cost/Price Entry</a></li>
+                                        <li><a href="#">Item Cost/Price Entry</a></li>
+                                        <li><a href="#">Service Cost/Price Entry</a></li>
+                                        <li><a href="#">Code Master Inquiry</a></li>
+                                        <li><a href="#">Truck No. Entry</a></li>
+
+                                        <!--                                          <li><a href="SAL040102.html">Transport&nbsp;Request&nbsp;Entry</a></li>-->
+                                        <!--                                          <li><a href="SAL040106.html">Delivery&nbsp;Forklift&nbsp;Menu</a></li>-->
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="folder">Service
+                            <ul>
+                                <li class="folder">Service Job Management
+                                    <ul>
+                                        <li><a href="#">PM/Service Planning Entry</a></li>
+                                        <li><a href="#">Service Job Order Inquiry</a></li>
+                                        <li><a href="#">Service Request Inquiry</a></li>
+                                        <li><a href="#">Service Job Order Result Entry</a></li>
+                                        <li><a href="#">Service History</a></li>
+                                        <li><a href="#">Forklift Service repair order Report(Yearly)</a></li>
+                                        <li><a href="#">Maintenance monthly report</a></li>
+                                        <li><a href="#">Maintenance cost monthly report</a></li>
+                                        <!--                                        <li><a href="PurchaseRequestEntry.html">Purchase&nbsp;Request&nbsp;Entry</a></li>-->
+                                    </ul>
+                                </li>
+                                <li class="folder">Service Constact Management
+                                    <ul>
+                                        <li><a href="#">Service Contract Inquiry</a></li>
+                                    </ul>
+                            </ul>
+                        </li>
+
+                        <li class="folder">Purchase
+                            <ul>
+                                <li class="folder">Procurement Request (PR)
+                                    <ul>
+                                        <li><a href="PurchaseRequestInquiry.html">Purchase&nbsp;Request&nbsp;Inquiry</a></li>
+                                        <!--                                        <li><a href="PurchaseRequestEntry.html">Purchase&nbsp;Request&nbsp;Entry</a></li>-->
+                                    </ul>
+                                </li>
+                                <li class="folder">Receiving Schedule
+                                    <ul>
+                                        <!--                                        <li><a href="ReceiveItemEntry.html">Receive&nbsp;Item&nbsp;Entry</a></li>-->
+                                        <li><a href="PUR020110.html">Receiving&nbsp;Schedule&nbsp;Inquiry</a></li>
+                                    </ul>
+                                </li>
+                                <li class="folder">Purchase Master Managenent
+                                    <ul>
+                                        <!--                                        <li><a href="ReceiveItemEntry.html">Receive&nbsp;Item&nbsp;Entry</a></li>-->
+                                        <li><a href="#">Supplier Upload Report</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="folder">Inventory
+                            <ul>
+                                <li class="folder">Stock Management
+                                    <ul>
+                                        <li><a href="#">Stocktaking Actual Count Entry</a></li>
+                                        <li><a href="INV010201.html">Stock&nbsp;Inquiry</a></li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="folder">Goods Receive/Issue
+                                    <ul>
+                                        <li><a href="#">Goods Receive/Issue Inquiry</a></li>
+                                        <li><a href="#">Stock Movement</a></li>
+                                        <li><a href="#">Battery/Charger Stock Inquiry</a></li>
+                                        <li><a href="#">Battery/Charger Inventory Status</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="folder">Borrow Request
+                                    <ul>
+                                        <li><a href="INV030106.html">Borrow&nbsp;Request&nbsp;Inquiry</a></li>
+                                        <!--                                        <li><a href="INV030101.html">Borrow&nbsp;Request&nbsp;Entry</a></li>-->
+                                        <li><a href="INV030107.html">Borrow&nbsp;Allocate&nbsp;Inquiry</a></li>
+                                        <li><a href="#">Part Usage</a></li>
+                                        <li><a href="#">Location Entry</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="folder">Other
+                            <ul>
+                                <li class="folder">Common
+                                    <ul>
+
+                                        <li><a href="OTH010201.html">Approval&nbsp;Workflow&nbsp;Inquiry</a></li>
+                                        <li><a href="#">User Entry</a></li>
+                                        <li><a href="#">Group Entry</a></li>
+                                        <li><a href="#">Role Entry</a></li>
+                                        <li><a href="#">Role of Group Entry</a></li>
+                                        <li><a href="#">Function/Action Entry</a></li>
+                                        <li><a href="#">Change Password</a></li>
+                                        <li><a href="#">Monthly closing entry</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script>
+            /*
+             $(function() {
+             if ($.sessionStorage('login.name') == null) {
+             window.location = "login.html";
+             } else {
+             console.log("UserName: " + $.sessionStorage('login.name'));
+             }
+             });
+             */
+        </script>
+    </body>
+</html>
