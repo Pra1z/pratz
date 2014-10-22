@@ -1,0 +1,46 @@
+<!--
+<%--
+ % Main contents.
+ % This page is Approval Workflow Entry Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Phannika R.
+ % Creation date : 2014/10/08
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<div class="contentpanel">
+    <div class="frm">
+        <fieldset class="approval-entry">
+            <legend>
+                <b>Approval&nbsp;Entry</b>
+            </legend>
+            <div id="approval-content">
+            </div>
+        </fieldset>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Remark</th>
+                    <td colspan="3"><textarea rows="4" cols="20"></textarea></td>
+                </tr>
+                <tr class="btn">
+                    <td colspan="4" align="center">
+                        <input type="button" value="Approve" class="button-normal" onclick="goToApprovalWorkflowInquiry();"/>
+                        <input type="button" value="Reject" class="button-normal" onclick="goToApprovalWorkflowInquiry();"/>
+                        <input type="button" value="Cancel" class="button-normal" onclick="goToApprovalWorkflowInquiry();"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $("#approval-content").load("PurchaseRequestEntry2.html").block({message: null});
+        //$("#approval-content").load("PurchaseRequestEntry2.html");
+    });
+</script>

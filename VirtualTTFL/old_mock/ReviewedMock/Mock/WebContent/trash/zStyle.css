@@ -1,0 +1,475 @@
+/* Copyright(c) 2013-2014 SIAM TINPLATE CO.,LTD. All rights reserved. */
+
+/* ��{�Z���N�^(body) */
+body{
+    background: #EEEEEE;                           /* �S�̂̔w�i�F�A��␅�F */
+    font-family:Arial, sans-serif;                 /* Arial                  */
+    font-size: 11pt;                               /* �t�H���g11pt           */
+    margin: 0px;
+}
+
+/
+/*-----------------------------------------
+ * �R���e���c���̃��C�A�E�g���`���܂��B
+ * ----------------------------------------*/
+
+/* ���i�̃|�W�V�����̒�`�i�E�l�߁j������g�p�\*/
+/* �������i�̒�`(���l) ������g�p�\ */
+/* ���s���ifloat�̉��� */
+/*-----------------------------------------
+ * ������
+ * ----------------------------------------*/
+hr.line{
+    width: 1150px;
+    margin: 10px 0px 10px 0px;
+}
+ /*-----------------------------------------
+ * ���o���A�e�L�X�g���`���܂��B�B
+ * ----------------------------------------*/
+div.literal
+{
+    margin: 5px 5px 5px 5px;
+    display:inline;
+}
+
+/*-----------------------------------------
+ * �O���b�h�����`���܂��B
+ * ----------------------------------------*/
+div.grid_header
+{
+    height: auto;                                   /* �O���b�h�w�b�_(div)�̍����������ݒ肵�܂�                */
+    overflow: visible;                              /* �O���b�h�w�b�_(div)�̃{�b�N�X����͂ݏo���ĕ\��          */
+}
+/* table�̏ꍇ�A�t�H���g�A�T�C�Y���p������Ȃ����߁A���ڎw�� */
+table.grid_header {
+    font-family:Arial;                             /* Arial                                                     */
+    font-size: 11pt;                               /* �t�H���g11pt                                              */
+    border: 1px solid black;                       /* �O���b�h�w�b�_�̑S�{�[�_�[�ɃX�^�C���E�����E�F���w��      */
+    border-collapse:collapse;                      /* �O���b�h�w�b�_�̃{�[�_�[�\���̎d����w��                  */
+    /* table-layout:fixed; */                       /* �O���b�h�w�b�_�̗񕝂��Œ背�C�A�E�g�ɐݒ�                */
+}
+
+table.grid_header tr {
+    background: #6677AA;                           /* �O���b�h�w�b�_�ɒP�F �����F���]                           */
+    color:#ffffff;                                 /* �����F�@��(���])                                          */
+}
+table.grid_header th {
+    border: 1px solid black;                       /* �w�b�_�{�[�_�[�̃X�^�C���E�����E�F��ݒ�                  */
+}
+div.grid_body
+{
+    overflow-x: hidden;                            /* x���̃f�[�^���͂ݏo�����ꍇ�A�g��                         */
+    overflow-y: auto;                              /* y���̃f�[�^���͂ݏo�����ꍇ�X�N���[���\�� */
+    position:relative;                             /* tooltip�p */
+}
+/* table�̏ꍇ�A�t�H���g�A�T�C�Y���p������Ȃ����߁A���ڎw�� */
+table.grid_body {
+    font-family:Arial;                            /* Arial                                                      */
+    font-size: 11pt;                              /* �t�H���g11pt                                               */
+    border-top: 0px solid;                        /* �{�f�B�����̏�{�[�_�[�̃X�^�C���E�����E�F���w��           */
+    border-left: 1px solid black;                 /* �{�f�B�����̍��{�[�_�[�̃X�^�C���E�����E�F���w��           */
+    border-right: 1px solid black;                /* �{�f�B�����̉E�{�[�_�[�̃X�^�C���E�����E�F���w��           */
+    border-bottom: 1px solid black;               /* �{�f�B�����̉��{�[�_�[�̃X�^�C���E�����E�F���w��           */
+    border-collapse:collapse;                     /* �{�f�B�����̃{�[�_�[�\���̎d����w��                       */
+    /*table-layout:fixed;*/                       /* �{�f�B�����̗񕝂��Œ背�C�A�E�g�ɐݒ�                     */
+}
+table.grid_body tr {
+    background: #FFFFFF;                          /* ����s�̔w�i�𔒐F �ɐݒ�                                  */
+    height:16px;                                  /* �������Œ�                                                 */
+}
+table.grid_body td {                              /* background-color�́Atr�ݒ���㏑������̂Őݒ肵�Ȃ�       */
+    border: 1px solid black;                      /* �S�{�[�_�[�ɃX�^�C���E�����E�F���w��                       */
+    word-break: keep-all;                         /* �܂�Ԃ��w�� CSS2.0�ł͓��삵�Ȃ�                          */
+    padding-top:2px;
+    margin:0px;
+}
+ /*-----------------------------------------
+ * �\��e�[�u�����`���܂��i�\�`���i�O���b�h�j�ɂ͎g�p�s�j�B
+ * ----------------------------------------*/
+table.table {
+    font-family:Arial;                              /* Arial                                                      */
+    font-size: 11pt;                                /* �t�H���g11pt                                               */
+    border-top: 1px solid black;                    /* �e�[�u���`���̏�{�[�_�[�̃X�^�C���E�����E�F���w��         */
+    border-left: 1px solid black;                   /* �e�[�u���`���̍��{�[�_�[�̃X�^�C���E�����E�F���w��         */
+    border-right: 1px solid black;                  /* �e�[�u���`���̉E�{�[�_�[�̃X�^�C���E�����E�F���w��         */
+    border-bottom: 1px solid black;                 /* �e�[�u���`���̉��{�[�_�[�̃X�^�C���E�����E�F���w��         */
+    border-collapse:collapse;                       /* �e�[�u���`���̃{�[�_�[�\���̎d����w��                     */
+    /* table-layout:fixed; */                       /* �e�[�u���`���̗񕝂��Œ背�C�A�E�g�ɐݒ�                   */
+}
+
+table.table tr{
+    background: #FFFFFF;                            /* ����s�̔w�i�𔒐F �ɐݒ�                                  */
+    height:1px;                                     /* �e�[�u���`���̍������Œ�                                   */
+}
+table.table th {
+    border-top: 1px solid black;                    /* �e�[�u���`���w�b�_�̏�{�[�_�[�̃X�^�C���E�����E�F��ݒ�   */
+    border-left: 1px solid black;                   /* �e�[�u���`���w�b�_�̍��{�[�_�[�̃X�^�C���E�����E�F��ݒ�   */
+    border-right: 1px solid black;                  /* �e�[�u���`���w�b�_�̉E�{�[�_�[�̃X�^�C���E�����E�F��ݒ�   */
+    border-bottom: 1px solid black;                 /* �e�[�u���`���w�b�_�̉��{�[�_�[�̃X�^�C���E�����E�F��ݒ�   */
+    background: #6677AA;                            /* �e�[�u���`���w�b�_�� �P�F �����F���]                       */
+    color:#ffffff;                                  /* �����F�@��(���])                                           */
+}
+table.table td {                                  /* background-color�́Atr�ݒ���㏑������̂Őݒ肵�Ȃ�       */
+    border: 1px solid black;                        /* �S�{�[�_�[�ɃX�^�C���E�����E�F���w��                       */
+    padding-top:2px;
+    margin:0px;
+}
+
+@media print {
+    body {
+        zoom: 90%; /* ���Ɏ�܂�悤�k�� */
+    }
+    table.grid_body td{
+        border-top: 0px solid; /* ���{�^���t���O���b�h��\�����邽�߂̏��� */
+    }
+    div.grid_body {
+        overflow: visible;      /* �O���b�h�̃X�N���[���o�[���폜 */
+        height:100% !important; /* style������height�����ŗD�� */
+    }
+}
+
+/*-----------------------------------------
+ * �w�b�_�p�̒�`
+ * ----------------------------------------*/
+div.header {
+    background-repeat: repeat-x;
+    background-image: url("../images/header_back.png");
+    height: 78px;
+    color: #FFFFFF;
+}
+div.footer {
+    background-repeat: repeat-x;
+    background-image: url("../images/header_back.png");
+    height: 45px;
+    color: #FFFFFF;
+}
+
+div.message_panel {
+    background-color: #222255;
+    height: 46px;
+    overflow: auto;
+}
+
+div.message_notify {
+    color: #FFFFFF;
+}
+
+div.message_notify {
+    color: #FFFFFF;
+}
+
+div.message_notify {
+    color: #FFFFFF;
+}
+
+a, a:hover, a:active, a:focus {
+    outline:0; font-weight:normal;
+}
+
+.positioner {
+    position:relative;
+    height: 29px;
+    z-index:500;
+}
+.menuHolder {
+    /* background: url('../images/menu.png') left top repeat-x;*/
+    position: absolute;
+    height: 29px;
+}
+ul.ulTop {
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 29px;
+    text-align: left;
+    zoom: 1;
+        /*border: solid #555555 1px;*/
+}
+ul.ulTop a {
+    display: block;
+    padding-left:10px;
+    padding-right:10px;
+    color: #000000;
+    text-decoration: none;
+    white-space: nowrap;
+    border: solid #555555 1px;
+    background: url('../images/menu.png') left top repeat-x;
+}
+ul.ulTop li.liTop {
+    float: left;
+}
+ul.ulTop li.liTop a.aTopDisabled{
+    color:#777777;
+}
+ul.ulTop li.liTop:hover {
+    position: relative;
+}
+ul.ulTop li.liTop a.aTop:hover {
+    color:red;
+}
+ul.sub {
+    position: absolute;
+    left: -9999px;
+    top: -32000px;
+    list-style: none;
+    background: url('../images/menu.png') left top repeat;
+    padding: 0;
+    margin: 0;
+}
+ul.sub li {
+    line-height: 29px;
+    vertical-align: top;
+    height: 29px;
+}
+
+ul.sub li a {
+    text-align:left;
+    background: url('../images/menu.png') left top repeat-x;
+    border: solid #555555 1px;
+}
+ul.sub li a.disabled{
+    color:#777777;
+}
+ul.sub li a.last {
+    /* null */
+}
+ul.ulTop :hover ul {
+    left: 0;
+    top: 31px;
+}
+
+ul.sub li a.last:hover {
+    color:red;
+}
+
+ul.sub a:hover {
+    color:red;
+}
+ul.sub li a.disabled:hover {
+    /* disabled�͊D�F�̂܂� */
+    color:#777777;
+}
+div.ylogocaption {
+    /* ���S��\�� */
+    display:none;
+}
+
+/*-----------------------------------------
+ * �^�C�v�ʃX�^�C��
+ * ----------------------------------------*/
+
+
+/* table�̏ꍇ�A�t�H���g�A�T�C�Y���p������Ȃ����߁A���ڎw�� */
+table{
+    font-family:Arial, sans-serif;                 /* Arial                  */
+    font-size: 11pt;                               /* �t�H���g11pt           */
+}
+
+/* submit */
+input[type="submit"]{
+    font-family:Arial;
+    font-size: 11pt;
+    width: 160px;
+    height: 25px;
+    margin: 5px 5px 5px 5px;
+}
+/* submit �L��̂� */
+input[type="submit"]:not([disabled]){
+    color: #333333;
+    background: -moz-linear-gradient(top, #fff, #F1F1F1 1%, #F1F1F1 50%, #DFDFDF 99%, #ccc);
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(0.01, #F1F1F1), color-stop(0.5, #F1F1F1), color-stop(0.99, #DFDFDF), to(#ccc));
+}
+
+/* button */
+input[type="button"]{
+    font-family:Arial;
+    font-size: 11pt;
+    width: 160px;
+    height: 25px;
+    margin: 5px 5px 5px 5px;
+}
+/* button �L��̂� */
+input[type="button"]:not([disabled]){
+    color: #333333;
+    background: -moz-linear-gradient(top, #fff, #F1F1F1 1%, #F1F1F1 50%, #DFDFDF 99%, #ccc);
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(0.01, #F1F1F1), color-stop(0.5, #F1F1F1), color-stop(0.99, #DFDFDF), to(#ccc));
+}
+
+/* file */
+input[type="file"]{
+    font-family:Arial;
+    font-size: 10pt;
+    width: 250px;
+    height: 25px;
+    margin: 5px 5px 5px 5px;
+}
+/* file �L��̂� */
+input[type="file"]:not([disabled]){
+    color: #333333;
+    background: -moz-linear-gradient(top, #fff, #F1F1F1 1%, #F1F1F1 50%, #DFDFDF 99%, #ccc);
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(0.01, #F1F1F1), color-stop(0.5, #F1F1F1), color-stop(0.99, #DFDFDF), to(#ccc));
+}
+
+/* 1�s�e�L�X�g�{�b�N�X */
+input[type="text"]{
+    font-family:Arial;
+    font-size:11pt;
+    margin: 0px 0px 0px 0px;
+}
+
+/* radio �ʒu����̑Ή� */
+input[type="radio"]{
+    margin: 0;
+    width: auto !important;
+}
+input[type="checkbox"]{
+    margin: 0;
+    width: auto !important;
+}
+
+/* select */
+select{
+    font-family:Arial;
+    color: #333333;
+    font-size: 11pt;
+    height: 22px;
+    margin: 0px 0px 0px 0px;
+
+}
+
+/*-----------------------------------------
+ * �ʓK�p�X�^�C��
+ * ----------------------------------------*/
+/* �K�{��͍���(�e�L�X�g�{�b�N�X) */
+INPUT.required {
+    background-color: #FFFF99;
+}
+
+/* �K�{��͍���(�Z���N�g�{�b�N�X) */
+SELECT.required {
+    background-color: #FFFF99;
+}
+
+ /* ���l�E�� */
+INPUT.right {
+    text-align: right;
+    padding-right:2px;
+}
+
+/*-----------------------------------------
+ *�e�[�u���X�^�C��
+ * ----------------------------------------*/
+
+/* �{�^���\���p�e�[�u��(���Œ�) */
+table.button{
+    font-family:Arial, sans-serif;
+    width: 990px;
+    border: 0;
+}
+
+/* �{�^���\���p�e�[�u����td�E���� */
+table.button td{
+    float:right;
+}
+
+/* �t���[�t�H�[�}�b�g�p�e�[�u��(���Œ�) */
+table.free {
+    font-family:Arial, sans-serif;
+    width: 990px;
+    border: 0;
+}
+
+/* �P�\�p�e�[�u��(���Œ�) */
+table.simpleTable {
+    font-family:Arial, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding:0px;
+    border-collapse:collapse;
+
+}
+table.simpleTable th {
+    font-weight:normal;
+    padding:4px 2px 2px 4px;
+    text-align:left;
+    vertical-align:top;
+    color:#ffffff;
+    background-color:#cccccc;
+    background-color:#666699;
+    border:1px solid #999999;
+
+
+}
+table.simpleTable td    {
+    padding:0px 0px 0px 0px;
+    background-color:#ffffff;
+    border:1px solid #999999;
+}
+
+table.simpleTable input {
+    width: 100%;
+    height: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* �P�\�p�e�[�u���� ���Œ肵�Ȃ�input�^�O */
+table.simpleTable input.autoWidth {
+    width: auto;
+    height: 100%;
+}
+
+/* �����p�e�[�u��(���Œ�) */
+table.search {
+    font-family:Arial, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding:0px;
+    border-collapse:collapse;
+
+}
+table.search th {
+    font-weight:normal;
+    padding:4px 2px 2px 4px;
+    text-align:left;
+    vertical-align:top;
+    color:#ffffff;
+    background-color:#6699CC;
+    border:1px solid #999999;
+}
+
+table.search td {
+    padding:0px 0px 0px 0px;
+    background-color:#ffffff;
+    border:1px solid #999999;
+}
+
+table.search input {
+    width: 100%;
+    height: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* �����p�e�[�u���� ���Œ肵�Ȃ�input�^�O */
+table.search input.autoWidth {
+    width: auto;
+    height: 100%;
+}
+
+/*-----------------------------------------
+ * �����񂪒������ăZ������͂ݏo���ꍇ�A�������u...�v�ŕ\��
+ * ----------------------------------------*/
+*.ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    /*overflow: hidden;*/
+}
+

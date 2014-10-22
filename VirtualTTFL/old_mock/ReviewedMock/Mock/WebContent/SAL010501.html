@@ -1,0 +1,623 @@
+<!--
+<%--
+ % Main contents.
+ % This page is Opportunity Status Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Padchimnuch S.
+ % Creation date : 2014/10/10
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<div class="contentpanel">
+	<script>
+		new JsDatePick({
+			useMode : 2,
+			target : "plandeliverydatefrom",
+			dateFormat : "%d/%m/%Y"
+		});
+
+		new JsDatePick({
+			useMode : 2,
+			target : "plandeliverydateto",
+			dateFormat : "%d/%m/%Y"
+		});
+		
+		new JsDatePick({
+			useMode : 2,
+			target : "shippingschdatefrom",
+			dateFormat : "%d/%m/%Y"
+		});
+
+		new JsDatePick({
+			useMode : 2,
+			target : "shippingschdateto",
+			dateFormat : "%d/%m/%Y"
+		});
+		
+		new JsDatePick({
+			useMode : 2,
+			target : "pdiplanfinisheddatefrom",
+			dateFormat : "%d/%m/%Y"
+		});
+
+		new JsDatePick({
+			useMode : 2,
+			target : "pdiplanfinisheddateto",
+			dateFormat : "%d/%m/%Y"
+		});
+		
+		new JsDatePick({
+			useMode : 2,
+			target : "osjplanfinisheddatefrom",
+			dateFormat : "%d/%m/%Y"
+		});
+
+		new JsDatePick({
+			useMode : 2,
+			target : "osjplanfinisheddateto",
+			dateFormat : "%d/%m/%Y"
+		});
+		
+		new JsDatePick({
+			useMode : 2,
+			target : "paymentdatefrom",
+			dateFormat : "%d/%m/%Y"
+		});
+
+		new JsDatePick({
+			useMode : 2,
+			target : "paymentdateto",
+			dateFormat : "%d/%m/%Y"
+		});
+	</script>
+        <div class="frm" style="margin-top: -10px;">
+		<table>
+                    <caption>Opportunity Status</caption>
+			<colgroup>
+				<col class="col-20-left"></col>
+				<col class="col-30-left"></col>
+				<col class="col-20-left"></col>
+				<col class="col-30-left"></col>
+			</colgroup>
+			<tbody>
+				
+				<tr>
+					<th>Plan&nbsp;Delivery&nbsp;Date&nbsp;From*</th>
+					<td><input id="plandeliverydatefrom" name="plandeliverydatefrom" type="text"/></td>
+					<th>Plan&nbsp;Delivery&nbsp;Date&nbsp;To*</th>
+					<td><input id="plandeliverydateto" name="plandeliverydateto" type="text"/></td>
+				</tr>
+				<tr>
+					<th>Customer&nbsp;Code</th>
+					<td><input type="text"/><input type="button" value="&nbsp;&nbsp;...&nbsp;&nbsp;" class="btnpopup"/></td>
+					<th>Customer&nbsp;Name</th>
+					<td><input type="text" readonly="readonly" value=""/></td>
+				</tr>
+				<tr>
+					<th>Sale&nbsp;Type</th>
+					<td colspan="3">
+						<select name="saleType" class="dropdownlist">
+							<option value="sample1"></option>
+							<option value="sample2">Sale New F/L</option>
+							<option value="sample3">Sale Used F/L</option>
+							<option value="sample4">Rental</option>
+							<option value="sample5">Service</option>
+							<option value="sample6">Sale Part</option>
+						</select>
+					</td>
+				</tr>
+                                <tr>
+                                    <th>Sale Type</th>
+                                      <td><input type="text"/></td>
+                                    <th>Sale&nbsp;Order&nbsp;No.</th>
+				    <td><input type="text"/></td>
+                                </tr>
+                                <tr>
+                                    <th>PDI No</th>
+                                      <td><input type="text"/></td>
+                                    <th>PDI Status</th>
+				    <td><input type="text"/></td>
+                                </tr>
+                                <tr>
+					<th>Confirmed&nbsp;Delivery&nbsp;Date&nbsp;From*</th>
+					<td><input id="plandeliverydatefrom" name="plandeliverydatefrom" type="text"/></td>
+					<th>Confirmed&nbsp;Delivery&nbsp;Date&nbsp;To*</th>
+					<td><input id="plandeliverydateto" name="plandeliverydateto" type="text"/></td>
+				</tr>
+                                <tr>
+                                    <th>Delivery Status</th>
+                                     <td><input type="text"/></td>
+                                     <th>Paid</th>
+                                     <td><input type="text"/></td>
+                                </tr>
+                                 <tr>
+					<th>Payment&nbsp;Delivery&nbsp;Date&nbsp;From*</th>
+					<td><input id="plandeliverydatefrom" name="plandeliverydatefrom" type="text"/></td>
+					<th>Payment&nbsp;Delivery&nbsp;Date&nbsp;To*</th>
+					<td><input id="plandeliverydateto" name="plandeliverydateto" type="text"/></td>
+				</tr>
+<!--				<tr>
+					<th>Quotation&nbsp;No.</th>
+					<td><input type="text"/></td>
+					<th>Quotation&nbsp;Status</th>
+					<td>
+						<select name="quotationstatus" class="dropdownlist">
+							<option value="sample1"></option>
+							<option value="sample2">Approved</option>
+							<option value="sample3">Canceled</option>
+							<option value="sample4">Draft</option>
+							<option value="sample5">Revised</option>
+							<option value="sample6">Wait for Approve</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					
+					<th>Sale&nbsp;Order&nbsp;Status</th>
+					<td>
+						<select name="saleorderstatus" class="dropdownlist">
+							<option value="sample1"></option>
+							<option value="sample2">Approved</option>
+							<option value="sample3">Canceled</option>
+							<option value="sample4">Draft</option>
+							<option value="sample5">Wait for Approve</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>Shipping&nbsp;Sch.&nbsp;Date&nbsp;From</th>
+					<td><input id="shippingschdatefrom" name="shippingschdatefrom" type="text"/></td>
+					<th>Shipping&nbsp;Sch.&nbsp;Date&nbsp;To</th>
+					<td><input id="shippingschdateto" name="shippingschdateto" type="text"/></td>
+				</tr>
+				<tr>
+					<th>Frame&nbsp;No.</th>
+					<td colspan="3"><input type="text"/></td>
+				</tr>
+				<tr>
+					<th>PDI&nbsp;No.</th>
+					<td><input type="text"/></td>
+					<th>PDI&nbsp;Status</th>
+					<td>
+						<select name="pdistatus" class="dropdownlist">
+							<option value="sample1"></option>
+							<option value="sample2">Open</option>
+							<option value="sample3">Prepare</option>
+							<option value="sample4">WIP</option>
+							<option value="sample5">Completed</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>PDI&nbsp;Plan&nbsp;Finished&nbsp;Date&nbsp;From</th>
+					<td><input id="pdiplanfinisheddatefrom" name="pdiplanfinisheddatefrom" type="text"/></td>
+					<th>PDI&nbsp;Plan&nbsp;Finished&nbsp;Date&nbsp;To</th>
+					<td><input id="pdiplanfinisheddateto" name="pdiplanfinisheddateto" type="text"/></td>
+				</tr>
+				<tr>
+					<th>OSJ&nbsp;Plan&nbsp;Finished&nbsp;Date&nbsp;From</th>
+					<td><input id="osjplanfinisheddatefrom" name="osjplanfinisheddatefrom" type="text"/></td>
+					<th>OSJ&nbsp;Plan&nbsp;Finished&nbsp;Date&nbsp;To</th>
+					<td><input id="osjplanfinisheddateto" name="osjplanfinisheddateto" type="text"/></td>
+				</tr>
+				<tr>
+					<th>Delivery&nbsp;Status</th>
+					<td>
+						<select name="deliverystatus" class="dropdownlist">
+							<option value="sample1"></option>
+							<option value="sample2">Delivered</option>
+							<option value="sample3">Customer Rejected</option>
+						</select>
+					</td>
+					<th>Tax&nbsp;Invoice&nbsp;No.</th>
+					<td><input type="text"/></td>
+				</tr>
+				<tr>
+					<th>Payment&nbsp;Date&nbsp;From</th>
+					<td><input id="paymentdatefrom" name="paymentdatefrom" type="text"/></td>
+					<th>Payment&nbsp;Date&nbsp;To</th>
+					<td><input id="paymentdateto" name="paymentdateto" type="text"/></td>
+				</tr>
+				<tr>
+					<th>Paid</th>
+					<td colspan="3">
+						<select name="paid" class="dropdownlist">
+							<option value="sample1"></option>
+							<option value="sample2">Yes</option>
+							<option value="sample3">No</option>
+						</select>
+					</td>
+				</tr>-->
+				<tr class="tr-button">
+					<td class="td-button" colspan="4">
+				 	  	<input type="button" value="Search" class="button-normal"/>
+					   	<input type="button" value="Clear" class="button-normal"/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+        <div class="tbl" style="margin-top: -10px;">
+		<table>
+			<thead>
+				<tr>
+					<th>Customer</th>
+					<th>Sale&nbsp;Type</th>
+					<th>Plan&nbsp;Delivery<br>Date</th>
+					<th>Sale&nbsp;Order&nbsp;No.</th>
+					<th>Sale&nbsp;Order<br>Status</th>
+					<th>Shipping&nbsp;Sch.<br>(TICO)&nbsp;Date</th>
+					<th>Stock&nbsp;Date</th>
+					<th>Frame&nbsp;No.</th>
+					<th>PDI&nbsp;No.</th>
+					<th>PDI&nbsp;Plan<br>Finished&nbsp;Date</th>
+					<th>PDI&nbsp;Status</th>
+					<th>Confirmed Delivery Date</th>
+					<th>Tax&nbsp;Invoice&nbsp;No.</th>
+					<th>Delivery&nbsp;Date</th>
+					<th>Delivery&nbsp;Status</th>
+					<th>Payment&nbsp;Date</th>
+					<th>Paid</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>ABSOLUTE&nbsp;DENIM&nbsp;CO.,&nbsp;LTD.</td>
+					<td>Sale&nbsp;New&nbsp;F/L</td>
+					<td>29/09/2014</td>
+					
+					<td><a href="#">SO1400124</a></td>
+					<td>Approved</td>
+					<td>08/08/2014</td>
+					<td>08/08/2014</td>
+					<td>8FBN18-1111</td>
+					<td><a href="#">1409-150</a></td>
+					<td>23/09/2014</td>
+					<td>Completed</td>
+					<td>24/09/2014</td>
+					<td><a href="#">2A-S140928-010</a></td>
+					<td>29/09/2014</td>
+					<td>Delivered</td>
+					<td>10/10/2014</td>
+					<td class="td-center">Yes</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+					<td><a href="#"></a></td>
+					<td></td>
+					<td>08/08/2014</td>
+					<td>08/08/2014</td>
+					<td>8FBN18-1112</td>
+					<td><a href="#">1409-151</a></td>
+					<td>23/09/2014</td>
+					<td>Completed</td>
+					<td>24/09/2014</td>
+					<td><a href="#">2A-S140928-011</a></td>
+					<td>29/09/2014</td>
+					<td>Delivered</td>
+					<td>10/10/2014</td>
+					<td class="td-center">Yes</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+					<td><a href="#"></a></td>
+					<td></td>
+					<td>08/08/2014</td>
+					<td>08/08/2014</td>
+					<td>8FBN18-1113</td>
+					<td><a href="#">1409-152</a></td>
+					<td>23/09/2014</td>
+					<td>Completed</td>
+					<td></td>
+					<td><a href="#">2A-S140928-012</a></td>
+					<td>29/09/2014</td>
+					<td>Delivered</td>
+					<td>10/10/2014</td>
+					<td class="td-center">Yes</td>
+				</tr>
+				<tr>
+					<td>Toyota&nbsp;Motor&nbsp;Co.,&nbsp;Ltd.</td>
+					<td>Rental&nbsp;F/L</td>
+					<td>01/10/2014</td>
+					
+					<td><a href="#">SO1410030</a></td>
+					<td>Approved</td>
+					<td></td>
+					<td></td>
+					<td>8FBN18-1021</td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td>01/10/2014</td>
+					<td>Customer&nbsp;Rejected</td>
+					<td></td>
+					<td class="td-center"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>8FBN18-1021</td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td>02/10/2014</td>
+					<td><a href="#"></a></td>
+					<td>03/10/2014</td>
+					<td>Delivered</td>
+					<td></td>
+					<td class="td-center"></td>
+				</tr>
+				<tr>
+					<td>SIAM&nbsp;MAKRO&nbsp;PUBLIC&nbsp;CO.,&nbsp;LTD.</td>
+					<td>Sale&nbsp;Used&nbsp;F/L</td>
+					<td>03/10/2014</td>
+					
+					<td><a href="#">SO1409028</a></td>
+					<td>Approved</td>
+					<td></td>
+					<td></td>
+					<td>8FBN25-1020</td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td>30/09/2014</td>
+					<td><a href="#">8A-S141002-020</a></td>
+					<td>03/10/2014</td>
+					<td>Delivered</td>
+					<td>30/10/2014</td>
+					<td class="td-center">No</td>				
+				</tr>
+				<tr>
+					<td>Toyota&nbsp;Motor&nbsp;Co.,&nbsp;Ltd.</td>
+					<td>Sale&nbsp;Part</td>
+					<td>05/10/2014</td>
+					
+					<td><a href="#">SO1410100</a></td>
+					<td>Approved</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="#">4A-S141005-010</a></td>
+					<td>05/10/2014</td>
+					<td></td>
+					<td>10/10/2014</td>
+					<td class="td-center">Yes</td>
+				</tr>
+				<tr>
+					<td>Toyota&nbsp;Motor&nbsp;Co.,&nbsp;Ltd.</td>
+					<td>Service</td>
+					<td>10/10/2014</td>
+					
+					<td><a href="#">SO1410150</a></td>
+					<td>Approved</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="#">3A-S141010-015</a></td>
+					<td>10/10/2014</td>
+					<td>Done</td>
+					<td>10/10/2014</td>
+					<td class="td-center">Yes</td>
+				</tr>
+				<tr>
+					<td>KHOLER&nbsp;(THAILAND)&nbsp;PUBLIC&nbsp;COMPANY&nbsp;LIMITED</td>
+					<td>Sale&nbsp;New&nbsp;F/L</td>
+					<td>15/10/2014</td>
+					
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="td-center"></td>
+				</tr>
+				<tr>
+					<td>SIAM&nbsp;MAKRO&nbsp;PUBLIC&nbsp;CO.,&nbsp;LTD.</td>
+					<td>Sale&nbsp;New&nbsp;F/L</td>
+					<td>25/10/2014</td>
+				
+					<td><a href="#">SO1408025</a></td>
+					<td>Approved</td>
+					<td>01/10/2014</td>
+					<td>02/10/2014</td>
+					<td>8FBN25-1120</td>
+					<td><a href="#">1410-170</a></td>
+					<td>10/10/2014</td>
+					<td>Prepare</td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="td-center"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+					<td><a href="#"></a></td>
+					<td></td>
+					<td>01/10/2014</td>
+					<td>02/10/2014</td>
+					<td>8FBN25-1121</td>
+					<td><a href="#">1410-171</a></td>
+					<td>10/10/2014</td>
+					<td>WIP</td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="td-center"></td>
+				</tr>
+				<tr>
+					<td>Toyota&nbsp;Motor&nbsp;Co.,&nbsp;Ltd.</td>
+					<td>Rental&nbsp;F/L</td>
+					<td>01/12/2014</td>
+					
+					<td><a href="#">SO1410032</a></td>
+					<td>Approved</td>
+					<td></td>
+					<td></td>
+					<td>8FBN25-1009</td>
+					<td><a href="#">1410-180</a></td>
+					<td>20/11/2014</td>
+					<td>Open</td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="td-center"></td>
+				</tr>
+				<tr>
+					<td>KHOLER&nbsp;(THAILAND)&nbsp;PUBLIC&nbsp;COMPANY&nbsp;LIMITED</td>
+					<td>Sale&nbsp;New&nbsp;F/L</td>
+					<td>25/12/2014</td>
+					
+					<td><a href="#">SO1409150</a></td>
+					<td>Approved</td>
+					<td>09/10/2014</td>
+					<td>09/10/2014</td>
+					<td>8FBN18-1150</td>
+					<td><a href="#">1410-160</a></td>
+					<td>20/12/2014</td>
+					<td>Open</td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="td-center"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					
+					<td><a href="#"></a></td>
+					<td></td>
+					<td>09/10/2014</td>
+					<td>09/10/2014</td>
+					<td>8FBN18-1152</td>
+					<td><a href="#">1410-161</a></td>
+					<td>20/12/2014</td>
+					<td>Open</td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="td-center"></td>
+				</tr>
+				<tr>
+					<td>KHOLER&nbsp;(THAILAND)&nbsp;PUBLIC&nbsp;COMPANY&nbsp;LIMITED</td>
+					<td>Sale&nbsp;New&nbsp;F/L</td>
+					<td>15/12/2014</td>
+					
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="td-center"></td>
+				</tr>
+				<tr>
+					<td>SIAM&nbsp;KUBOTA&nbsp;CORPORATION&nbsp;CO.,&nbsp;LTD.</td>
+					<td>Sale&nbsp;New&nbsp;F/L</td>
+					<td>25/12/2014</td>
+					
+					<td><a href="#">SO1410028</a></td>
+					<td>Canceled</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="td-center"></td>
+				</tr>
+				<tr>
+					<td>SIAM&nbsp;KUBOTA&nbsp;CORPORATION&nbsp;CO.,&nbsp;LTD.</td>
+					<td>Sale&nbsp;New&nbsp;F/L</td>
+					<td>25/12/2014</td>
+					
+					<td><a href="#">SO1410029</a></td>
+					<td>Approved</td>
+					<td>30/11/2014</td>
+					<td></td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="#"></a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td class="td-center"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<script>
+$(document).ready(function() {
+    $('.cell-border.datatable').dataTable({
+                  "scrollY": 200,
+                   "scrollX": true,
+                   "searching": false,
+                   "pageLength": 5,
+                   "ordering":  false,
+                   "lengthChange": false
+   });
+});
+</script>

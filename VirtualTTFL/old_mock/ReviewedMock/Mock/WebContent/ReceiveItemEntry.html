@@ -1,0 +1,106 @@
+<!--
+<%--
+ % Receive Item Entry contents.
+ % This page is Receive Item Entry Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Sutiporn.D
+ % Creation date : 2014/10/07
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<div class="contentpanel">
+	<div class="frm">
+		<table>
+                    <caption>Receive Item Entry</caption>
+			<tbody>
+				<tr>
+					<th>&nbsp;Received&nbsp;Date*</th>
+					<td><input type="text" value="29-Sep-14"/></td>
+					<th>&nbsp;Received&nbsp;Type*</th>
+					<td>
+						<select class="dropdownlist">
+							<option value="sample1">Buy</option>
+							<option value="sample1">Claim</option>
+							<option value="sample2">Return</option>
+							<option value="sample3">Other</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>&nbsp;To&nbsp;Location*</th>
+					<td><input type="text" value="Temp"/><input type="button" value="&nbsp;&nbsp;...&nbsp;&nbsp;" class="btnpopup"/></td>
+					<th>&nbsp;To&nbsp;Warehouse</th>
+					<td><input type="text" value="Part" readonly="readonly"/></td>
+				</tr>
+				<tr>
+					<th>&nbsp;Supplier/Customer*</th>
+					<td><input type="text" value="Cust001"/></td>
+					<th>&nbsp;Supplier/Customer*&nbsp;Name</th>
+					<td><input type="text" value="Supplier's name" readonly="readonly"/></td>
+				</tr>
+				<tr>
+					<th>&nbsp;Reference&nbsp;Document&nbsp;No.1*</th>
+					<td><input type="text" value="OTH001"/></td>
+					<th>&nbsp;Reference&nbsp;Document&nbsp;No.2*</th>
+					<td><input type="text"/></td>
+				</tr>
+				<tr>
+					<th>&nbsp;Receiver&nbsp;User&nbsp;ID*</th>
+					<td><input type="text" value="Emp0001"/><input type="button" value="&nbsp;&nbsp;...&nbsp;&nbsp;" class="btnpopup"/></td>
+					<th>&nbsp;Receiver&nbsp;Name</th>
+					<td><input type="text" value="Emp's name" readonly="readonly"/></td>
+				</tr>
+				<tr>
+					<td colspan="4" align="right">
+						
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" align="right">
+						<input type="button" value="Save" class="button-normal"/>&nbsp;&nbsp;
+						<input type="button" value="Cancel" class="button-normal"/>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="tbl">
+		<table>
+			<caption>&nbsp;Datail
+				<div>
+				<button>+</button>
+				<button>-</button>
+				</div>
+			</caption>
+			<tbody>
+				<tr>
+					<th>Item&nbsp;Code*</th>
+					<th>Item&nbsp;Description</th>
+					<th class="currency">Received&nbsp;Qty*</th>
+					<th>Remark</th>
+				</tr>
+				<tr>
+					<td class="wdtbltd"><input type="text" disabled="disabled" value="A" class="txttbl"/><input type="button" value="&nbsp;&nbsp;...&nbsp;&nbsp;" class="btnpopup"/></td>
+					<td bgcolor="#FAF7CE">Part&nbsp;A</td>
+					<td align="right">30</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="wdtbltd"><input type="text" disabled="disabled" value="B" class="txttbl"/><input type="button" value="&nbsp;&nbsp;...&nbsp;&nbsp;" class="btnpopup"/></td>
+					<td bgcolor="#FAF7CE">Part&nbsp;B</td>
+					<td align="right" >50</td>
+					<td></td>
+				</tr><tr>
+					<td class="wdtbltd"><input type="text" disabled="disabled" value="C	" class="txttbl"/><input type="button" value="&nbsp;&nbsp;...&nbsp;&nbsp;" class="btnpopup"/></td>
+					<td bgcolor="#FAF7CE">Part&nbsp;C</td>
+					<td align="right">30</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

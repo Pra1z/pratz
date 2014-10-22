@@ -1,0 +1,163 @@
+<!--
+<%--
+ % Sale Order Inquiry contents.
+ %
+ % Creator       : Sutiporn.D
+ % Creation date : 2014/10/03
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<div class="contentpanel">
+    <div class="frm">
+        <table>
+            <caption>Sale&nbsp;Order&nbsp;Inquiry</caption>
+            <tbody>
+                <tr>
+                    <th>Order&nbsp;Type</th>
+                    <td>
+                        <select class="dropdownlist">
+                            <option value="0">&nbsp;</option>
+                        </select>
+                    </td>
+                    <th>Reference&nbsp;No.</th>
+                    <td><input type="text"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Sales&nbsp;Order&nbsp;No.</th>
+                    <td><input type="text" /></td>
+                    <th>Quotation&nbsp;No.</th>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <th>Order&nbsp;Date&nbsp;From</th>
+                    <td><input type="text" id="orderdatefrom"/></td>
+                    <th>Order&nbsp;Date&nbsp;To</th>
+                    <td><input type="text" id="orderdateto"/></td>
+                </tr>
+                <tr>
+                    <th>Customer&nbsp;Code&nbsp;:</th>
+                    <td><input type="text"/><input type="button" value="..." onclick="SearchCustomer();"/></td>
+                    <th>Status</th>
+                    <td>
+                        <select class="dropdownlist">
+                            <option value="0">&nbsp;</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tblfooter">
+        <div>
+            <input type="button" value="New" class="button-normal" onclick="goToSaleOrderEntry();"/>
+            <input type="button" value="Search" class="button-normal"/>
+            <input type="button" value="Clear" class="button-normal"/>
+        </div>
+    </div>
+    <div class="tbl">
+        <table>
+           
+            <thead>
+                <tr>
+                    <th>SO&nbsp;No.</th>
+                    <th>Order&nbsp;Date</th>
+                    <th>Order&nbsp;Type</th>
+                    <th>Customer</th>
+                    <th>Quotation&nbsp;No.</th>
+                    <th>Reference&nbsp;No.</th>
+                    <th>No.&nbsp;of&nbsp;PDI</th>
+                    <th>Sales&nbsp;Rep</th>
+                    <th>Total&nbsp;Amt</th>
+                    <th>VAT&nbsp;Amt</th>
+                    <th>Grand&nbsp;Total&nbsp;Amt</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tblcenter"><a href="#">SC1A-145-MHT-089</a></td>
+                    <td class="tblcenter">6/24/2014</td>
+                    <td>New&nbsp;F/L</td>
+                    <td>Siam&nbsp;Kubota&nbsp;Corp.</td>
+                    <td class="tblcenter"><a href="#">QR1A-145-MHT-049&nbsp;R.1</a></td>
+                    <td>5706009</td>
+                    <td>2</td>
+                    <td>Sirinapa</td>
+                    <td>1,563,000</td>
+                    <td>109,410</td>
+                    <td>1,672,410</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><a href="#">SC1A-145-MHT-089</a></td>
+                    <td class="tblcenter">6/24/2014</td>
+                    <td>New&nbsp;F/L</td>
+                    <td>Siam&nbsp;Kubota&nbsp;Corp.</td>
+                    <td class="tblcenter"><a href="#">QR1A-145-MHT-049&nbsp;R.1</a></td>
+                    <td>5706009</td>
+                    <td>2</td>
+                    <td>Sirinapa</td>
+                    <td>1,563,000</td>
+                    <td>109,410</td>
+                    <td>1,672,410</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><a href="#">SC1A-145-MHT-089</a></td>
+                    <td class="tblcenter">6/24/2014</td>
+                    <td>New&nbsp;F/L</td>
+                    <td>Siam&nbsp;Kubota&nbsp;Corp.</td>
+                    <td class="tblcenter"><a href="#">QR1A-145-MHT-049&nbsp;R.1</a></td>
+                    <td>5706009</td>
+                    <td>2</td>
+                    <td>Sirinapa</td>
+                    <td>1,563,000</td>
+                    <td>109,410</td>
+                    <td>1,672,410</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><a href="#">SC1A-145-MHT-089</a></td>
+                    <td class="tblcenter">6/24/2014</td>
+                    <td>New&nbsp;F/L</td>
+                    <td>Siam&nbsp;Kubota&nbsp;Corp.</td>
+                    <td class="tblcenter"><a href="#">QR1A-145-MHT-049&nbsp;R.1</a></td>
+                    <td>5706009</td>
+                    <td>2</td>
+                    <td>Sirinapa</td>
+                    <td>1,563,000</td>
+                    <td>109,410</td>
+                    <td>1,672,410</td>
+                    <td>Completed</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    /*
+    $(document).ready(function() {
+        $('.cell-border.datatable').dataTable({
+            "scrollY": 200,
+            "scrollX": true,
+            "searching": false,
+            "pageLength": 5,
+            "ordering": false,
+            "lengthChange": false
+        });
+    });
+    new JsDatePick({
+        useMode: 2,
+        target: "orderdateto",
+        dateFormat: "%d/%m/%Y"
+    });
+    new JsDatePick({
+        useMode: 2,
+        target: "orderdatefrom",
+        dateFormat: "%d/%m/%Y"
+    });*/
+</script>

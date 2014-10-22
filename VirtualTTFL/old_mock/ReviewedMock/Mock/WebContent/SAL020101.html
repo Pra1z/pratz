@@ -1,0 +1,112 @@
+<!--
+<%--
+ % SAL020101 - PDI Request Inquiry.
+ %
+ % Creator       : Pratz
+ % Creation date : 2014/10/13
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<div class="contentpanel">
+    <div class="frm">
+        <table>
+            <caption>Search&nbsp;Condition</caption>
+            <tbody>
+                <tr>
+                    <th>Quotation&nbsp;No.</th>
+                    <td><input type="text"/></td>
+                    <th>Sales&nbsp;Order&nbsp;No.</th>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <th>PDI&nbsp;Request&nbsp;No.</th>
+                    <td><input type="text"/></td>
+                    <th>Request&nbsp;Date</th>
+                    <td><input id="pdiRequestDate" type="text"/></td>
+                </tr>
+                <tr>
+                    <th>Customer</th>
+                    <td><input type="text" value="34000228"/><input type="button" value="..." onclick="SearchCustomer();"/></td>
+                    <th>Model</th>
+                    <td><input type="button" value="..." onclick="SelectModel();"/></td>
+                </tr>
+                <tr>
+                    <th>Status</th>
+                    <td colspan="3">
+                        <select>
+                            <option value="0">&nbsp;</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tblfooter">
+        <div>
+            <input type="button" value="New" name="New" class="button-normal"/> 
+            <input type="button" value="Search" name="Search" class="button-normal"/>
+            <input type="button" value="Clear" name="Clear" class="button-normal"/>
+        </div>
+    </div>
+    <div class="tbl">
+        <table class='cell-border datatable'>
+            <thead>
+                <tr>
+                    <th>PDI&nbsp;Request&nbsp;No.</th>
+                    <th>Customer</th>
+                    <th>Quotation&nbsp;No.</th>
+                    <th>Sales&nbsp;Order&nbsp;No.</th>
+                    <th>Request&nbsp;Date</th>
+                    <th>Required&nbsp;Delivery&nbsp;Date</th>
+                    <th>Confirm&nbsp;Delivery&nbsp;Date</th>
+                    <th>Manage&nbsp;By</th>
+                    <th>Model</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tblcenter"><a href="#" onclick="goToPDIRequestEntry();">1406-011</a></td>
+                    <td>Siam&nbsp;Kubota&nbsp;Corp.</td>
+                    <td class="tblcenter"><a href="#">QR1A-145-MHT-049 R.1</a></td>
+                    <td class="tblcenter"><a href="#">SC1A-145-MHT-089</a></td>
+                    <td class="tblcenter">21/09/2014</td>
+                    <td class="tblcenter">21/09/2014</td>
+                    <td class="tblcenter">21/09/2014</td>
+                    <td>PDI</td>
+                    <td>30-8FG25</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><a href="#" onclick="goToPDIRequestEntry();">1406-012</a></td>
+                    <td>Siam&nbsp;Kubota&nbsp;Corp.</td>
+                    <td class="tblcenter"><a href="#">QR1A-145-MHT-049 R.1</a></td>
+                    <td class="tblcenter"><a href="#">SC1A-145-MHT-089</a></td>
+                    <td class="tblcenter">21/09/2014</td>
+                    <td class="tblcenter">21/09/2014</td>
+                    <td class="tblcenter">21/09/2014</td>
+                    <td>PDI</td>
+                    <td>30-8FG25</td>
+                    <td>Completed</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    /*
+    $(document).ready(function() {
+        $('.cell-border.datatable').dataTable({
+            "scrollY": 300,
+            "scrollX": true,
+            "searching": false,
+            "pageLength": 5,
+            "ordering": false,
+            "lengthChange": false
+        });
+    });
+    */
+</script>

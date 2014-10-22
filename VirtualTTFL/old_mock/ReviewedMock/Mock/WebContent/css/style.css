@@ -1,0 +1,37 @@
+/*
+ % Header contents.
+ % This page is @@ BAD standard @@ Header contents Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Kambara
+ % Creation date : 2014/09/29
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ */
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+#header {
+	background:#ededed;
+	/*padding:10px;*/
+}
+#content {
+	padding-bottom:100px; /* Height of the footer element */
+}
+#footer {
+	background:#ffab62;
+	width:100%;
+	height:100px;
+	position:fixed;
+	bottom:0;
+	left:0;
+}

@@ -1,0 +1,262 @@
+<!--
+<%--
+ % Main contents.
+ % This page is main contents (Customer-Dashboard) Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Pratz
+ % Creation date : 2014/09/29
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<div id="customer-dashbord">
+    <div class="order-type">
+        Order&nbsp;Type
+        <select name="orderselect">
+            <option value="sample1">Sale&nbsp;New&nbsp;FL</option>
+            <option value="sample2">Sale&nbsp;Rental&nbsp;New&nbsp;FL</option>
+            <option value="sample3">Sale&nbsp;Rental&nbsp;Used&nbsp;FL</option>
+            <option value="sample4">Sale&nbsp;Used&nbsp;FL</option>
+            <option value="sample5">Sale&nbsp;Service</option>
+            <option value="sample6">Sale&nbsp;Part</option>
+        </select>
+        <input type="submit" value="Open Order" class="button-normal" onclick="goToCostsheet();"/>
+    </div>
+    <div class="frm">
+        <table>
+            <caption>Customer&nbsp;Info.</caption>
+            <tbody>
+                <tr>
+                    <th>Customer&nbsp;Code&nbsp;:</th>
+                    <td><input type="text" value="34000228"/><input type="button" value="..." onclick="SearchCustomer();"/></td>
+                    <th>Customer&nbsp;Name&nbsp;:</th>
+                    <td>SV1ZZ-ONE&nbsp;COPORATION&nbsp;LTD.&nbsp;HQ</td>
+                </tr>
+                <tr>
+                    <th>Company&nbsp;Name&nbsp;:</th>
+                    <td>บริษัท&nbsp;SV1ZZ-ONE&nbsp;COPORATION&nbsp;LTD.</td>
+                    <th>Nation&nbsp;:</th>
+                    <td>Local</td>
+                </tr>
+                <tr>
+                    <th>Address&nbsp;:</th>
+                    <td>Local</td>
+                    <th>Business&nbsp;Type</th>
+                    <td>Rubber</td>
+                </tr>
+                <tr>
+                    <th>Email&nbsp;:</th>
+                    <td>&nbsp;</td>
+                    <th>Tel:</th>
+                    <td>02-420-0038</td>
+                </tr>
+                <tr>
+                    <th>Fax&nbsp;:</th>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tbl">
+        <table>
+            <caption>Sales&nbsp;Activily
+                <div>
+                    <button onclick="addSaleActivity();">+</button>
+                    <button>-</button>
+                </div>
+            </caption>
+            <tbody>
+                <tr>
+                    <th><input type="checkbox"/></th>
+                    <th>No.</th>
+                    <th>Activity&nbsp;No.</th>
+                    <th>Plan</th>
+                    <th>Actual</th>
+                    <th>Purpose</th>
+                    <th>Contact</th>
+                    <th>Situation</th>
+                    <th>Sale&nbsp;Person</th>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><input type="checkbox"/></td>
+                    <td class="tblcenter">1</td>
+                    <td class="tblcenter"><a href="#">201310-001</a></td>
+                    <td class="tblcenter">22/12/2013</td>
+                    <td class="tblcenter">22/12/2013</td>
+                    <td>visit</td>
+                    <td>K.Somsri</td>
+                    <td>เข้าดูหน้างาน,กำหนดSpec</td>
+                    <td>Sale&nbsp;1</td>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><input type="checkbox"/></td>
+                    <td class="tblcenter">2</td>
+                    <td class="tblcenter"><a href="#">201310-002</a></td>
+                    <td class="tblcenter">22/12/2013</td>
+                    <td class="tblcenter">22/12/2013</td>
+                    <td>visit</td>
+                    <td>K.Somsri</td>
+                    <td>ติดตามเสนอราคา</td>
+                    <td>Sale&nbsp;1</td>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><input type="checkbox"/></td>
+                    <td class="tblcenter">3</td>
+                    <td class="tblcenter"><a href="#">201310-003</a></td>
+                    <td class="tblcenter">22/12/2013</td>
+                    <td class="tblcenter">22/12/2013</td>
+                    <td>visit</td>
+                    <td>K.Somsri</td>
+                    <td>สรุปเรื่องSpec</td>
+                    <td>Sale&nbsp;1</td>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><input type="checkbox"/></td>
+                    <td class="tblcenter">4</td>
+                    <td class="tblcenter"><a href="#">201310-004</a></td>
+                    <td class="tblcenter">22/12/2013</td>
+                    <td class="tblcenter">22/12/2013</td>
+                    <td>visit</td>
+                    <td>K.Somsri</td>
+                    <td>not&nbsp;reading</td>
+                    <td>Sale&nbsp;1</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tbl">
+        <table>
+            <caption>
+                Asset
+                <div>
+                    <button onclick="addAsset();">
+                        +
+                    </button>
+                    <button>
+                        -
+                    </button>
+                </div>
+            </caption>
+            <tbody>
+                <tr>
+                    <th><input type="checkbox"/></th>
+                    <th>No.</th>
+                    <th>Asset No.</th>
+                    <th>Maker</th>
+                    <th>Capa</th>
+                    <th>Type</th>
+                    <th>Intro Date</th>
+                    <th>Model</th>
+                    <th>Frame#</th>
+                    <th>Engine No.</th>
+                    <th>Remark</th>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><input type="checkbox"/></td>
+                    <td class="tblcenter">1</td>
+                    <td class="tblcenter"><a href="#">34000228-001</a></td>
+                    <td>Maker</td>
+                    <td>Capa</td>
+                    <td>Type</td>
+                    <td>Intro Date</td>
+                    <td>Model</td>
+                    <td>30-8FG25&nbsp;V30&nbsp;PSCT&nbsp;1070&nbsp;(xxxxxxxxxxxxxxxxxxxxxxx)</td>
+                    <td>24755</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>				
+            </tbody>
+        </table>
+    </div>
+    <div class="tbl">
+        <table>
+            <caption>Sales&nbsp;History</caption>
+            <tbody>
+                <tr>
+                    <th>No.</th>
+                    <th>Date</th>
+                    <th>Cost&nbsp;Sheet</th>
+                    <th>Quation</th>
+                    <th>Sale&nbsp;Order</th>
+                    <th>Type</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td class="tblcenter">1</td>
+                    <td class="tblcenter">22/12/2013</td>
+                    <td>QS1A-133-DST-180</td>
+                    <td>QS1A-133-DST-180</td>
+                    <td>SAL123456</td>
+                    <td>Sale&nbsp;New&nbsp;F/L</td>
+                    <td>Delivered</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>				
+            </tbody>
+        </table>
+    </div>
+</div>

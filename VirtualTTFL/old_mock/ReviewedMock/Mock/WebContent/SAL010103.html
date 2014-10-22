@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+<%--
+ % Customer Card
+ %
+ % Creator       : Pratz
+ % Creation date : 2014/10/09
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+
+        <div class="customer-card-entry">
+            <div class="frm">
+                <table>
+                    <caption>Customer&nbsp;Card</caption>
+                    <tbody>
+                        <tr>
+                            <th>Customer&nbsp;Code</th>
+                            <td><input  type="text" readonly="readonly" value="34001313"/></td>
+                            <th>Customer&nbsp;Name</th>
+                            <td><input  type="text" readonly="readonly" value="SV1ZZ-ONE COPORATION LTD. HQ"/></td>
+                        </tr>
+                        <tr>
+                            <th>Plan</th>
+                            <td><input id="planDate" type="text"/></td>
+                            <th>Actual</th>
+                            <td><input id="actualDate" type="text"/></td>
+                        </tr>
+                        <tr>
+                            <th>Purpose</th>
+                            <td>
+                                <select>
+                                    <option value="visit">Visit</option>
+                                </select>
+                            </td>
+                            <th>Contact&nbsp;Person</th>
+                            <td>
+                                <select>
+                                    <option value="somsri">K.Somsri</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">Situation</th>
+                            <td rowspan="2"><textarea rows="4" cols="20"></textarea></td>
+                            <th rowspan="2">&nbsp;</th>
+                            <td rowspan="2">&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <table class="tbl-command">
+                    <tr>
+                        <td>
+                            <button onclick="goToDashborad();" class="button-normal">Save</button>&nbsp;&nbsp;<button onclick="goToDashborad();" class="button-normal">Cancel</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script>
+            new JsDatePick({
+                useMode: 2,
+                target: "planDate",
+                dateFormat: "%d/%m/%Y"
+            });
+            new JsDatePick({
+                useMode: 2,
+                target: "actualDate",
+                dateFormat: "%d/%m/%Y"
+            });
+        </script>
+ 

@@ -1,0 +1,201 @@
+<!--
+<%--
+ % Main contents.
+ % This page is Purchase Request Inquiry Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Phannika R.
+ % Creation date : 2014/10/06
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<script>
+	new JsDatePick({
+		useMode : 2,
+		target : "fromDate",
+		dateFormat : "%d/%m/%Y"
+	});
+	
+	new JsDatePick({
+		useMode : 2,
+		target : "toDate",
+		dateFormat : "%d/%m/%Y"
+	});
+</script>
+<div class="contentpanel">
+<div class="frm">
+	<table>
+            <caption>Search Criteria</caption>
+		<tbody>
+			<tr>
+				<th>&nbsp;From&nbsp;Date&nbsp;*</th>
+				<td><input type="text" id="fromDate" name="fromDate"/></td>
+				<th>&nbsp;To&nbsp;Date&nbsp;*</th>
+				<td><input type="text" id="toDate" name="toDate"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;Purchase&nbsp;Request&nbsp;No.</th>
+				<td colspan="3"><input type="text"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;Supplier</th>
+				<td><input type="text"/><input type="button" value="  ...  "/></td>
+				<th>&nbsp;Supplier&nbsp;Name.</th>
+				<td><input type="text" readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;Type&nbsp;of&nbsp;Order</th>
+				<td>
+					<select name="orderTypeSelect" class="dropdownlist" >
+						<option value="sample1"></option>
+						<option value="sample1">Urgent (Out of Stock)</option>
+						<option value="sample2">Urgent (For Stock)</option>
+						<option value="sample3">Normal</option>
+					</select>
+				</td>
+				<th>&nbsp;Section</th>
+				<td>
+					<select name="sectionSelect" class="dropdownlist">
+						<option value="sample1"></option>
+						<option value="sample1">Part</option>
+						<option value="sample2">Service</option>
+						<option value="sample3">PDI</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>&nbsp;Item&nbsp;No</th>
+				<td><input type="text"/><input type="button" value="  ...  "/></td>
+				<th>&nbsp;Item&nbsp;Name</th>
+				<td><input type="text" readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;Status</th>
+				<td>
+					<select name="statusSelect" class="dropdownlist">
+						<option value="sample1"></option>
+						<option value="sample1">Revised</option>
+						<option value="sample1">Wait for Approve</option>
+						<option value="sample2">Draft</option>
+						<option value="sample3">Partial Received</option>
+						<option value="sample3">Receive Completed</option>
+						<option value="sample3">Ordered</option>
+						<option value="sample3">Approved</option>
+					</select>
+				</td>
+				<th>&nbsp;Transferred&nbsp;to&nbsp;WEST</th>
+				<td>
+					<select name="sectionSelect" class="dropdownlist">
+						<option value="sample1"></option>
+						<option value="sample1">Yes</option>
+						<option value="sample2">No</option>
+					</select>
+				</td>
+			</tr>
+			
+		</tbody>
+	</table>	
+</div>
+<div class="tblfooter">
+    <div>
+        <input type="button" value="Search" class="button-normal"/>
+				   	<input type="button" value="Add" class="button-normal"/>
+				   	<input type="button" value="Clear" class="button-normal"/>
+    </div>
+</div>
+
+<div class="tbl">
+	<table>
+		<caption>&nbsp;Result</caption>
+		<tbody>
+			<tr>
+				<th>Purchase Request No</th>
+				<th>Approval Remark</th>
+				<th>Request Date</th>
+				<th>Section</th>
+				<th>Supplier</th>
+				<th>Type of Order</th>
+				<th>Status</th>
+				<th>Transferred to WEST</th>
+			</tr>
+			<tr>
+				<td class="tblcenter"><a href="#">PR001</a></td>
+				<td>Wrong quantity</td>
+				<td>01/09/2014</td>
+				<td>Part</td>
+				<td>Sup A</td>
+				<td>Urgent (Out of Stock)</td>
+				<td>Revised</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td class="tblcenter"><a href="#">PR001</a></td>
+				<td></td>
+				<td>01/09/2014</td>
+				<td>Part</td>
+				<td>Sup A</td>
+				<td>Urgent (Out of Stock)</td>
+				<td>Wait for Approve</td>
+				<td>No</td>
+			</tr>
+			<tr>
+				<td class="tblcenter"><a href="#">PR002</a></td>
+				<td></td>
+				<td>05/09/2014</td>
+				<td>Part</td>
+				<td>Sup B</td>
+				<td>Urgent (For Stock)</td>
+				<td>Draft</td>
+				<td>No</td>
+			</tr>
+			<tr>
+				<td class="tblcenter"><a href="#">PR003</a></td>
+				<td></td>
+				<td>10/09/2014</td>
+				<td>Service</td>
+				<td>Sup A</td>
+				<td>Urgent (Out of Stock)</td>
+				<td>Partial Received</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td class="tblcenter"><a href="#">PR004</a></td>
+				<td></td>
+				<td>20/09/2014</td>
+				<td>PDI</td>
+				<td>Sup C</td>
+				<td>Normal</td>
+				<td>Receive Completed</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td class="tblcenter"><a href="#">PR005</a></td>
+				<td></td>
+				<td>20/09/2014</td>
+				<td>PDI</td>
+				<td>Sup D</td>
+				<td>Normal</td>
+				<td>Ordered</td>
+				<td>Yes</td>
+			</tr>
+			<tr>
+				<td class="tblcenter"><a href="#">PR006</a></td>
+				<td></td>
+				<td>20/09/2014</td>
+				<td>PDI</td>
+				<td>Sup E</td>
+				<td>Normal</td>
+				<td>Approved</td>
+				<td>No</td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="purchaseRequest" align="right">
+		<input type="button" value="Export P/R to WEST" class="button-large"/>
+	</div>
+</div>
+    </div>
+	

@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+<%--
+ % login contents.
+ % This page is login Mock HTML.
+ %
+ % Creator       : Pratz
+ % Creation date : 2014/10/8
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- <meta http-equiv="Content-Script-Type" content="text/javascript"> -->
+        <title>TTFL&nbsp;projects</title>
+        <!-- <title><spring:message text="${title}" /></title> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <script type="text/javascript" src="js/jquery/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery.rStorage.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/slidebars.js"></script>
+        <script type="text/javascript" src="js/jquery.fancytree-all.min.js"></script>
+        <script type="text/javascript" src="js/jsDatePick.min.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+
+
+        <link rel="stylesheet" type="text/css" href="./css/common.css" />
+        <link rel="stylesheet" type="text/css" href="./css/jquery/jquery-ui.min.css" />
+        <link rel="stylesheet" type="text/css" href="./css/slidebars.css" />
+        <link rel="stylesheet" type="text/css" href="./css/ui.fancytree.min.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="./css/jsDatePick_ltr.min.css" />
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+        <link rel="stylesheet" type="text/css" href="./css/jquery.dataTables.css" >
+
+
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+               <div class="header-panel">
+    
+    <div class="logo" >
+        <img src="image/TTFL_LOGO_Blue.png" />
+    </div>
+    <div class="header-system-name">
+        <span>New&nbsp;One&nbsp;Stop&nbsp;System</span><br/>
+        <span class="system">Login</span>
+    </div>
+    
+</div>
+<div class="message-panel">
+    <span>Information:</span>
+    <div>message&nbsp;info&nbsp;message&nbsp;info&nbsp;message&nbsp;info&nbsp;message&nbsp;info&nbsp;message&nbsp;info&nbsp;message&nbsp;info</div>
+</div>
+            </div>
+            <div id="content">
+                <div style="margin-left:250px;margin-top:100px;width:250px;line-height: 3em;" class="frm">
+                    <p>UserID<br/>
+                        <input type="text" name="userId" id="userId" style="width:100%;size:15;" value="sale"/>
+                    </p>
+                    <p>Password<br/>
+                        <input type="password" name="password" style="width:100%;size:15;" />
+                    </p>
+                    <br/>
+                    <p>
+                        <input id="btnLogin" type="button" value="Login" onclick="">
+                    </p>
+                </div>
+            </div>
+            <div id="footer"> 
+                <!--  <tiles:insert page="footer.jsp"/>  -->
+            </div> 
+        </div>
+        <script>
+            //define for thai in subpage
+            
+    $(function(){
+        $.ajaxSetup({
+                'beforeSend': function(xhr) {
+                    xhr.overrideMimeType('text/html; charset=UTF-8');
+                }
+            });
+
+            $("#footer").load("footer.html");
+            $('#btnLogin').click(function(){
+                var user = $('#userId').val();
+                
+                if (user=='sale'){
+                   // alert(0);
+                    window.location="layout.html";
+                }else{
+                    //alert(1);
+                    window.location="layout2.html";
+                }
+            });
+    });
+
+        </script>
+    </body>
+</html>

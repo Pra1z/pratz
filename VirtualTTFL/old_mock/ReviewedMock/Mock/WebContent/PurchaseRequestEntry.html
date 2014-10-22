@@ -1,0 +1,216 @@
+<!--
+<%--
+ % PurchaseRequestEntry - 
+ % This page is Purchase Request Entry Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Phannika R.
+ % Creation date : 2014/10/06
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<script>
+	new JsDatePick({
+		useMode : 2,
+		target : "requestDate",
+		dateFormat : "%d/%m/%Y"
+	});
+	
+	new JsDatePick({
+		useMode : 2,
+		target : "deliveryDate",
+		dateFormat : "%d/%m/%Y"
+	});
+</script>
+
+<div class="contentpanel">
+<div class="frm">
+	<table>
+            <!--
+		<colgroup>
+			<col class="col-20-left"></col>
+			<col class="col-30-left"></col>
+			<col class="col-20-left"></col>
+			<col class="col-30-left"></col>
+		</colgroup>
+			-->
+                        <caption>Header</caption>
+		<tbody>
+			
+			<tr>
+				<th>&nbsp;Status</th>
+				<td><input type="text" readonly="readonly" value="Draft"/></td>
+				<th>&nbsp;Approver&nbsp;User&nbsp;ID</th>
+				<td><input type="text" readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;Purchase&nbsp;Request&nbsp;No.</th>
+				<td colspan="3"><input type="text" readonly="readonly" value="PR001"/></td>
+			
+			</tr>
+			<tr>
+				<th>&nbsp;Request&nbsp;Date*</th>
+				<td><input type="text" id="requestDate" name="requestDate"/></td>
+				<th>&nbsp;Requester&nbsp;User&nbsp;ID</th>
+				<td><input type="text" readonly="readonly" value="EMP002"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;Section*</th>
+				<td>
+					<select name="sectionSelect" class="dropdownlist">
+						<option value="sample1"></option>
+						<option value="sample1">Part</option>
+						<option value="sample2">Service</option>
+						<option value="sample3">PDI</option>
+					</select>
+				</td>
+				<th>&nbsp;Requester&nbsp;Tel./Ext*</th>
+				<td><input type="text"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;Supplier&nbsp;ID*</th>
+				<td><input type="text" value="SLP0001"/><input type="button" value="  ...  "/></td>
+				<th>&nbsp;Supplier&nbsp;Name</th>
+				<td><input type="text" readonly="readonly" value="อู๊ดการช่าง สำนักงานใหญ่"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;Contact&nbsp;Person*</th>
+				<td colspan="3" align="left"><input type="text" value="K. Sukhum"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;Tel.*</th>
+				<td><input type="text" value="0123456789"/></td>
+				<th>&nbsp;Fax</th>
+				<td><input type="text"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;Job&nbsp;Type*</th>
+				<td>
+					<select name="jobTypeSelect" class="dropdownlist">
+						<option value="sample1"></option>
+						<option value="sample2">PDI</option>
+						<option value="sample3">OSJ</option>
+						<option value="sample4">Service</option>
+						<option value="sample5">Sale</option>
+						<option value="sample6">Other</option>
+					</select>
+				</td>
+				<th>&nbsp;Job&nbsp;No</th>
+				<td><input type="text" value="J0001"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;Type&nbsp;of&nbsp;Purchase*</th>
+				<td>
+					<select name="purchaseSelect" class="dropdownlist">
+						<option value="sample1"></option>
+						<option value="sample2">Asset</option>
+						<option value="sample3">Stock</option>
+						<option value="sample4">Expense</option>
+						<option value="sample5">Other</option>
+					</select>
+				</td>
+				<th>&nbsp;Purchase&nbsp;Order&nbsp;No.</th>
+				<td><input type="text"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;Delivery&nbsp;By*</th>
+				<td colspan="3">
+					<select name="purchaseSelect" class="dropdownlist">
+						<option value="sample1"></option>
+						<option value="sample2">SOS Air</option>
+						<option value="sample3">Air</option>
+						<option value="sample4">Sea</option>
+						<option value="sample5">Normal</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>&nbsp;Delivery&nbsp;Date</th>
+				<td><input type="text" id="deliveryDate" name="deliveryDate"/></td>
+				<th>&nbsp;Delivery&nbsp;Place</th>
+				<td><input type="text"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;Type&nbsp;of&nbsp;Order*</th>
+				<td colspan="3">
+					<select name="orderTypeSelect" class="dropdownlist">
+						<option value="sample1"></option>
+						<option value="sample2">Urgent (Out of Stock)</option>
+						<option value="sample3">Urgent (For Stock)</option>
+						<option value="sample4">Normal</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>&nbsp;Cause&nbsp;of&nbsp;Urgent</th>
+				<td colspan="3"><input type="text" size="60"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;Remark</th>
+                                <td colspan="3"><textarea rows="3" cols="50"></textarea></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+	
+<div class="tbl">
+	<table>
+		<caption>&nbsp;Detail
+			<div>
+				<button>+</button>
+				<button>-</button>
+			</div>
+		</caption>
+		<tbody>
+			<tr>
+				<th><input type="checkbox"/></th>
+				<th>Item&nbsp;No</th>
+				<th>Item&nbsp;Description*</th>
+				<th>Request&nbsp;Qty*</th>
+				<th>Unit&nbsp;Price*</th>
+				<th>Total</th>
+			</tr>
+			<tr>
+				<td><input type="checkbox"/></td>
+                                <td><input type="text" value="A" class="textpopup"/><input type="button" value="  ...  "/></td>
+				<td>Part&nbsp;A</td>
+				<td><input type="text" value="20" class="currency"/></td>
+				<td><input type="text" value="100" class="currency"/></td>
+				<td class="currency">2000</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"/></td>
+				<td><input type="text" value="B" class="textpopup"/><input type="button" value="  ...  "/></td>
+				<td>Part&nbsp;B</td>
+				<td><input type="text" value="10" class="currency"/></td>
+				<td><input type="text" value="500" class="currency"/></td>
+				<td class="currency">5000</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"/></td>
+				<td><input type="text" value="C" class="textpopup"/><input type="button" value="  ...  "/></td>
+				<td>Part&nbsp;C</td>
+				<td><input type="text" value="30" class="currency"/></td>
+				<td><input type="text" value="20" class="currency"/></td>
+				<td class="currency">600</td>
+			</tr>
+			<tr>
+                            <td colspan="5" class="currency">Grand&nbsp;Total</td>
+				<td class="currency">7600</td>
+			</tr>
+		</tbody>
+	</table>
+	<div align="center" id="purchaseRequest">
+		<input type="button" value="Save" class="button-normal"/>
+		<input type="button" value="Cancel" class="button-normal"/>
+		<input type="button" value="Copy to new P/R" class="button-normal"/>
+		<input type="button" value="Send to approve" class="button-normal"/>
+		<input type="button" value="Print Report" class="button-normal"/>
+		<input type="button" value="Receive Completed" class="button-normal"/>
+		<input type="button" value="Cancel PR" class="button-normal"/>
+	</div>
+</div>
+    </div>

@@ -1,0 +1,221 @@
+<!-- Start -->
+
+<!--
+<%--
+ % QuotationEntry - SAL010302
+ % This page is Quotation Entry Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Tin
+ % Creation date : 2014/10/06
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<script>
+	new JsDatePick({
+		useMode : 2,
+		target : "quotationdate",
+		dateFormat : "%d/%m/%Y"
+	});
+</script>
+<div class="frm">
+	<table>
+		<caption>Quotation</caption>
+		<tbody>
+			<tr>
+				<th>Quotation&nbsp;No.</th>
+				<td>
+					<input name="quotationno" type="text" value="QS1A-133-DST-183" /> 
+					<input type="button" value="..." />
+				</td>
+				<th>Salesman</th>
+				<td><input name="salesman" type="text" value="Sales 0001" readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<th>Cost&nbsp;Sheet&nbsp;No.</th>
+				<td>
+					<select name="costsheetno">
+						<option value="1" label="QS1A-133-DST-183-R1" selected="selected" />
+						<option value="2" label="QS1A-133-DST-183-R2" />
+						<option value="3" label="QS1A-133-DST-183-R3" />
+					</select>
+				</td>
+				<th>Sale&nbsp;Type</th>
+				<td><input name="saletype" type="text" value="Sale New F/L" readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<th>Quotation&nbsp;Date</th>
+				<td><input id="quotationdate" name="quotationdate" type="text" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<table>
+		<caption>Customer</caption>
+		<tbody>
+			<tr>
+				<th>Customer&nbsp;Code</th>
+				<td><input name="customercode" type="text" value="34001313" readonly="readonly"/></td>
+				<th>Customer&nbsp;Name</th>
+				<td><input name="customername" type="text" value="SV1ZZ-ONE CORPORATION LTD." readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<th>Site</th>
+				<td colspan="3"><input name="site" type="text" value="HQ" readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<th>Contact&nbsp;Name</th>
+				<td><input name="contactname" type="text" value="K.Somsri" /></td>
+				<th>Email</th>
+				<td><input name="email" type="text" value="abc@abccc.com" /></td>
+			</tr>
+			<tr>
+				<th>Telephone</th>
+				<td><input name="telephone" type="text" value="02-1234567" /></td>
+				<th>Fax</th>
+				<td><input name="fax" type="text" value="02-1234567" /></td>
+			</tr>
+			<tr>
+				<th>Payment&nbsp;Term</th>
+				<td>
+					<input name="paymentterm1" type="text" value="30 Days" /> 
+					<input name="paymentterm2" type="text" value="หลังจากวันส่งรถ" />
+				</td>
+				<th>Delivery&nbsp;Term</th>
+				<td><input name="deliveryterm" type="text" value="30 - 60 Days" /></td>
+			</tr>
+			<tr>
+				<th>Price&nbsp;Basic</th>
+				<td><input name="pricebasic" type="text" value="0" />&nbsp;THB</td>
+				<th rowspan="2">Delivery&nbsp;Place</th>
+				<td rowspan="2"><textarea rows="2">Customer's&nbsp;factory</textarea></td>
+			</tr>
+			<tr>
+				<th>Validity</th>
+				<td><input name="validity" type="text" value="7 Days" /></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="tbl">
+	<table>
+		<tbody>
+			<tr>
+				<th>#</th>
+				<th>Description</th>
+				<th class="col-numeric">Quantity</th>
+				<th class="col-numeric">Price</th>
+				<th class="col-numeric">Amount</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>F/L</td>
+				<td>1</td>
+				<td><input class="numeric gridinput" name="price_1" type="text" value="760,000.00" /></td>
+				<td><input class="numeric gridinput" name="amount_1" type="text" value="760,000.00" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td class="numeric"></td>
+				<td><input class="numeric gridinput" name="price_2" type="text" /></td>
+				<td><input class="numeric gridinput" name="amount_2" type="text" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td class="numeric"></td>
+				<td><input class="numeric gridinput" name="price_3" type="text" /></td>
+				<td><input class="numeric gridinput" name="amount_3" type="text" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td class="numeric"></td>
+				<td><input class="numeric gridinput" name="price_4" type="text" /></td>
+				<td><input class="numeric gridinput" name="amount_4" type="text" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td class="numeric"></td>
+				<td><input class="numeric gridinput" name="price_5" type="text" /></td>
+				<td><input class="numeric gridinput" name="amount_5" type="text" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td class="numeric"></td>
+				<td><input class="numeric gridinput" name="price_6" type="text" /></td>
+				<td><input class="numeric gridinput" name="amount_6" type="text" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td class="numeric"></td>
+				<td><input class="numeric gridinput" name="price_7" type="text" /></td>
+				<td><input class="numeric gridinput" name="amount_7" type="text" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td class="numeric"></td>
+				<td><input class="numeric gridinput" name="price_8" type="text" /></td>
+				<td><input class="numeric gridinput" name="amount_8" type="text" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td class="numeric"></td>
+				<td><input class="numeric gridinput" name="price_9" type="text" /></td>
+				<td><input class="numeric gridinput" name="amount_9" type="text" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td class="numeric"></td>
+				<td><input class="numeric gridinput" name="price_10" type="text" /></td>
+				<td><input class="numeric gridinput" name="amount_10" type="text" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td class="numeric"></td>
+				<td><input class="numeric gridinput" name="price_11" type="text" /></td>
+				<td><input class="numeric gridinput" name="amount_11" type="text" /></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td class="numeric"></td>
+				<td><input class="numeric gridinput" name="price_12" type="text" /></td>
+				<td><input class="numeric gridinput" name="amount_12" type="text" /></td>
+			</tr>
+			<tr>
+				<td class="tblfooterlabel" colspan="3"><b>Amount</b></td>
+				<td></td>
+				<td><input class="numeric gridinput" name="totalamount" type="text" value="760,000.00" readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<td class="tblfooterlabel" colspan="3"><b>VAT</b></td>
+				<td class="numeric">7%</td>
+				<td><input class="numeric gridinput" name="vatamount" type="text" value="53,200.00" readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<td class="tblfooterlabel" colspan="3"><b>Total&nbsp;Amount</b></td>
+				<td></td>
+				<td><input class="numeric gridinput" name="grandtotal" type="text" value="813,200.00" readonly="readonly"/></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="tblfooter">
+	<div>
+		<input name="approve" type="button" value="Send Approve" /> 
+		<input name="save" type="button" value="Save" />
+	</div>
+</div>
+
+<!-- End -->

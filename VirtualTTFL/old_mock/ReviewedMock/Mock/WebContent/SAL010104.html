@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+<%--
+ % Asset-SAL010104
+ %
+ % Creator       : Pratz
+ % Creation date : 2014/10/09
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+
+        <div class="asset-entry">
+            <div class="frm">
+                <table>
+                    <caption>Asset</caption>
+                    <tbody>
+                         <tr>
+                            <th>Customer&nbsp;Code</th>
+                            <td><input  type="text" readonly="readonly" value="34001313"/></td>
+                            <th>Customer&nbsp;Name</th>
+                            <td><input  type="text" readonly="readonly" value="SV1ZZ-ONE COPORATION LTD. HQ"/></td>
+                        </tr>
+                        <tr>
+                            <th>Maker</th>
+                            <td>
+                                <select>
+                                    <option value="0">&nbsp;</option>
+                                </select>
+                            </td>
+                            <th>Capa</th>
+                            <td>
+                                <input  type="text"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Type</th>
+                            <td><input type="text"/></td>
+                            <th>Intro&nbsp;Date</th>
+                            <td><input id="introDate" type="text"/></td>
+                        </tr>
+                        <tr>
+                            <th>Model</th>
+                            <td><input type="text"/></td>
+                            <th>Frame</th>
+                            <td><input type="text"/></td>
+                        </tr>
+                        <tr>
+                            <th>Engine</th>
+                            <td><input type="text"/></td>
+                            <th>Mast</th>
+                            <td><input type="text"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table class="tbl-command">
+                <tr>
+                    <td>
+                        <button onclick="goToDashborad();" class="button-normal">Save</button>&nbsp;&nbsp;<button onclick="goToDashborad();" class="button-normal">Cancel</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            new JsDatePick({
+			useMode : 2,
+			target : "introDate",
+			dateFormat : "%d/%m/%Y"
+		});
+        </script>
+ 

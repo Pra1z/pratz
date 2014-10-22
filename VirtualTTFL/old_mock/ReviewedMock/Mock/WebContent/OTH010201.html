@@ -1,0 +1,180 @@
+<!--
+<%--
+ % Main contents.
+ % This page is Approval Workflow Inquiry Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Phannika R.
+ % Creation date : 2014/10/08
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<script>
+    new JsDatePick({
+        useMode: 2,
+        target: "fromDate",
+        dateFormat: "%d/%m/%Y"
+    });
+    new JsDatePick({
+        useMode: 2,
+        target: "toDate",
+        dateFormat: "%d/%m/%Y"
+    });
+</script>
+<div class="contentpanel">
+<div class="frm">
+    <table>
+        <caption>Approval Workflow Inquiry</caption>
+        <tbody>
+            <tr>
+                <th colspan="4">Search&nbsp;Criteria</th>
+            </tr>
+            <tr>
+                <th>From&nbsp;Date&nbsp;*</th>
+                <td><input type="text" id="fromDate" name="fromDate"/></td>
+                <th>Date&nbsp;*</th>
+                <td><input type="text" id="toDate" name="toDate"/></td>
+            </tr>
+            <tr>
+                <th>Document&nbsp;Type</th>
+                <td>
+                    <select name="documentTypeSelect" class="dropdownlist" >
+                        <option value="sample1"></option>
+                        <option value="sample2">Cost&nbsp;Sheet</option>
+                        <option value="sample3">Quotation</option>
+                        <option value="sample4">Purchase&nbsp;Request</option>
+                        <option value="sample5">Borrow&nbsp;Request</option>
+                    </select>
+                </td>
+                <th>Purchase&nbsp;Request&nbsp;No.</th>
+                <td><input type="text" readonly="readonly"/></td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td colspan="3">
+                    <select name="statusSelect" class="dropdownlist">
+                        <option value="sample1">&nbsp;</option>
+                        <option value="sample2">Revised</option>
+                        <option value="sample3" selected="selected">Wait&nbsp;for&nbsp;Approve</option>
+                        <option value="sample4">Draft</option>
+                        <option value="sample5">Partial&nbsp;Received</option>
+                        <option value="sample6">Receive&nbsp;Completed</option>
+                        <option value="sample7">Ordered</option>
+                        <option value="sample8">Approved</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="btn">
+                <td colspan="4" align="center">
+                    <input type="button" value="Search" class="button-normal"/>
+                    <input type="button" value="Clear" class="button-normal"/>
+                </td>
+            </tr>
+        </tbody>
+    </table>	
+</div>
+<div class="tbl">
+    <table>
+        <caption>Result</caption>
+        <tbody>
+            <tr>
+                <th>Request&nbsp;Date</th>
+                <th>Document&nbsp;Type</th>
+                <th>Document&nbsp;No.</th>
+                <th>Customer/Supplier</th>
+                <th>Status</th>
+                <th>Request&nbsp;By</th>
+                <th>Approved&nbsp;By</th>
+            </tr>
+            <tr>
+                <td class="tblcenter">&nbsp;01/09/2014</td>
+                <td>&nbsp;Borrow</td>
+                <td class="tblcenter">&nbsp;<a href="#" onclick="goToApprovalWorkflowEntry();">BR002</a></td>
+                <td>&nbsp;Sup&nbsp;A</td>
+                <td>&nbsp;Wait&nbsp;for&nbsp;Approve</td>
+                <td>User01</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="tblcenter">&nbsp;01/09/2014</td>
+                <td>&nbsp;Borrow</td>
+                <td class="tblcenter">&nbsp;<a href="#" onclick="goToApprovalWorkflowEntry();">BR003</a></td>
+                <td>&nbsp;Sup&nbsp;A</td>
+                <td>&nbsp;Wait&nbsp;for&nbsp;Approve</td>
+                <td>User02</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="tblcenter">&nbsp;05/09/2014</td>
+                <td>&nbsp;Quotation</td>
+                <td class="tblcenter">&nbsp;<a href="#" onclick="goToApprovalWorkflowEntry();">QT001</a></td>
+                <td>&nbsp;Sup&nbsp;B</td>
+                 <td>&nbsp;Wait&nbsp;for&nbsp;Approve</td>
+                <td>User06</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="tblcenter">&nbsp;10/09/2014</td>
+                <td>&nbsp;Borrow</td>
+                <td class="tblcenter"><a href="#" onclick="goToApprovalWorkflowEntry();">QT002</a></td>
+                <td>&nbsp;Sup&nbsp;A</td>
+                <td>&nbsp;Wait&nbsp;for&nbsp;Approve</td>
+                <td>User02</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="tblcenter">&nbsp;20/09/2014</td>
+                <td>&nbsp;Purchase</td>
+                <td class="tblcenter">&nbsp;<a href="#" onclick="goToApprovalWorkflowEntry();">PR003</a></td>
+                <td>&nbsp;Sup&nbsp;C</td>
+                <td>&nbsp;Wait&nbsp;for&nbsp;Approve</td>
+                <td>User03</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="tblcenter">&nbsp;20/09/2014</td>
+                <td>&nbsp;Purchase</td>
+                <td class="tblcenter">&nbsp;<a href="#" onclick="goToApprovalWorkflowEntry();">PR004</a></td>
+                <td>&nbsp;Sup&nbsp;D</td>
+               <td>&nbsp;Wait&nbsp;for&nbsp;Approve</td>
+                <td>User09</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="tblcenter">&nbsp;20/09/2014</td>
+                <td>&nbsp;Purchase</td>
+                <td class="tblcenter">&nbsp;<a href="#" onclick="goToApprovalWorkflowEntry();">PR006</a></td>
+                <td>&nbsp;Sup&nbsp;C</td>
+                <td>&nbsp;Wait&nbsp;for&nbsp;Approve</td>
+                <td>User07</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="tblcenter">&nbsp;20/09/2014</td>
+                <td>&nbsp;Quotation</td>
+                <td class="tblcenter">&nbsp;<a href="#" onclick="goToApprovalWorkflowEntry();">QT003</a></td>
+                <td>&nbsp;Sup&nbsp;D</td>
+               <td>&nbsp;Wait&nbsp;for&nbsp;Approve</td>
+                <td>User01</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="tblcenter">&nbsp;21/09/2014</td>
+                <td>&nbsp;Quotation</td>
+                <td class="tblcenter">&nbsp;<a href="#" onclick="goToApprovalWorkflowEntry();">QT004</a></td>
+                <td>&nbsp;Sup&nbsp;E</td>
+                <td>&nbsp;Wait&nbsp;for&nbsp;Approve</td>
+                <td>User01</td>
+                <td>&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    </div>
+<script>
+    
+</script>
+

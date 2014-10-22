@@ -1,0 +1,211 @@
+<!--
+<%--
+ % SAL020102 - PDI Request Entry.
+ %
+ % Creator       : Pratz
+ % Creation date : 2014/10/13
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<div class="contentpanel">
+    <div>
+        <input type="button" value="Gen. Transport Req" class="button-normal"/>
+        <input type="button" value="Send to PDI" class="button-normal" />
+        <input type="button" value="Save" class="button-normal" />
+        <input type="button" value="Cancel" class="button-normal" onclick="goToPDIRequestInquiry();"/>
+        <input type="button" value="Back" class="button-normal" onclick="goToPDIRequestInquiry();" />
+    </div>
+    <div class="frm">
+        <table>
+            <caption>PDI Request Entry</caption>
+            <tbody>
+                <tr>
+                    <th>PDI&nbsp;Request&nbsp;No.</th>
+                    <td><input type="text" readonly="readonly"/></td>
+                    <th>Status</th>
+                    <td><input type="text" readonly="readonly"/></td>
+                </tr>
+                <tr>
+                    <th>Request&nbsp;Date</th>
+                    <td><input type="text" readonly="readonly"/></td>
+                    <th>Request&nbsp;By.</th>
+                    <td><input type="text" readonly="readonly"/></td>
+                </tr>
+                <tr>
+                    <th>Customer</th>
+                    <td><input type="text" readonly="readonly"/></td>
+                    <th>Model</th>
+                    <td><input type="text" readonly="readonly"/></td>
+                </tr>
+                <tr>
+                    <th>Bill&nbsp;Addr.</th>
+                    <td><input type="text" readonly="readonly"/></td>
+                    <th>Ship&nbsp;Addr.</th>
+                    <td><input type="text" readonly="readonly"/></td>
+                </tr>
+                <tr>
+                    <th rowspan="3">Full&nbsp;Ship&nbsp;Addr.</th>
+                    <td colspan="3"><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text"/></td>
+                </tr>
+                <tr>
+                    <th>Required&nbsp;Delivery&nbsp;Date</th>
+                    <td><input type="text" readonly="readonly"/></td>
+                    <th>Confirm&nbsp;Delivery&nbsp;Date</th>
+                    <td><input type="text" id="confirm-date"/></td>
+                </tr>
+                <tr>
+                    <th>Last&nbsp;Update&nbsp;By</th>
+                    <td colspan="3"><input type="text" readonly="readonly"/></td>
+                </tr>
+                <tr>
+                    <th>Reference</th>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <th>Quotation&nbsp;No.</th>
+                    <td><input type="text" readonly="readonly"/></td>
+                    <th>Sales&nbsp;Order&nbsp;No.</th>
+                    <td><input type="text" readonly="readonly"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tblfooter">
+        <div>
+            <input name="Request Borrow" type="button" value="Request Borrow" class="button-normal" /> 
+            <input name="Request Purchase" type="button" value="Request Purchase" class="button-normal" />
+        </div>
+    </div>
+    <div class="tbl">
+        <table>
+            <caption>Main&nbsp;Part<div>F/L&nbsp;Frame&nbsp;No.<input type="text" style="width: 200px;"/><button>Select&nbsp;F/L&nbsp;Frame</button><button>Switch</button><button>Customize</button></div></caption>
+            <thead>
+                <tr>
+                    <th rowspan="2"><input type="checkbox"/></th>
+                    <th rowspan="2">Item&nbsp;Type</th>
+                    <th rowspan="2">Item</th>
+                    <th rowspan="2">Item&nbsp;Identity</th>
+                    <th rowspan="2">Switch</th>
+                    <th rowspan="2">PR&nbsp;No.</th>
+                    <th rowspan="2">Borrow&nbsp;Req.&nbsp;No.</th>
+                    <th rowspan="2">Qty</th>
+                    <th colspan="2">Receiving</th>
+                    <th rowspan="2">Note</th>
+                </tr>
+                <tr>
+                    <th>Plan&nbsp;Date</th>
+                    <th>Actual&nbsp;Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tblcenter"><input type="checkbox"/></td>
+                    <td>Frame</td>
+                    <td>Frame&nbsp;8FG</td>
+                    <td>Frame&nbsp;8FG</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="currency">1</td>
+                    <td class="tblcenter">9/7/2014</td>
+                    <td class="tblcenter">9/7/2014</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><input type="checkbox"/></td>
+                    <td>Frame</td>
+                    <td>Frame&nbsp;8FG</td>
+                    <td>Frame&nbsp;8FG</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="currency">1</td>
+                    <td class="tblcenter">9/7/2014</td>
+                    <td class="tblcenter">9/7/2014</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><input type="checkbox"/></td>
+                    <td>Frame</td>
+                    <td>Frame&nbsp;8FG</td>
+                    <td>Frame&nbsp;8FG</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td class="currency">1</td>
+                    <td class="tblcenter">9/7/2014</td>
+                    <td class="tblcenter">9/7/2014</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tbl">
+        <table>
+            <caption>Special&nbsp;Requirement</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2"><input type="checkbox"/></th>
+                    <th rowspan="2">Item&nbsp;Type</th>
+                    <th rowspan="2">Item</th>
+                    <th rowspan="2">Qty</th>
+                    <th rowspan="2">PR&nbsp;No.</th>
+                    <th rowspan="2">Borrow&nbsp;Req.&nbsp;No.</th>
+                    <th colspan="2">Receiving</th>
+                </tr>
+                <tr>
+                    <th>Plan&nbsp;Date</th>
+                    <th>Actual&nbsp;Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tblcenter"><input type="checkbox"/></td>
+                    <td>Attachement</td>
+                    <td>Flash&nbsp;Light</td>
+                    <td class="currency">1</td>
+                    <td>P5A-1400230</td>
+                    <td>&nbsp;</td>
+                    <td class="tblcenter">9/5/2014</td>
+                    <td class="tblcenter">9/5/2014</td>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><input type="checkbox"/></td>
+                    <td>Attachement</td>
+                    <td>Flash&nbsp;Light</td>
+                    <td class="currency">1</td>
+                    <td>P5A-1400230</td>
+                    <td>&nbsp;</td>
+                    <td class="tblcenter">9/5/2014</td>
+                    <td class="tblcenter">9/5/2014</td>
+                </tr>
+                <tr>
+                    <td class="tblcenter"><input type="checkbox"/></td>
+                    <td>Attachement</td>
+                    <td>Flash&nbsp;Light</td>
+                    <td class="currency">1</td>
+                    <td>P5A-1400230</td>
+                    <td>&nbsp;</td>
+                    <td class="tblcenter">9/5/2014</td>
+                    <td class="tblcenter">9/5/2014</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    new JsDatePick({
+			useMode : 2,
+			target : "confirm-date",
+			dateFormat : "%d/%m/%Y"
+    });
+</script>

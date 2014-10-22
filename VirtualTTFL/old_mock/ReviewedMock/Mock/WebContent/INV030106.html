@@ -1,0 +1,139 @@
+<!--
+<%--
+ % Main contents.
+ % This page is Borrow Request Inquiry Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Phannika R.
+ % Creation date : 2014/10/07
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<script>
+	new JsDatePick({
+		useMode : 2,
+		target : "fromDate",
+		dateFormat : "%d/%m/%Y"
+	});
+	
+	new JsDatePick({
+		useMode : 2,
+		target : "toDate",
+		dateFormat : "%d/%m/%Y"
+	});
+</script>
+<div class="contentpanel">
+<div class="frm">
+	<table>
+            <caption>Search&nbsp;Criteria</caption>
+		<colgroup>
+			<col class="col-20-left"></col>
+			<col class="col-30-left"></col>
+			<col class="col-20-left"></col>
+			<col class="col-30-left"></col>
+		</colgroup>
+		<tbody>
+			<tr>
+				<th>&nbsp;From&nbsp;Date&nbsp;*</th>
+				<td><input type="text" id="fromDate" name="fromDate"/></td>
+				<th>&nbsp;To&nbsp;Date&nbsp;*</th>
+				<td><input type="text" id="toDate" name="toDate"/></td>
+			</tr>
+			<tr>
+				<th>&nbsp;Borrow&nbsp;Section</th>
+				<td><input type="text" readonly="readonly" value="PDI" /></td>
+				<th>&nbsp;Lender&nbsp;Section</th>
+				<td>
+					<select name="lenderDepartmentSelect" class="dropdownlist">
+						<option value="sample1"></option>
+						<option value="sample1">TY4A</option>
+						<option value="sample2">TY8A</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>&nbsp;Status</th>
+				<td colspan="3">
+					<select name="statusSelect" class="dropdownlist">
+						<option value="sample1"></option>
+						<option value="sample1">Revised</option>
+						<option value="sample1">Wait for Approve</option>
+						<option value="sample2">Draft</option>
+						<option value="sample3">Partial Received</option>
+						<option value="sample3">Receive Completed</option>
+						<option value="sample3">Ordered</option>
+						<option value="sample3">Approved</option>
+					</select>
+				</td>
+			</tr>
+			
+		</tbody>
+	</table>
+
+</div>
+<div class="tblfooter">
+    <div>
+        <input type="button" value="New" class="button-normal" /> 
+					<input type="button" value="Search" class="button-normal" />
+					<input type="button" value="Clear" class="button-normal" />
+    </div>
+</div>
+<div class="tbl">
+	<table>
+		<caption>&nbsp;Result</caption>
+		<tbody>
+			<tr>
+				<th>Borrow&nbsp;Request&nbsp;No.</th>
+				<th>Request&nbsp;Date</th>
+				<th>Plan&nbsp;Used&nbsp;Date</th>
+				<th>Lender&nbsp;Section</th>
+				<th>Job&nbsp;Type</th>
+				<th>Job&nbsp;No.</th>
+				<th>Customer</th>
+				<th>Plan&nbsp;Delivery&nbsp;Date</th>
+				<th>Remark</th>
+				<th>Status</th>
+			</tr>
+			<tr>
+				<td class="tblcenter"><a href="#">BR001</a></td>
+				<td class="tblcenter">01/09/2014</td>
+				<td class="tblcenter">06/09/2014</td>
+				<td>TY4A</td>
+				<td>PDI</td>
+				<td>PDI001</td>
+				<td>Cust&nbsp;C</td>
+				<td class="tblcenter">07/09/2014</td>
+				<td>ประกอบรถ</td>
+				<td>Receive&nbsp;Completed</td>
+			</tr>
+			<tr>
+				<td class="tblcenter"><a href="#">BR002</a></td>
+				<td class="tblcenter">01/09/2014</td>
+				<td class="tblcenter">07/09/2014</td>
+				<td>TY4A</td>
+				<td>PDI</td>
+				<td>PDI002</td>
+				<td>Cust&nbsp;C</td>
+				<td class="tblcenter">07/09/2014</td>
+				<td>ประกอบรถ</td>
+				<td>Receive&nbsp;Completed</td>
+			</tr>
+			<tr>
+				<td class="tblcenter"><a href="#">BR005</a></td>
+				<td class="tblcenter">02/09/2014</td>
+				<td class="tblcenter">22/09/2014</td>
+				<td>TY8A</td>
+				<td>OSJ</td>
+				<td>OSJ002</td>
+				<td>Cust&nbsp;C</td>
+				<td></td>
+				<td></td>
+				<td>Ordered</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+    </div>

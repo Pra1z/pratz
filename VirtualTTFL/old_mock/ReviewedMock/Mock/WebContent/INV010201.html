@@ -1,0 +1,110 @@
+<!--
+<%--
+ % Stock Inquiry contents.
+ % This page is Stock Inquiry Mock HTML.
+ % In comment for JSP.
+ %
+ % Creator       : Sutiporn.D
+ % Creation date : 2014/10/07
+ % Revision      : $Revision: $
+ % Reviser       : $Author: $
+ % Revision date : $Date: $
+ % Copyright(c) 2014 Thai NS Solutions Co., Ltd. All rights reserved.	
+ --%>
+-->
+<script>
+	function SelectItem() {
+   		var selectItem = window.open("OTH010102.html", "selectItem", "status=0,toolbar=0,location=0,menubar=0,directories=0,resizable=0,scrollbars=0,height=500,width=675,left=1,top=1,screenX=10px,screenY=10px");
+   		selectItem.focus();
+	}
+</script>
+<div class="contentpanel">
+	<div class="frm">
+		<table>
+			<caption>&nbsp;Search&nbsp;Criteria</caption>
+			<tbody>
+				<tr>
+					<th>&nbsp;Item&nbsp;Code</th>
+					<td><input type="text"/><input type="button" onclick="SelectItem();" value="&nbsp;&nbsp;...&nbsp;&nbsp;" class="btnpopup"/></td>
+					<th>&nbsp;Item&nbsp;Description</th>
+					<td><input type="text" readonly="readonly"/></td>	
+				</tr>
+				<tr>
+					<th>&nbsp;Section</th>
+					<td colspan="3">
+						<select class="dropdownlist">
+							<option value="sample1">All</option>
+							<option value="sample1">34000229</option>
+							<option value="sample2">34000230</option>
+							<option value="sample3">34000231</option>
+						</select>
+					</td>
+				</tr>
+				
+			</tbody>
+		</table>
+	</div>
+    <div class="tblfooter">
+        <div>
+            <input type="button" value="Search" class="button-normal"/>&nbsp;&nbsp;&nbsp;
+						<input type="button" value="Clear" class="button-normal"/>
+					
+        </div>
+    </div>
+	<div class="tbl">
+		<table>
+		<caption>&nbsp;Result</caption>
+			<tbody>
+				<tr>
+					<th>Item&nbsp;Code</th>
+					<th>Item&nbsp;Description</th>
+					<th>Section</th>
+					<th>Stock&nbsp;Qty</th>
+					<th>Allocated&nbsp;Qty</th>
+				</tr>
+				<tr>
+					<td class="tblcenter">&nbsp;<a href="#">A</a></td>
+					<td>&nbsp;Part&nbsp;A</td>
+					<td>&nbsp;TY4A</td>
+					<td align="right">20&nbsp;</td>
+					<td align="right"><a href="#">5</a>&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="tblcenter">&nbsp;<a href="#">A</a></td>
+					<td>&nbsp;Part&nbsp;A</td>
+					<td>&nbsp;TY8A</td>
+					<td align="right">5&nbsp;</td>
+					<td align="right"><a href="#">0</a>&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="tblcenter">&nbsp;<a href="#">B</a></td>
+					<td>&nbsp;Part&nbsp;B</td>
+					<td>&nbsp;TY4A</td>
+					<td align="right">15&nbsp;</td>
+					<td align="right"><a href="#">0</a>&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<table>
+		<caption>&nbsp;Datail</caption>
+			<tbody>
+				<tr>
+					<th>Warehosue</th>
+					<th>Location</th>
+					<th>Stock&nbsp;Qty</th>
+				</tr>
+				<tr>
+					<td>&nbsp;Path&nbsp;WH1</td>
+					<td>&nbsp;L1</td>
+					<td>&nbsp;12</td>
+				</tr>
+				<tr>
+					<td>&nbsp;Path&nbsp;WH1</td>
+					<td>&nbsp;L2</td>
+					<td>&nbsp;8</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
