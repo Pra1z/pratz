@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Feature</title>
+    </head>
+    <body>
+        <script>
+            var feature = (function() {
+                function Event(name) {
+                    this.name = name;
+                    this.callbacks = [];
+                    this.registerCallback = function(callback) {
+                        this.callbacks.push(callback);
+                    };
+                }
+
+                function Reactor() {
+                    this.events = {};
+                    this.registerEvent = function(eventName) {
+                        var event = new Event(eventName);
+                        this.events[eventName] = event;
+                    };
+                    this.dispatchEvent = function(eventName, eventArgs) {
+                        this.events[eventName].callbacks.forEach(function(callback) {
+                            callback(eventArgs);
+                        });
+                    };
+                    this.addEventListener = function(eventName, callback) {
+                        this.events[eventName].registerCallback(callback);
+                    };
+                }
+
+                function waitAMinute(callback) {
+                    console.log('2. waitAMinute...');
+                    delay();
+                    callback();
+                }
+                function delay() {
+                    var tmp = 0;
+                    for (i = 0; i < 10000; i++) {
+                        tmp++;
+                    }
+                    console.log('tmp:' + tmp);
+                }
+
+                return {
+                    addOne: function(callback) {
+                        console.log('1. addOne');
+                        return setTimeout(waitAMinute(function() {
+                            console.log('3. waitedAMinute');
+                            callback();
+                        }));
+                    }
+                };
+            })();
+//            
+//            setTimeout(feature.addOne(function() {
+//                console.log('4. finish');
+//            }),500000);
+//            console.log('other fn1');
+//            console.log('other fn2');
+//            console.log('other fn3');
+//            
+            
+            setTimeout(function() {
+                console.log('before');
+            }, 1000);
+            setTimeout(function() {
+                feature.addOne(function() {
+                    console.log('4. finish');
+                });
+            }, 5000);
+            console.log('begin loop');
+            for (i = 0; i < 10000; i++) {
+                       console.log('xxxp');
+            }
+            console.log('end loop');
+        </script>
+    </body>
+</html>
