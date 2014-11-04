@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nodejs</title>
+    </head>
+    <body>
+        <script>
+            function addOne(callback) {
+                console.log('1. addOne');
+                setTimeout(waitAMinute(function waitedAMinute(err,data) {
+                    console.log('3. waitedAMinute');
+                    callback();
+                }),5000);
+            }
+
+
+            function waitAMinute(callback) {
+                console.log('2. waitAMinute...');
+                //delay(100);
+                callback();
+            }
+
+            setTimeout(addOne(function() {
+                console.log('4. finish');
+            }),5000);
+            
+            console.log('Other...1');
+            console.log('Other...2');
+            console.log('Other...3');
+        </script>
+    </body>
+</html>
