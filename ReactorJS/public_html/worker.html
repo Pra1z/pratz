@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Worker</title>
+        <script type="text/javascript">
+            var myWorker = new Worker("my_task.js");
+            //myWorker.terminate();
+            myWorker.onmessage = function(oEvent) {
+                console.log(oEvent.data);
+            };
+            
+            myWorker.postMessage("ali1");
+            myWorker.postMessage("ali2");
+            myWorker.postMessage("ali3");
+            myWorker.postMessage("ali4");
+        </script>
+    </head>
+    <body></body>
+</html>

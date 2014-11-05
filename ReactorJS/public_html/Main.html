@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main</title>
+    </head>
+    <body>
+        <script>
+            var w1 = new Worker('worker1.js');
+            var w3 = new Worker('worker1.js');
+            var w2 = new Worker('worker2.js');
+            w1.onmessage=function(oEvent){
+                
+                console.log('-----oEventw1----- : '+oEvent);
+            };
+             w2.onmessage=function(oEvent){
+                
+                console.log('-----oEventw2----- : '+oEvent);
+            };
+            w3.onmessage=function(oEvent){
+                
+                console.log('-----oEventw3----- : '+oEvent);
+            };
+            w1.postMessage({data:"d1"});
+            w2.postMessage({data:"d2"});
+            w3.postMessage({data:"d3"});
+        </script>
+    </body>
+</html>

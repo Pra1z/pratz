@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Feature</title>
+    </head>
+    <body>
+        <script>
+            // Syntax: asyncEval(code[, listener])
+            
+            var asyncEval = (function() {
+                console.log('created worker');
+                var aListeners = [], oParser = new Worker("data:text/javascript;charset=US-ASCII,onmessage%20%3D%20function%20%28oEvent%29%20%7B%0A%09postMessage%28%7B%0A%09%09%22id%22%3A%20oEvent.data.id%2C%0A%09%09%22evaluated%22%3A%20eval%28oEvent.data.code%29%0A%09%7D%29%3B%0A%7D");
+                /*
+                 * 
+                 * Note that js in worker is
+                 
+                 onmessage = function (oEvent) {
+                 postMessage({
+                 "id": oEvent.data.id,
+                 "evaluated": eval(oEvent.data.code)
+                 });
+                 }
+                 
+                 
+                 */
+                oParser.onmessage = function(oEvent) {
+                    if (aListeners[oEvent.data.id]) {
+                        aListeners[oEvent.data.id](oEvent.data.evaluated);
+                    }
+                    delete aListeners[oEvent.data.id];
+                };
+
+
+                return function(sCode, fListener) {
+                    aListeners.push(fListener || null);
+                    oParser.postMessage({
+                        "id": aListeners.length - 1,
+                        "code": sCode
+                    });
+                };
+
+            })();
+
+
+            // asynchronous 
+            setTimeout(asyncEval("1", function(test) {
+                for (var i = 0; i < 10; i++) {
+                    console.log(test + ' '+i);
+                    //sleep(1);
+                }
+            }),1000);
+            setTimeout(asyncEval("2", function(test) {
+                for (var i = 0; i < 10; i++) {
+                    console.log(test + ' '+i);
+                    //sleep(1);
+                }
+            }),1000);
+           
+
+            function sleep(seconds)
+            {
+                var e = new Date().getTime() + (seconds * 1000);
+                while (new Date().getTime() <= e) {
+                }
+            }
+        </script>
+    </body>
+</html>
