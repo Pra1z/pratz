@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <context id="hsqldb" >
+    <jdbcConnection driverClass="org.hsqldb.jdbcDriver" connectionURL="jdbc:hsqldb:hsql://localhost/pratzdb" userId="pratz" password="pratz" />
+    <javaModelGenerator targetPackage="org.pratz.mybatis.model" targetProject="MyBatis" />
+    <sqlMapGenerator targetPackage="org.pratz.mybatis.mapper" targetProject="MyBatis" />
+    <javaClientGenerator targetPackage="org.pratz.mybatis.client" targetProject="MyBatis" type="XMLMAPPER" />
+    <table schema="public" tableName='users' >
+     
+    </table>
+  </context>
+</generatorConfiguration>
