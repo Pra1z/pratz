@@ -23,4 +23,6 @@
         -->
         
         <import resource="task-scheduler.xml"/>
+        
+        <import resource="security.xml"/>
 </beans>
